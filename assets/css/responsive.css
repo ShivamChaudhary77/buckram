@@ -1,0 +1,115 @@
+/* ==========================================================================
+   JAIBABA INTERLININGS — Responsive Overrides
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1199.98px) {
+  .container-custom { max-width: 100%; }
+  .cta-wrap { padding: 52px; }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  body.header-fixed-offset { padding-top: 96px; }
+
+  .topbar { display: none; }
+
+  .navbar-main {
+    padding: 14px 0;
+  }
+
+  .navbar-main .navbar-collapse {
+    background: var(--color-white);
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .navbar-main .nav-link {
+    padding: 12px 14px !important;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar-main .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+
+  .navbar-main .dropdown-menu {
+    box-shadow: none;
+    border: 1px solid var(--color-border);
+    padding: 6px;
+  }
+
+  .navbar-main .btn-enquire {
+    margin: 14px 0 0;
+    display: block;
+    text-align: center;
+  }
+
+  .hero { min-height: 82vh; }
+  .hero-stats-strip { gap: 28px; margin-top: 46px; }
+  .hero-stats-strip .stat-num { font-size: 28px; }
+
+  .page-hero { min-height: 38vh; }
+
+  .badge-experience {
+    position: static;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+  }
+
+  .timeline { padding-left: 32px; }
+  .timeline-item::before { left: -42px; }
+}
+
+/* Mobile landscape / large phones */
+@media (max-width: 767.98px) {
+  section { padding: 56px 0; }
+  .section-header { margin-bottom: 36px; }
+
+  .hero { min-height: auto; padding: 150px 0 60px; }
+  .hero .hero-actions { width: 100%; }
+  .hero .hero-actions .btn { flex: 1 1 auto; text-align: center; }
+  .hero-stats-strip { flex-direction: column; gap: 22px; }
+  .hero-scroll-cue { display: none; }
+
+  .page-hero { padding: 110px 0 46px; min-height: auto; }
+
+  .cta-wrap { padding: 34px 22px; }
+  .cta-wrap .btn { width: 100%; margin-top: 10px; }
+
+  .trust-strip .trust-item { justify-content: flex-start; margin-bottom: 14px; }
+
+  .whatsapp-float, .back-to-top {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 18px;
+  }
+  .whatsapp-float { left: 18px; }
+  .back-to-top { right: 18px; }
+
+  .footer-bottom { text-align: center; }
+  .footer-bottom .text-md-end { text-align: center !important; margin-top: 10px; }
+
+  .form-box { padding: 24px 18px; }
+
+  .compare-table { font-size: 12.5px; }
+  .compare-table th, .compare-table td { padding: 12px 10px; }
+}
+
+/* Small phones */
+@media (max-width: 575.98px) {
+  .section-title { font-size: 26px; }
+  .hero h1 { font-size: 30px; }
+  .hero p.hero-lead { font-size: 15.5px; }
+  .value-card, .step-card { padding: 26px 20px; }
+  .cta-section { border-radius: var(--radius-md); }
+  .contact-info-card { padding: 26px 18px; }
+  .newsletter-bar .col-md-auto { width: 100%; }
+  .newsletter-bar form { flex-direction: column; }
+  .newsletter-bar .form-control { margin-bottom: 10px; }
+}

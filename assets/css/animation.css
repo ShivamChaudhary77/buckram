@@ -1,0 +1,126 @@
+/* ==========================================================================
+   JAIBABA INTERLININGS — Animation Layer
+   Subtle, premium motion only.
+   ========================================================================== */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Generic reveal fallback for browsers/pages without AOS init timing */
+.reveal-fallback {
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* Hover lift utility */
+.hover-lift {
+  transition: var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+}
+
+/* Link underline animation */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.35s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Icon micro-interaction */
+.icon-bounce {
+  transition: transform 0.35s ease;
+}
+
+*:hover > .icon-bounce {
+  transform: translateY(-3px);
+}
+
+/* Nav underline indicator */
+.navbar-main .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-main .nav-link:hover::before,
+.navbar-main .nav-item.active .nav-link::before {
+  transform: scaleX(1);
+}
+
+/* AOS tuning — slightly faster / premium easing */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Skeleton shimmer (used while counters/images lazy-load) */
+.img-skeleton {
+  background: linear-gradient(90deg, var(--color-bg-alt) 25%, #e3e7ed 37%, var(--color-bg-alt) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Marquee for trust logos (optional) */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

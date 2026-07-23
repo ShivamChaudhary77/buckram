@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="100" viewBox="0 0 420 100">
+  <rect x="0" y="18" width="64" height="64" rx="8" fill="#0F2747"/>
+  <path d="M18 60 L32 32 L46 60 M23 50 H41" stroke="#C59D2A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="78" y="46" font-family="Poppins, Arial, sans-serif" font-size="24" font-weight="700" fill="#0F2747">JAIBABA</text>
+  <text x="78" y="70" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#C59D2A">INTERLININGS</text>
+</svg>
