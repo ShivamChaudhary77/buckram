@@ -1496,6 +1496,10 @@ textarea.form-control-custom {
   border-bottom: none;
 }
 
+.feature-mini.flex-column {
+  align-items: center;
+}
+
 .feature-mini .feature-mini-icon {
   width: 44px;
   height: 44px;
