@@ -153,15 +153,6 @@
     counters.forEach(function (c) { observer.observe(c); });
   }
 
-  function initPreloader() {
-    var pre = document.querySelector('.preloader');
-    if (!pre) return;
-
-    window.addEventListener('load', function () {
-      setTimeout(function () { pre.classList.add('loaded'); }, 200);
-    });
-  }
-
   function initSwipers() {
     if (typeof Swiper === 'undefined') return;
 
@@ -307,7 +298,6 @@
     });
 
     initCounters();
-    initPreloader();
     initSwipers();
     initContactForm();
     initNewsletterForm();
