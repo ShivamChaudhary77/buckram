@@ -65,10 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $requiredFields = [
     'full_name' => 'Full Name',
     'company'   => 'Company Name',
-    'email'     => 'Email Address',
     'phone'     => 'Phone Number',
     'city'      => 'City',
-    'country'   => 'Country',
     'product'   => 'Product Required',
     'quantity'  => 'Quantity Required',
 ];
@@ -97,21 +95,13 @@ $rawMessage    = isset($_POST['message']) ? (string) $_POST['message'] : '';
 $data['message'] = trim(strip_tags($rawMessage));
 $data['message'] = htmlspecialchars($data['message'], ENT_QUOTES, 'UTF-8');
 
-// Email format validation
-if (isset($data['email'])) {
-    $filteredEmail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    if ($filteredEmail === false) {
-        $errors[] = 'Please provide a valid email address.';
-    } else {
-        $data['email'] = $filteredEmail;
-    }
-}
-
-// Phone sanity check — digits, spaces, +, -, () only, 7-20 characters
+// Phone sanity check — digits only, 10-12 characters
 if (isset($data['phone'])) {
     $phoneDigitsOnly = preg_replace('/[^0-9]/', '', $_POST['phone']);
-    if (strlen($phoneDigitsOnly) < 7 || strlen($phoneDigitsOnly) > 15) {
-        $errors[] = 'Please provide a valid phone number.';
+    if (strlen($phoneDigitsOnly) < 10 || strlen($phoneDigitsOnly) > 12) {
+        $errors[] = 'Please provide a valid phone number (10-12 digits).';
+    } else {
+        $data['phone'] = $phoneDigitsOnly;
     }
 }
 
@@ -131,22 +121,17 @@ function sendNotificationEmail(array $data): bool
     $body  = "A new bulk enquiry has been submitted on the " . SITE_NAME . " website.\r\n\r\n";
     $body .= "Name: {$data['full_name']}\r\n";
     $body .= "Company: {$data['company']}\r\n";
-    $body .= "Email: {$data['email']}\r\n";
     $body .= "Phone: {$data['phone']}\r\n";
     $body .= "City: {$data['city']}\r\n";
-    $body .= "Country: {$data['country']}\r\n";
     $body .= "Product Required: {$data['product']}\r\n";
     $body .= "Quantity: {$data['quantity']}\r\n";
     $body .= "Message:\r\n{$data['message']}\r\n\r\n";
     $body .= "Submitted: " . date('Y-m-d H:i:s') . "\r\n";
 
-    $safeReplyToName = str_replace(['"', "\r", "\n"], '', $data['full_name']);
-
     $headers   = [];
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-Type: text/plain; charset=UTF-8';
     $headers[] = 'From: ' . SITE_NAME . ' Website <no-reply@jaibabainterlinings.com>';
-    $headers[] = "Reply-To: \"{$safeReplyToName}\" <{$data['email']}>";
     $headers[] = 'X-Mailer: PHP/' . phpversion();
 
     return @mail($to, $subject, $body, implode("\r\n", $headers));
