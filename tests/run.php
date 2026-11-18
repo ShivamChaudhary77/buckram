@@ -248,7 +248,54 @@ try {
     check('switched off: never serves PHP source', get('/app/config.php')['status'] === 404);
     config_set(['enabled' => true]);
 
+    /* ------------------------------------------------------------ migration */
+    $section('migration of the static site');
+    require_once ROOT_DIR . '/scripts/lib/html-compare.php';
+    require_once ROOT_DIR . '/scripts/lib/migrate-lib.php';
+    $dirs[] = $mig = sys_get_temp_dir() . '/jaibaba-mig-' . bin2hex(random_bytes(4));
+    ensure_dir($mig . '/pages');
+    config_set(['content_dir' => $mig, 'cache' => false]);
+    $rep = migrate_site(ROOT_DIR, $mig);
+    $static = migrate_source_files(ROOT_DIR);
+    check('migration reports no problems', $rep['problems'] === 0);
+    check('one page per static file', count($rep['pages']) === count($static) && count(glob("$mig/pages/*.json")) === count($static));
+    check('header/menu/footer identical to includes', strpos($rep['text'], 'DIFF') === false && substr_count($rep['text'], '  same  ') === 3);
+    foreach ($rep['pages'] as $id => $pg) {
+        check("$id: valid", page_validate($pg, []) === []);
+        if ($pg['type'] === 'product') {
+            $htmlBlocks = array_filter($pg['blocks'], function ($b) { return $b['type'] === 'html'; });
+            check("$id: product page fully structured", !$htmlBlocks);
+            check("$id: has product card", !empty($pg['card']['title']) && !empty($pg['card']['image']));
+        }
+    }
+    $homeMig = $rep['pages']['home'];
+    check('home keeps Organization JSON-LD', ($homeMig['jsonld'][0]['@type'] ?? '') === 'Organization');
+    check('hidden (commented-out) sections are kept', (bool) array_filter($homeMig['blocks'], function ($b) {
+        return $b['type'] === 'html' && strpos($b['html'], '<!--') !== false && strpos($b['html'], 'STATISTICS') === false && strpos($b['html'], 'counter') !== false;
+    }));
+    $site = json_read("$mig/site.json");
+    check('site settings: 2 phones, 5 social links, 2 addresses', count($site['phones']) === 2 && count($site['social']) === 5 && count($site['addresses']) === 2);
+    check('site settings: products menu has 10 products', count(array_filter($site['nav'][3]['children'] ?? [], function ($c) {
+        return strpos($c['href'] ?? '', '/product/') === 0;
+    })) === 10);
+    // Re-running gives the same content (apart from timestamps).
+    $strip = function ($p) { unset($p['created'], $p['updated']); return $p; };
+    $first = array_map($strip, $rep['pages']);
+    rm_tree($mig);
+    ensure_dir($mig . '/pages');
+    $rep2 = migrate_site(ROOT_DIR, $mig);
+    check('migration is repeatable', array_map($strip, $rep2['pages']) === $first);
+    // Every migrated page renders through the router with one H1.
+    config_set(['enabled' => true]);
+    foreach ($rep2['pages'] as $id => $pg) {
+        $resp = get($pg['path']);
+        check("$id: renders 200 with one H1", $resp['status'] === 200 && preg_match_all('/<h1[\s>]/', $resp['body']) === 1);
+    }
+    $chunks = migrate_split_main("<main>\n  <!-- LABEL -->\n  <!-- <section>\n  hidden\n  </section> -->\n  <section class=\"x\">\n    <p>a</p>\n  </section>\n</main>", 't');
+    check('splitter: label skipped, comment kept, section found', array_column($chunks, 'kind') === ['label', 'comment', 'element']);
+
     /* ------------------------------------------------------- whole fixtures */
+    config_set(['content_dir' => $dirs[1], 'enabled' => true]);
     $section('every fixture page renders');
     foreach (pages_all() as $id => $page) {
         if (($page['status'] ?? '') !== 'published') {

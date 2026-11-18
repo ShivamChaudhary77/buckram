@@ -1,0 +1,327 @@
+{
+    "id": "buckram-fabric",
+    "type": "product",
+    "status": "published",
+    "path": "/product/buckram-fabric.html",
+    "title": "Buckram Fabric",
+    "source": "product/buckram-fabric.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Buckram Fabric Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Buckram fabric manufacturer in Delhi since 1977. Stiff, shape-holding fabric for caps, belts, structured bags and waistbands. Standard and custom widths, bulk supply, export-ready.",
+        "ogDescription": "Stiff, shape-holding buckram fabric for caps, belts, structured bags and waistbands. Manufactured in Delhi since 1977, supplied in bulk to garment units and export buyers."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-shapes",
+            "eyebrow": "Structured Fabric",
+            "heading": "Buckram Fabric",
+            "intro": "Stiff, sized fabric manufactured for shape retention in caps, belts, structured bags and other garment components that need to hold their form.",
+            "image": "/assets/images/products/buckram-fabric/buckram-fabric-branded-rolls-04.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/buckram-fabric/buckram-fabric-branded-rolls-04.jpg",
+            "imageAlt": "Buckram fabric roll used for structured garment components",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "Fabric Built To Hold Its Shape, Not Just Its Colour",
+            "html": "<p class=\"mb-4\">Buckram is a sized or resin-treated fabric produced specifically for stiffness rather than drape. Where most interlining is chosen for how it bends, buckram is chosen for how well it resists bending — it is the material behind a cap peak that stays flat, a belt that doesn't fold under its own weight, or a box-style bag panel that keeps its edges square.</p>\n          <p class=\"mb-4\">We manufacture buckram on a cotton or blended base, treated to a firm, stable hand-feel that holds up through cutting, stitching and the finished life of the garment component. Every roll is produced to a consistent stiffness so a pattern piece cut from metre 5 behaves the same as one cut from metre 500.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Manufactured in-house in Delhi, not sourced through a middleman",
+                "Consistent stiffness roll to roll for predictable cutting and stitching",
+                "Standard and custom widths available on request"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Request a Quote",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Applications",
+            "subtitle": "Buckram goes into any garment component or accessory that needs to hold a fixed shape rather than fall or drape.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-hat-cowboy",
+                    "title": "Caps & Cap Peaks",
+                    "text": "Front panel and peak stiffening for structured caps that hold a fixed profile."
+                },
+                {
+                    "icon": "fas fa-grip-lines",
+                    "title": "Belts",
+                    "text": "Core stiffening for fabric belts that need to stay firm and uncrushed."
+                },
+                {
+                    "icon": "fas fa-box",
+                    "title": "Structured Bags & Boxes",
+                    "text": "Panel and edge support for structured bag and box-style components."
+                },
+                {
+                    "icon": "fas fa-ruler-horizontal",
+                    "title": "Waistband Stiffening",
+                    "text": "Added body at the waistband for a cleaner, uncollapsed finish."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/buckram-fabric/buckram-fabric-detail-07.png",
+            "imageAlt": "Close view of stiff buckram fabric texture",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes Our Buckram Different",
+            "html": "",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-hand-paper",
+                    "title": "Firm Hand-Feel",
+                    "text": "A stiff, stable feel by design, built for structural components."
+                },
+                {
+                    "icon": "fas fa-balance-scale",
+                    "title": "Consistent Stiffness",
+                    "text": "Uniform body across the full roll, not just the leading metres."
+                },
+                {
+                    "icon": "fas fa-cut",
+                    "title": "Stable Cut Edges",
+                    "text": "Holds a clean edge after cutting, without fraying loosely."
+                },
+                {
+                    "icon": "fas fa-layer-group",
+                    "title": "Cotton / Blended Base",
+                    "text": "Resin or starch-treated base cloth suited to structural use."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Works For Your Line",
+            "heading": "Benefits",
+            "items": [
+                {
+                    "icon": "fas fa-shield-alt",
+                    "title": "Shape Retention Through Wear",
+                    "text": "Holds its form after repeated handling and use, not just off the roll."
+                },
+                {
+                    "icon": "fas fa-chart-line",
+                    "title": "Predictable Roll-to-Roll Stiffness",
+                    "text": "Consistent body across production runs, so cutting and stitching parameters don't need re-tuning order after order."
+                },
+                {
+                    "icon": "fas fa-coins",
+                    "title": "Cost-Effective Structure",
+                    "text": "A straightforward, economical way to add structural body without switching to a heavier outer fabric."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Product Specifications",
+            "heading": "Typical Specifications",
+            "subtitle": "Figures below are typical production ranges, not guaranteed exact values. Confirm your specification sheet with us before ordering.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Composition",
+                    "Cotton or blended base cloth, resin/starch treated"
+                ],
+                [
+                    "Stiffness",
+                    "Firm to high, by grade — see variants below"
+                ],
+                [
+                    "Hand-Feel",
+                    "Stiff, board-like body; not designed to drape"
+                ],
+                [
+                    "Roll Form",
+                    "Standard rolls; custom widths available on request"
+                ],
+                [
+                    "Colour",
+                    "Natural / White / Black — subject to availability"
+                ],
+                [
+                    "Recommended Use",
+                    "Structural components only — caps, belts, bags, waistbands"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Options",
+            "heading": "Buckram Variants",
+            "subtitle": "Choose a stiffness grade based on how much rigidity your component needs.",
+            "items": [
+                {
+                    "title": "Light Stiffness Grade",
+                    "text": "A softer buckram for components that need body without full rigidity — useful where some hand-flex is acceptable."
+                },
+                {
+                    "title": "Medium Stiffness Grade",
+                    "text": "Our most commonly ordered grade, balancing firm shape-holding with workable cutting and stitching behaviour."
+                },
+                {
+                    "title": "Heavy Stiffness Grade",
+                    "text": "Maximum rigidity for components like cap peaks and box panels that must hold a fixed profile under pressure."
+                },
+                {
+                    "title": "Custom Width Rolls",
+                    "text": "Any of the above grades cut to a width matching your pattern layout, on confirmed bulk quantities."
+                }
+            ],
+            "delayMode": "linear",
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Buckram Fabric FAQs",
+            "intro": "Don't see your question here? Ask us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "buckramFaq",
+            "itemPrefix": "buckramFaq",
+            "items": [
+                {
+                    "q": "What widths does buckram come in?",
+                    "a": "We produce buckram in standard roll widths, and can cut to custom widths for confirmed bulk orders. Share your pattern width requirement and we'll confirm feasibility and lead time."
+                },
+                {
+                    "q": "Can buckram be dyed, or is it only natural colour?",
+                    "a": "We typically supply buckram in natural, white and black, subject to availability. If you need a specific shade for a visible application, discuss it with us before finalising your order."
+                },
+                {
+                    "q": "What is the minimum order quantity?",
+                    "a": "Minimum quantity depends on the stiffness grade and width you need. Contact us with your requirement and we'll confirm order sizes and pricing directly."
+                },
+                {
+                    "q": "How should buckram be stored before use?",
+                    "a": "Store rolls flat or upright in a dry area away from direct moisture. Damp storage can affect the sizing treatment and soften the stiffness before the fabric is even cut."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "belt-roll"
+                },
+                {
+                    "page": "shoulder-pad"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Buckram In Bulk?",
+            "text": "Tell us the stiffness grade, width and quantity you need — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Buckram Fabric",
+        "tag": "Structured",
+        "summary": "Stiff, shape-holding fabric for caps, belts and structured garment parts.",
+        "image": "/assets/images/products/buckram-fabric/buckram-fabric-branded-rolls-04.jpg",
+        "imageAlt": "Buckram fabric rolls stacked for garment manufacturing"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

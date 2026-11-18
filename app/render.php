@@ -142,11 +142,25 @@ function cards_per_row(string $colClass): int
     return 1;
 }
 
-/** Staggered animation delay used by the theme: 0, 100, 200… per row. */
-function aos_delay(int $i, int $perRow): string
+/**
+ * Staggered animation delay used by the theme: 0, 100, 200… restarting each row
+ * ($mode "row"), or growing for every card ($mode "linear").
+ */
+function aos_delay(int $i, int $perRow, string $mode = 'row'): string
 {
-    $d = ($perRow > 0 ? $i % $perRow : $i) * 100;
+    $d = ($mode === 'linear' || $perRow < 1 ? $i : $i % $perRow) * 100;
     return $d > 0 ? ' data-aos-delay="' . $d . '"' : '';
+}
+
+/** Animation delay for card $i of a grid block (delayMode row | linear | custom with "delays" list). */
+function block_delay(array $b, int $i, int $perRow): string
+{
+    $mode = (string) ($b['delayMode'] ?? 'row');
+    if ($mode === 'custom' && isset($b['delays'][$i])) {
+        $d = (int) $b['delays'][$i];
+        return $d > 0 ? ' data-aos-delay="' . $d . '"' : '';
+    }
+    return aos_delay($i, $perRow, $mode === 'linear' ? 'linear' : 'row');
 }
 
 /** <i class="fas fa-x"></i> or ''. */

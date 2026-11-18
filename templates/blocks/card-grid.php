@@ -5,7 +5,9 @@
  *   bg, eyebrow, heading, subtitle,
  *   card: "value" (icon card) | "variant" (optional photo card)
  *   centered (bool), col (column class, default "col-lg-4 col-md-6"), titleTag (h3|h4),
- *   items [{icon, image, imageAlt, title, text}], link {label, href}
+ *   items [{icon, image, imageAlt, title, text}], link {label, href},
+ *   center (bool: centre an incomplete last row), dark (white heading on a dark band),
+ *   delayMode ("row" | "linear" | "custom" + delays [ms…])
  */
 $col = (string) (($b['col'] ?? '') ?: 'col-lg-4 col-md-6');
 $perRow = cards_per_row($col);
@@ -16,13 +18,16 @@ $centered = !empty($b['centered']);
   <section<?= section_attr($b) ?>>
     <div class="container-custom">
 <?= render_template('partials/section-header', ['h' => $b]) ?>
-      <div class="row g-4">
+      <div class="row g-4<?= !empty($b['center']) ? ' justify-content-center' : '' ?>">
 <?php foreach (array_values($b['items'] ?? []) as $i => $item): ?>
-        <div class="<?= e($col) ?>" data-aos="fade-up"<?= aos_delay($i, $perRow) ?>>
+        <div class="<?= e($col) ?>" data-aos="fade-up"<?= block_delay($b, $i, $perRow) ?>>
 <?php if ($variant): ?>
           <div class="variant-card">
 <?php if (($item['image'] ?? '') !== ''): ?>
             <img src="<?= e($item['image']) ?>" alt="<?= e($item['imageAlt'] ?? '') ?>" loading="lazy" class="variant-swatch">
+<?php elseif (($item['icon'] ?? '') !== ''): ?>
+            <?= icon($item['icon']) ?>
+
 <?php endif; ?>
 <?php else: ?>
           <div class="value-card<?= $centered ? ' text-center' : '' ?>">

@@ -1,15 +1,17 @@
 <?php
 /**
- * Two-column specification table.
- * @var array $b  bg, eyebrow, heading, subtitle, columns [left, right], rows [[left, right], …]
+ * Table: product specifications (2 columns) or a comparison table (any number of columns).
+ * @var array $b  bg, eyebrow, heading, subtitle, style ("spec-table" | "compare-table"),
+ *                columns [heading…], rows [[cell (simple HTML)…], …], note (simple HTML under the table)
  */
 $cols = $b['columns'] ?? ['Parameter', 'Typical Specification'];
+$tableClass = in_array($b['style'] ?? '', ['spec-table', 'compare-table'], true) ? $b['style'] : 'spec-table';
 ?>
   <section<?= section_attr($b) ?>>
     <div class="container-custom">
 <?= render_template('partials/section-header', ['h' => $b]) ?>
       <div class="table-responsive-custom" data-aos="fade-up">
-        <table class="spec-table">
+        <table class="<?= $tableClass ?>">
           <thead>
             <tr>
 <?php foreach ($cols as $c): ?>
@@ -28,6 +30,9 @@ $cols = $b['columns'] ?? ['Parameter', 'Typical Specification'];
           </tbody>
         </table>
       </div>
+<?php if (trim((string) ($b['note'] ?? '')) !== ''): ?>
+      <p class="text-center text-muted mt-4" data-aos="fade-up"><?= $b['note'] ?></p>
+<?php endif; ?>
     </div>
   </section>
 

@@ -1,0 +1,208 @@
+{
+    "id": "about",
+    "type": "about",
+    "status": "published",
+    "path": "/about.html",
+    "title": "About Us",
+    "source": "about.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "About Us | Jaibaba Interlinings — Garment Interlining Manufacturer Since 1977",
+        "description": "Jai Baba Nanak Cloth Trading Co. has manufactured buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pads, EVA foam, woven & knitted elastics, tatron and velcro tape from Delhi since 1977. Read our story, mission and manufacturing legacy.",
+        "ogDescription": "A family-run Delhi manufacturer of garment interlining fabric, in continuous operation since 1977. Learn our story, mission, values and manufacturing legacy."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-industry",
+            "eyebrow": "About Jaibaba Interlinings",
+            "heading": "Manufacturing Interlining Fabric in Delhi Since 1977",
+            "intro": "From a small cloth trading counter in 1977 to a full-scale interlining manufacturer — this is the story of the business garment makers and buying houses still call directly today.",
+            "image": "/assets/images/banners/about-page-banner.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"row align-items-center g-5\">\n        <div class=\"col-lg-6\" data-aos=\"fade-right\">\n          <div class=\"position-relative\">\n            <div class=\"img-frame\">\n              <img src=\"/assets/images/general/general-buckram-detail-04.jpg\" alt=\"Fabric rolls at Jai Baba Nanak Cloth Trading Co. in Delhi\" loading=\"lazy\" class=\"w-100\">\n            </div>\n            <div class=\"badge-experience d-none d-md-block\">\n              <div class=\"num\">1977</div>\n              <div class=\"lbl\">Year Founded</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-6\" data-aos=\"fade-left\">\n          <span class=\"section-eyebrow\">Our Story</span>\n          <h2 class=\"section-title\">From A Small Trading Counter To A Manufacturer</h2>\n          <p class=\"mb-4\">Jai Baba Nanak Cloth Trading Co. began in 1977 as a small cloth trading counter in Delhi. There was no factory behind it at first — just a family willing to source fabric honestly and deliver what was promised, on the day it was promised.</p>\n          <p class=\"mb-4\">Over the decades, that trading counter grew into in-house <a href=\"/manufacturing.html\">manufacturing</a>. Machines were added as demand grew, product lines were built one at a time, and the business moved from simply trading cloth to producing it — buckram, fusible interlining, pocketing cloth, readymade collar &amp; cuff, belt roll &amp; placket (patti), shoulder pads, EVA foam, woven &amp; knitted elastics, tatron and velcro tape. Buckram alone moves through every channel we operate — manufactured for garment units and supplied in bulk to wholesalers and traders alike.</p>\n          <p class=\"mb-4\">The company remains family-run to this day. It is now guided by the next generation of the Chawla family, and our sales team handles orders, specifications and dispatch for garment manufacturers and buying houses.</p>\n          <ul class=\"check-list mb-4\">\n            <li><i class=\"fas fa-check-circle\"></i>Family-owned since 1977, now in its next generation of leadership</li>\n            <li><i class=\"fas fa-check-circle\"></i>Grew from trading to full in-house manufacturing</li>\n            <li><i class=\"fas fa-check-circle\"></i>Same direct, no-middleman relationship with buyers since day one</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "From A Small Trading Counter To A Manufacturer"
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Our Journey</span>\n        <h2 class=\"section-title\">Journey Since 1977</h2>\n        <p class=\"section-subtitle mx-auto\">Every stage of our growth has been built on the same principle: don't take on more than the factory can deliver consistently.</p>\n      </div>\n      <div class=\"row g-3 mb-3\">\n        <div class=\"col-sm-6 col-lg-3\" data-aos=\"fade-up\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-store\"></i></div>\n            <div>\n              <h4>1977 — Trading Counter</h4>\n              <p>Started as a small cloth trading business in Delhi.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-sm-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-industry\"></i></div>\n            <div>\n              <h4>In-House Manufacturing</h4>\n              <p>Brought production in-house to control quality directly.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-sm-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-th-large\"></i></div>\n            <div>\n              <h4>10 Product Lines</h4>\n              <p>Broadened into the full range of interlining categories we make today.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-sm-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-globe-asia\"></i></div>\n            <div>\n              <h4>Domestic &amp; Export</h4>\n              <p>Extended supply to buying houses and export merchants.</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Journey Since 1977"
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Our Mission",
+            "heading": "Consistent Fabric, Order After Order",
+            "subtitle": "Our mission has not changed since 1977 — supply garment makers with interlining they can build a production schedule around.",
+            "items": [
+                {
+                    "icon": "fas fa-check-double",
+                    "title": "Reliable, Repeatable Quality",
+                    "text": "The roll you reorder should match the roll you first tested — every time, not just on the first order."
+                },
+                {
+                    "icon": "fas fa-handshake",
+                    "title": "Direct Manufacturer Relationships",
+                    "text": "Buyers deal with the people who make their fabric, not a chain of agents and resellers."
+                },
+                {
+                    "icon": "fas fa-truck-fast",
+                    "title": "Dispatch You Can Plan Around",
+                    "text": "A confirmed delivery date is a commitment, not an estimate — production schedules depend on us keeping it."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Our Vision",
+            "heading": "Where We're Headed",
+            "subtitle": "Growth for us means going deeper into interlining manufacturing, not spreading thin across unrelated categories.",
+            "items": [
+                {
+                    "icon": "fas fa-industry",
+                    "title": "Deeper Manufacturing Capability",
+                    "text": "Continued investment in our Delhi production floor, not diversification away from what we know."
+                },
+                {
+                    "icon": "fas fa-globe-asia",
+                    "title": "Wider Export Reach",
+                    "text": "Extending the same manufacturer-direct relationship to more export buying houses and merchants."
+                },
+                {
+                    "icon": "fas fa-people-roof",
+                    "title": "A Business Built To Outlast Us",
+                    "text": "Passing a family business to the next generation with the same standards it was built on."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Our Values",
+            "heading": "What Guides Every Order We Ship",
+            "items": [
+                {
+                    "icon": "fas fa-ruler-combined",
+                    "title": "Consistency Over Cleverness",
+                    "text": "We would rather hold a specification steady across a thousand metres than experiment mid-order."
+                },
+                {
+                    "icon": "fas fa-scale-balanced",
+                    "title": "Straight Dealing",
+                    "text": "Clear pricing, honest lead times, and no surprises buried in the fine print of an order."
+                },
+                {
+                    "icon": "fas fa-shield-halved",
+                    "title": "Ownership",
+                    "text": "If a batch falls short of specification, we own the problem and fix it — not the buyer's production schedule."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-production-floor-19.jpg",
+            "imageAlt": "Interlining fabric manufacturing floor at Jaibaba Interlinings",
+            "video": "",
+            "eyebrow": "Manufacturing Legacy",
+            "heading": "A Factory Built Up Step By Step Over Decades",
+            "html": "<p class=\"mb-4\">Our manufacturing capability wasn't set up in a single investment — it was added to gradually, decade after decade, as the business earned the right to grow. Each machine, each process checkpoint, was added because a buyer needed it, not because it looked good on paper.</p>\n          <p class=\"mb-4\">That gradual build-up is why our <a href=\"/manufacturing.html\">manufacturing process</a> is as stable as it is today. Nothing on our floor is untested at scale, and every product category we run has years of production history behind it.</p>",
+            "miniFeatures": [],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Leadership</span>\n        <h2 class=\"section-title\">Family-Run, Now In Its Next Generation</h2>\n        <p class=\"section-subtitle mx-auto\">The Chawla family still runs the business, and a dedicated sales team looks after customer enquiries and orders.</p>\n      </div>\n      <div class=\"row justify-content-center\">\n        <div class=\"col-lg-6\" data-aos=\"zoom-in\">\n          <div class=\"testimonial-card text-center\">\n            <div class=\"testimonial-avatar mx-auto mb-3\">SC</div>\n            <h3 class=\"mb-1\">Mr. Sahil Chawla</h3>\n            <p class=\"author-role mb-3\">Representing the Current Generation, Jai Baba Nanak Cloth Trading Co.</p>\n            <p class=\"quote-text\">Mr. Sahil Chawla carries the family business forward into its next generation, keeping the same standards buyers have relied on since 1977. Our sales team handles order enquiries, specifications and dispatch.</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Family-Run, Now In Its Next Generation"
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-warehouse-aisle-18.jpg",
+            "imageAlt": "Production infrastructure at the Jaibaba Interlinings Delhi facility",
+            "video": "",
+            "eyebrow": "Infrastructure Overview",
+            "heading": "A Delhi Facility Set Up For Repeat, Bulk Production",
+            "html": "<p class=\"mb-4\">Our infrastructure is built around one goal: repeatability at volume. Raw material intake, production, in-line checks and packing are laid out as a continuous flow, so a bulk order doesn't get treated any differently from a small one — it just runs longer.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Dedicated production lines for each core product category",
+                "In-line width, weight and bond checkpoints during every run",
+                "Packing and storage set up for both domestic dispatch and export"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Our Quality Standards",
+                "href": "/quality.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Milestones</span>\n        <h2 class=\"section-title\">Since 1977, In Brief</h2>\n      </div>\n      <div class=\"timeline\" data-aos=\"fade-up\">\n        <div class=\"timeline-item\">\n          <div class=\"timeline-year\">1977</div>\n          <h3>Started As A Cloth Trading Counter</h3>\n          <p>Jai Baba Nanak Cloth Trading Co. began trading cloth in Delhi, building relationships one order at a time.</p>\n        </div>\n        <div class=\"timeline-item\">\n          <div class=\"timeline-year\">Early Years</div>\n          <h3>Expansion Into In-House Manufacturing</h3>\n          <p>The business moved beyond trading and began producing interlining fabric on its own floor.</p>\n        </div>\n        <div class=\"timeline-item\">\n          <div class=\"timeline-year\">Growth Years</div>\n          <h3>Broadened Into 10 Core Product Categories</h3>\n          <p>Buckram, fusible interlining, pocketing cloth, readymade collar &amp; cuff, belt roll &amp; placket (patti), shoulder pads, EVA foam, woven &amp; knitted elastics, tatron and velcro tape were added to the range.</p>\n        </div>\n        <div class=\"timeline-item\">\n          <div class=\"timeline-year\">Later Years</div>\n          <h3>Began Serving Export Buying Houses</h3>\n          <p>Domestic supply extended into export documentation and container-ready bulk shipments.</p>\n        </div>\n        <div class=\"timeline-item\">\n          <div class=\"timeline-year\">Today</div>\n          <h3>In Continuous Operation Since 1977</h3>\n          <p>Now guided by the next generation of the Chawla family, manufacturing ten interlining product lines from Delhi for garment makers, wholesalers and traders across India and abroad.</p>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Since 1977, In Brief"
+        },
+        {
+            "type": "cta",
+            "heading": "Want To Know More Before You Order?",
+            "text": "Talk directly to the team that manufactures your fabric — ask about our process, our quality checks, or your specification.",
+            "buttons": [
+                {
+                    "label": "Contact Us",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

@@ -1,0 +1,336 @@
+{
+    "id": "fusible-interlining",
+    "type": "product",
+    "status": "published",
+    "path": "/product/fusible-interlining.html",
+    "title": "Fusible Interlining",
+    "source": "product/fusible-interlining.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Fusible Interlining Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Fusible interlining manufactured in Delhi since 1977 — even resin coating for a clean, bubble-free fuse on collars, cuffs, plackets and jacket fronts. Bulk and export orders.",
+        "ogTitle": "Fusible Interlining Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Resin-coated fusible interlining for a clean, bubble-free fuse on collars, cuffs, plackets and jacket fronts. Manufactured in Delhi since 1977."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-temperature-high",
+            "eyebrow": "Heat-Bonded Interlining",
+            "heading": "Fusible Interlining",
+            "intro": "Resin-coated interlining fabric built for a clean, even fuse — collar to cuff to placket — with the same bond quality on your 500th metre as your first sample.",
+            "image": "/assets/images/products/fusible-interlining/fusible-interlining-warehouse-04.png",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/fusible-interlining/fusible-interlining-qc-inspection-02.png",
+            "imageAlt": "Fusible interlining fabric roll with resin coating for heat bonding",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "A Resin-Coated Fabric Made To Bond, Not Just Sit On Top",
+            "html": "<p class=\"mb-4\">Fusible interlining is a support fabric coated with a heat-activated resin on one side. Placed between the outer fabric and the fusing press, heat and pressure melt the resin into the weave of the shell fabric, bonding the two layers into a single, stable panel.</p>\n          <p class=\"mb-4\">Done right, the fuse is invisible from the outside — no bubbling, no peeling at the edges, no stiffness that fights the drape of the garment. That result depends on two things: how evenly the resin is coated at the factory, and how the fusing press is set on your line. We control the first; we help you get the second right with every order.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Even resin spread across the full roll width, not just the centre",
+                "Consistent from the first metre to the last on every production run",
+                "Manufactured in-house in Delhi since 1977, with batch-wise QC"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Built For Structural Panels That Need A Clean Fuse",
+            "subtitle": "Fusible interlining is the standard choice wherever a garment panel needs shape and stability without added bulk.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-tshirt",
+                    "title": "Shirt Collars & Cuffs",
+                    "text": "A crisp collar roll and cuff edge that holds shape through ironing and wear."
+                },
+                {
+                    "icon": "fas fa-grip-lines",
+                    "title": "Plackets",
+                    "text": "Stable button and buttonhole placket panels that resist rippling."
+                },
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Jacket & Blazer Fronts",
+                    "text": "Fused chest and front panels that hold structure without adding stiffness."
+                },
+                {
+                    "icon": "fas fa-ruler-horizontal",
+                    "title": "Waistbands",
+                    "text": "Firm, even support for trouser and skirt waistbands under daily wear."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/fusible-interlining/fusible-interlining-resin-finish-05.png",
+            "imageAlt": "Close-up of fusible interlining resin coating before heat bonding",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes A Fuse Hold Up On The Line",
+            "html": "<p class=\"mb-4\">A fusible interlining is only as good as its resin coating. We manufacture to keep three things in check on every roll that leaves our floor.</p>",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-layer-group",
+                    "title": "Even Resin Coating",
+                    "text": "Applied uniformly across the full roll width for consistent adhesion, edge to edge."
+                },
+                {
+                    "icon": "fas fa-check-double",
+                    "title": "Bubble-Free Fuse",
+                    "text": "Clean bond when pressed at the settings recommended for your fabric and press."
+                },
+                {
+                    "icon": "fas fa-hand-sparkles",
+                    "title": "Stable Hand-Feel After Fusing",
+                    "text": "Bonds without turning stiff or papery — the drape of the outer fabric stays intact."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "Discuss Your Specification",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "featureCol": "col-sm-12"
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Matters On Your Line",
+            "heading": "Benefits That Show Up In Your Rejection Rate",
+            "items": [
+                {
+                    "icon": "fas fa-thumbs-up",
+                    "title": "Clean Finish, No Bubbling",
+                    "text": "A properly coated and correctly fused panel shows no bubbling or peeling at the seams or edges after pressing."
+                },
+                {
+                    "icon": "fas fa-recycle",
+                    "title": "Fewer Rework & Rejects",
+                    "text": "Even resin distribution means fewer panels sent back from the fusing line for re-pressing or replacement."
+                },
+                {
+                    "icon": "fas fa-history",
+                    "title": "Predictable Across Repeat Orders",
+                    "text": "The roll you reorder six months from now fuses the same way as the one you tested first — no re-tuning your press each time."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Product Specifications",
+            "heading": "Typical Specification Range",
+            "subtitle": "General reference only — exact fusing temperature, pressure and dwell time should be confirmed with our team for your specific fabric and press before bulk production.",
+            "columns": [
+                "Specification",
+                "Typical Detail"
+            ],
+            "rows": [
+                [
+                    "Coating Type",
+                    "Resin dot or paste coating, applied for even adhesion"
+                ],
+                [
+                    "Base Fabric",
+                    "Woven or non-woven base available depending on application"
+                ],
+                [
+                    "Bond Method",
+                    "Heat-activated resin; fusing press recommended for application"
+                ],
+                [
+                    "Roll Form",
+                    "Supplied in standard rolls, with custom widths on request"
+                ],
+                [
+                    "Fusing Parameters",
+                    "Temperature, pressure and dwell time vary by fabric and press — confirm with our team before production"
+                ],
+                [
+                    "Colour",
+                    "White and standard shades; custom shades on request for bulk orders"
+                ],
+                [
+                    "Packing",
+                    "Roll-wrapped for transit, labelled to order specification"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Variants",
+            "heading": "Choose The Base That Fits Your Application",
+            "subtitle": "We manufacture fusible interlining across base fabric types and weight grades. Tell us your end use and we'll recommend the right variant.",
+            "items": [
+                {
+                    "image": "/assets/images/products/fusible-interlining/fusible-interlining-showroom-03.png",
+                    "imageAlt": "Woven base fusible interlining variant",
+                    "title": "Woven Base",
+                    "text": "Stable dimensional hold for collars, cuffs and plackets on formal shirting."
+                },
+                {
+                    "image": "/assets/images/products/fusible-interlining/fusible-interlining-brand-range-01.jpg",
+                    "imageAlt": "Non-woven base fusible interlining variant",
+                    "title": "Non-Woven Base",
+                    "text": "Lighter, economical option for panels that need support without added weight."
+                },
+                {
+                    "image": "/assets/images/products/fusible-interlining/fusible-interlining-lobby-06.png",
+                    "imageAlt": "Light-weight grade fusible interlining variant",
+                    "title": "Light Weight Grade",
+                    "text": "Soft hand-feel for shirting and lightweight formalwear panels."
+                },
+                {
+                    "image": "/assets/images/products/fusible-interlining/fusible-interlining-qc-inspection-02.png",
+                    "imageAlt": "Medium to heavy weight grade fusible interlining variant",
+                    "title": "Medium-To-Heavy Grade",
+                    "text": "Firmer structure for jacket fronts, waistbands and heavier outer fabrics."
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "titleTag": "h4",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Fusible Interlining FAQs",
+            "intro": "Have a question specific to your fabric or press? Send it to us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "fusibleFaq",
+            "itemPrefix": "fusibleFaq",
+            "items": [
+                {
+                    "q": "What fusing temperature and pressure do you recommend?",
+                    "a": "Recommended temperature, pressure and dwell time depend on your outer fabric, the resin coating and the make and condition of your fusing press. We provide general starting guidance with every order, but we recommend confirming exact settings with our team and running a test fuse before bulk production."
+                },
+                {
+                    "q": "Will this interlining bubble after multiple washes?",
+                    "a": "A correctly fused panel, pressed at the right temperature and pressure for that fabric combination, should hold without bubbling through normal wash cycles. Most post-wash bubbling traces back to under-fusing on the press rather than the interlining itself, which is why we recommend a test fuse and wash trial before committing to bulk production."
+                },
+                {
+                    "q": "Can I get a sample to test on my fusing press before bulk order?",
+                    "a": "Yes. We recommend testing on your own press with your own outer fabric before placing a bulk order. Contact us with your application and we'll arrange samples for evaluation."
+                },
+                {
+                    "q": "What is the minimum order quantity?",
+                    "a": "Minimum quantities depend on the base fabric, weight grade and roll width you need. Share your requirement through our contact form and we'll confirm feasible order sizes along with lead time."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "subtitle": "Fusible interlining is often ordered alongside these categories for a complete garment structure.",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "collar-cuff"
+                },
+                {
+                    "page": "pocketing-fabric"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Ready To Test Fusible Interlining On Your Line?",
+            "text": "Tell us your fabric, application and quantity — our team will confirm feasibility, samples and pricing within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Fusible Interlining",
+        "tag": "Heat-Bonded",
+        "summary": "Even resin coating for a clean, bubble-free fuse on collars, cuffs and plackets.",
+        "image": "/assets/images/products/fusible-interlining/fusible-interlining-warehouse-04.png",
+        "imageAlt": "Fusible interlining fabric used in shirt collars and cuffs"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

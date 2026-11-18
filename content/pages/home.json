@@ -1,0 +1,350 @@
+{
+    "id": "home",
+    "type": "home",
+    "status": "published",
+    "path": "/index.html",
+    "title": "Home",
+    "source": "index.html",
+    "seo": {
+        "title": "Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977, Delhi",
+        "description": "Jai Baba Nanak Cloth Trading Co. manufactures buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pads, EVA foam, woven & knitted elastics, tatron and velcro tape for garment makers across India and export markets. In Delhi since 1977.",
+        "ogTitle": "Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977",
+        "ogDescription": "Manufacturer, supplier, wholesaler, exporter and trader of garment interlining fabrics from Delhi, India. Serving garment manufacturers and buying houses since 1977."
+    },
+    "jsonld": [
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Jai Baba Nanak Cloth Trading Co.",
+            "alternateName": "Jaibaba Interlinings",
+            "url": "https://www.jaibabainterlinings.com/",
+            "logo": "https://www.jaibabainterlinings.com/assets/images/logo.svg",
+            "foundingDate": "1977",
+            "description": "Manufacturer, supplier, wholesaler, exporter and trader of garment interlining fabrics including buckram, fusible interlining, pocketing cloth, readymade collar and cuff, belt roll and placket (patti), shoulder pads and EVA foam.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Delhi",
+                "addressCountry": "IN"
+            },
+            "telephone": "+91-9910555033",
+            "email": "Jaibabananakclothtrading@gmail.com",
+            "sameAs": [
+                "https://www.facebook.com/share/1DKBwKzXMC/",
+                "https://www.instagram.com/jaibabananakclothtrading",
+                "https://x.com/JB_GROUP_DELHI",
+                "https://youtube.com/@jaibabananakclothtradingco9486"
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "html",
+            "html": "  <section class=\"hero\" style=\"background-image:url('/assets/images/banners/home-page-hero-banner.png');\">\n    <div class=\"container-custom\">\n      <div class=\"row\">\n        <div class=\"col-xl-8 col-lg-9\">\n          <span class=\"hero-eyebrow\"><i class=\"fas fa-industry\"></i>Trusted Since 1977 · Delhi, India</span>\n          <h1>Interlining Fabric That Holds Its Shape, Shipment After Shipment</h1>\n          <p class=\"hero-lead\">Since 1977, garment manufacturers and buying houses have relied on us for buckram, fusible interlining, pocketing cloth, readymade collar &amp; cuff, belt roll &amp; placket (patti), shoulder pads, EVA foam, woven &amp; knitted elastics, tatron and velcro tape — produced to consistent width, weight and bond strength, order after order.</p>\n          <div class=\"hero-actions\">\n            <a href=\"/contact.html\" class=\"btn btn-gold btn-lg-custom\">Request Bulk Quote</a>\n            <a href=\"/products.html\" class=\"btn btn-outline-light-custom btn-lg-custom\">View Product Range</a>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"hero-stats-strip\">\n        <div>\n          <div class=\"stat-num\">1977</div>\n          <div class=\"stat-label\">Year Established</div>\n        </div>\n        <div>\n          <div class=\"stat-num\">In-House</div>\n          <div class=\"stat-label\">Manufacturing</div>\n        </div>\n        <div>\n          <div class=\"stat-num\">10</div>\n          <div class=\"stat-label\">Core Product Lines</div>\n        </div>\n        <div>\n          <div class=\"stat-num\">Pan-India</div>\n          <div class=\"stat-label\">+ Export Supply</div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"hero-scroll-cue\">\n      Scroll\n      <i class=\"fas fa-chevron-down\"></i>\n    </div>\n  </section>",
+            "label": "Interlining Fabric That Holds Its Shape, Shipment After Shipment"
+        },
+        {
+            "type": "html",
+            "html": "  <div class=\"trust-strip\">\n    <div class=\"container-custom\">\n      <div class=\"row g-4\">\n        <div class=\"col-6 col-lg-4\">\n          <div class=\"trust-item\" data-aos=\"fade-up\">\n            <i class=\"fas fa-award\"></i>\n            <div>\n              <div class=\"trust-title\">Est. 1977</div>\n              <div class=\"trust-sub\">Four Decades of Trust</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-6 col-lg-4\">\n          <div class=\"trust-item\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n            <i class=\"fas fa-globe-asia\"></i>\n            <div>\n              <div class=\"trust-title\">Domestic &amp; Export</div>\n              <div class=\"trust-sub\">Bulk Order Fulfilment</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-6 col-lg-4\">\n          <div class=\"trust-item\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n            <i class=\"fas fa-check-double\"></i>\n            <div>\n              <div class=\"trust-title\">Batch-Wise QC</div>\n              <div class=\"trust-sub\">Every Roll Inspected</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>"
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"row align-items-center g-5\">\n        <div class=\"col-lg-6\" data-aos=\"fade-right\">\n          <div class=\"position-relative\">\n            <div class=\"img-frame\">\n              <video class=\"w-100 d-block\" controls playsinline preload=\"metadata\">\n                <source src=\"https://antardrishtiyog.com/jaibaba-video.mp4\" type=\"video/mp4\">\n                Your browser does not support the video tag.\n              </video>\n            </div>\n            <div class=\"badge-experience d-none d-md-block\">\n              <div class=\"num\">1977</div>\n              <div class=\"lbl\">Established</div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-6\" data-aos=\"fade-left\">\n          <span class=\"section-eyebrow\">Who We Are</span>\n          <h2 class=\"section-title\">A Delhi-Based Manufacturer Trusted by Garment Buyers Since 1977</h2>\n          <p class=\"mb-4\">Jai Baba Nanak Cloth Trading Co. began as a small cloth trading business in Delhi in 1977 and has grown into a trusted manufacturer of premium interlining fabrics. With decades of experience, we supply buckram, fusible interlining, pocketing cloth, collar & cuff, belt roll & placket, shoulder pads, EVA foam, woven & knitted elastics, tatron, velcro tape and other garment accessories to manufacturers, wholesalers, buying houses, and exporters.</p>\n          <p class=\"mb-4\">As a family-run business now led by the next generation, we remain committed to consistent quality, reliable supply, and direct manufacturer pricing—ensuring every order meets the standards our customers expect.</p>\n          <!-- <ul class=\"check-list mb-4\">\n            <li><i class=\"fas fa-check-circle\"></i>Family-run business, now in its next generation of leadership</li>\n            <li><i class=\"fas fa-check-circle\"></i>Consistent width, weight and bonding across every dispatch</li>\n            <li><i class=\"fas fa-check-circle\"></i>Direct manufacturer pricing — no middleman markup</li>\n          </ul> -->\n          <a href=\"/about.html\" class=\"btn btn-navy\">Our Full Story <i class=\"fas fa-arrow-right ms-2\"></i></a>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "A Delhi-Based Manufacturer Trusted by Garment Buyers Since 1977"
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "What We Manufacture",
+            "heading": "Ten Product Lines, One Consistent Standard",
+            "subtitle": "Every category is produced and inspected in-house, so the roll you reorder six months from now performs exactly like the one you tested first.",
+            "center": false,
+            "items": [
+                {
+                    "page": "buckram-fabric"
+                },
+                {
+                    "page": "fusible-interlining"
+                },
+                {
+                    "page": "pocketing-fabric"
+                },
+                {
+                    "page": "collar-cuff"
+                },
+                {
+                    "page": "belt-roll"
+                },
+                {
+                    "page": "shoulder-pad"
+                },
+                {
+                    "page": "eva-foam"
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "promo": {
+                "icon": "fas fa-comments",
+                "title": "Need a Custom Spec?",
+                "text": "Tell us the GSM, width or bond you need — we'll confirm feasibility within one business day.",
+                "button": {
+                    "label": "Talk To Us",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-sm-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                }
+            }
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-buckram-about-02.jpg",
+            "imageAlt": "Textile machinery producing interlining fabric at Jaibaba factory",
+            "video": "",
+            "eyebrow": "Manufacturing Excellence",
+            "heading": "Built On The Factory Floor, Not Just The Sample Room",
+            "html": "<p class=\"mb-4\">A sample that looks right on a table can still fail on a production line. That's why our process is built around repeatability — the same raw material sourcing, the same machine settings, the same inspection checkpoints on every run, so your 500th metre matches your 5th.</p>",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-layer-group",
+                    "title": "Controlled Raw Material",
+                    "text": "Sourced and graded before it enters production."
+                },
+                {
+                    "icon": "fas fa-ruler-combined",
+                    "title": "Width & Weight Checks",
+                    "text": "Measured at intervals through every production run."
+                },
+                {
+                    "icon": "fas fa-temperature-high",
+                    "title": "Calibrated Fusing",
+                    "text": "Bond strength held steady across the full roll."
+                },
+                {
+                    "icon": "fas fa-box-open",
+                    "title": "Roll-Ready Packing",
+                    "text": "Packed to travel — by truck or by container."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where Our Fabric Goes",
+            "heading": "Industries & Garment Categories We Serve",
+            "subtitle": "From formal shirting to industrial workwear, our interlining is built into garments that need to hold shape through daily wear and repeated washing.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-tshirt",
+                    "title": "Shirts & Formalwear",
+                    "text": "Collar, cuff and placket support for a crisp, lasting finish."
+                },
+                {
+                    "icon": "fas fa-user-tie",
+                    "title": "Uniforms",
+                    "text": "School, corporate and institutional uniforms made for repeated washing."
+                },
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Blazers & Jackets",
+                    "text": "Shoulder, chest and lapel structure that holds through wear."
+                },
+                {
+                    "icon": "fas fa-industry",
+                    "title": "Industrial Garments",
+                    "text": "Heavy-duty interlining for workwear that faces daily abrasion."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Why Garment Makers Choose Us",
+            "heading": "Why Buyers Keep Ordering From Us",
+            "items": [
+                {
+                    "icon": "fas fa-industry",
+                    "title": "Manufacturer, Not Just Trader",
+                    "text": "We produce in-house, so we control quality and lead time instead of depending on someone else's factory schedule."
+                },
+                {
+                    "icon": "fas fa-history",
+                    "title": "In One Business Since 1977",
+                    "text": "We have stayed in interlining fabric all these years — no category-hopping, just deeper expertise every year."
+                },
+                {
+                    "icon": "fas fa-check-double",
+                    "title": "Batch-Wise Quality Checks",
+                    "text": "Every production run is inspected for width, weight and bond before it is cleared for dispatch."
+                },
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "Bulk Order Capacity",
+                    "text": "Production planning built for repeat, high-volume orders — not one-off small lots."
+                },
+                {
+                    "icon": "fas fa-globe-asia",
+                    "title": "Export-Ready Documentation",
+                    "text": "Packing lists, invoices and shipment paperwork prepared for smooth customs clearance."
+                },
+                {
+                    "icon": "fas fa-handshake",
+                    "title": "Direct Manufacturer Pricing",
+                    "text": "You deal directly with the people who produce your fabric — no middleman markup on your order."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-roller-closeup-23.jpg",
+            "imageAlt": "Quality inspection of fabric rolls before dispatch",
+            "video": "",
+            "eyebrow": "Quality Process",
+            "heading": "Every Roll Is Inspected Before Dispatch",
+            "html": "<p class=\"mb-4\">We check width, weight per metre, colour consistency and bond strength during production — not just at the end of the line. Any roll that falls outside tolerance is set aside before it ever reaches packing.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "In-line checks during production, not just final inspection",
+                "Fusing tested for bond strength and wash durability",
+                "Packing verified against order specification before dispatch"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Our Quality Standards",
+                "href": "/quality.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-up",
+            "textAos": "fade-up",
+            "image": "/assets/images/manufacturing-page/manufacturing-container-loading-01.jpg",
+            "imageAlt": "Export shipping containers for bulk interlining fabric orders",
+            "video": "",
+            "eyebrow": "Export Capability",
+            "heading": "We Also Supply Export Orders",
+            "html": "<p class=\"mb-4\">Alongside our domestic supply to garment units across India, we handle export documentation, container-ready packing and bulk logistics for overseas buying houses and merchant exporters.</p>\n          <div class=\"pill-list mb-4\">\n            <span class=\"pill\"><i class=\"fas fa-file-invoice\"></i>Export Documentation</span>\n            <span class=\"pill\"><i class=\"fas fa-box\"></i>Container Packing</span>\n            <span class=\"pill\"><i class=\"fas fa-ship\"></i>Bulk Logistics Support</span>\n            <span class=\"pill\"><i class=\"fas fa-clipboard-check\"></i>Pre-Shipment QC</span>\n          </div>",
+            "miniFeatures": [],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "Export Information",
+                "href": "/exports.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "mediaCol": "col-lg-6",
+            "textCol": "col-lg-6",
+            "mediaDelay": 150
+        },
+        {
+            "type": "html",
+            "html": "  <!-- <section class=\"bg-navy\">\n    <div class=\"container-custom\">\n      <div class=\"row g-4 text-center\">\n        <div class=\"col-6 col-lg-3\" data-aos=\"fade-up\">\n          <div class=\"stat-card\">\n            <div class=\"stat-icon\"><i class=\"fas fa-calendar-alt\"></i></div>\n            <div><span class=\"counter\" data-count=\"1977\">0</span></div>\n            <div class=\"stat-caption text-white-50\">Year Established</div>\n          </div>\n        </div>\n        <div class=\"col-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"stat-card\">\n            <div class=\"stat-icon\"><i class=\"fas fa-award\"></i></div>\n            <div>In-House</div>\n            <div class=\"stat-caption text-white-50\">Manufacturing</div>\n          </div>\n        </div>\n        <div class=\"col-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"stat-card\">\n            <div class=\"stat-icon\"><i class=\"fas fa-th-large\"></i></div>\n            <div><span class=\"counter\" data-count=\"10\">0</span></div>\n            <div class=\"stat-caption text-white-50\">Product Categories</div>\n          </div>\n        </div>\n        <div class=\"col-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"stat-card\">\n            <div class=\"stat-icon\"><i class=\"fas fa-check-double\"></i></div>\n            <div><span class=\"counter\" data-count=\"100\">0</span><span class=\"stat-suffix\">%</span></div>\n            <div class=\"stat-caption text-white-50\">Quality-Checked Dispatch</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section> -->",
+            "note": "Hidden (commented-out) section kept from the old site."
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Buyer Confidence</span>\n        <h2 class=\"section-title\">What Our Buyers Say</h2>\n        <p class=\"section-subtitle mx-auto\">Feedback from garment manufacturers and buying houses we work with — updated as new reviews come in.</p>\n      </div>\n      <div class=\"swiper testimonial-swiper\" data-aos=\"fade-up\">\n        <div class=\"swiper-wrapper pb-5\">\n          <div class=\"swiper-slide\">\n            <div class=\"testimonial-card\">\n              <i class=\"fas fa-quote-left quote-icon\"></i>\n              <div class=\"stars\"><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i></div>\n              <p class=\"quote-text\">\"Reorders match the first sample every single time — that consistency is what keeps our production line moving without surprises.\"</p>\n              <div class=\"testimonial-author\">\n                <div class=\"testimonial-avatar\">PM</div>\n                <div>\n                  <div class=\"author-name\">Procurement Manager</div>\n                  <div class=\"author-role\">Garment Manufacturing Unit, NCR</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"swiper-slide\">\n            <div class=\"testimonial-card\">\n              <i class=\"fas fa-quote-left quote-icon\"></i>\n              <div class=\"stars\"><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i></div>\n              <p class=\"quote-text\">\"Documentation for our export shipment was ready and accurate the first time. That alone saved us days at customs.\"</p>\n              <div class=\"testimonial-author\">\n                <div class=\"testimonial-avatar\">EB</div>\n                <div>\n                  <div class=\"author-name\">Export Buyer</div>\n                  <div class=\"author-role\">Buying House</div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"swiper-slide\">\n            <div class=\"testimonial-card\">\n              <i class=\"fas fa-quote-left quote-icon\"></i>\n              <div class=\"stars\"><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i></div>\n              <p class=\"quote-text\">\"We switched our collar interlining supplier twice before finding Jaibaba. The fuse quality has been steady for over two years now.\"</p>\n              <div class=\"testimonial-author\">\n                <div class=\"testimonial-avatar\">OB</div>\n                <div>\n                  <div class=\"author-name\">OEM Buyer</div>\n                  <div class=\"author-role\">Shirt Manufacturing Company</div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"swiper-pagination mt-3\"></div>\n      </div>\n    </div>\n  </section>",
+            "label": "What Our Buyers Say"
+        },
+        {
+            "type": "faq",
+            "bg": "bg-soft",
+            "eyebrow": "Common Questions",
+            "heading": "Frequently Asked Questions",
+            "intro": "Can't find your answer here? Send it to us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "homeFaq",
+            "itemPrefix": "faq",
+            "items": [
+                {
+                    "q": "What is the minimum order quantity for bulk enquiries?",
+                    "a": "Minimum quantities vary by product category and roll width. Share your requirement through our contact form and we'll confirm feasible order sizes along with lead time for your specific fabric."
+                },
+                {
+                    "q": "Can you supply custom widths or GSM specifications?",
+                    "a": "Yes. We regularly produce to buyer-specified width, weight and stiffness within our manufacturing capability. Send your specification sheet and we'll confirm what we can match."
+                },
+                {
+                    "q": "Do you export outside India?",
+                    "a": "Yes, we supply to export buyers and buying houses with full documentation and container-ready packing. See our <a href=\"/exports.html\">Exports page</a> for more detail on our process."
+                },
+                {
+                    "q": "How do I request fabric samples before placing a bulk order?",
+                    "a": "Contact us with your product category and application. We can arrange samples for evaluation before you commit to a bulk production order."
+                },
+                {
+                    "q": "What is your typical lead time for bulk orders?",
+                    "a": "Lead time depends on product category, quantity and current production schedule. We confirm a firm delivery date at the time of order confirmation, not after."
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "heading": "Ready To Discuss Your Next Bulk Order?",
+            "text": "Tell us your product, quantity and timeline — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

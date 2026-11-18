@@ -1,0 +1,330 @@
+{
+    "id": "collar-cuff",
+    "type": "product",
+    "status": "published",
+    "path": "/product/collar-cuff.html",
+    "title": "Readymade Collar & Cuff",
+    "source": "product/collar-cuff.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Readymade Collar & Cuff Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Readymade collar & cuff — precision-cut, ready-to-fuse panels from Jaibaba Interlinings, Delhi. Calibrated stiffness for a sharp collar roll and cuff edge that survives repeated ironing. Manufacturer since 1977.",
+        "ogTitle": "Readymade Collar & Cuff Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Precision-cut fusible interlining engineered specifically for shirt collar roll and cuff edge sharpness. Manufactured in Delhi since 1977."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-tshirt",
+            "eyebrow": "Precision Cut · Formal & Casual Shirting",
+            "heading": "Readymade Collar & Cuff",
+            "intro": "Purpose-built fusible interlining, calibrated specifically for collar roll and cuff edge sharpness that holds through repeated ironing and washing.",
+            "image": "/assets/images/products/collar-cuff/collar-cuff-flatlay-05.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/collar-cuff/collar-cuff-flatlay-05.jpg",
+            "imageAlt": "Collar and cuff interlining fabric prepared for shirt manufacturing",
+            "video": "",
+            "eyebrow": "Overview",
+            "heading": "A Step Up In Precision From General-Purpose Fusible",
+            "html": "<p class=\"mb-4\">Standard fusible interlining works across a wide range of garment parts. Readymade collar &amp; cuff is a different job — it is cut and calibrated specifically for the fold, roll and edge of a shirt collar and cuff, where any inconsistency shows up immediately on a finished garment.</p>\n          <p class=\"mb-4\">We produce this category with tighter control over stiffness and edge behaviour than our general-purpose fusible line, because a collar has to do something a flat panel doesn't: roll cleanly at the fold, hold that roll after fusing, and keep a sharp edge through the iron, the wash and the wear.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Calibrated specifically for collar roll and cuff edge structure",
+                "Supplied readymade as die-cut, ready-to-fuse panels — or as roll form for your own cutting room",
+                "Consistent fuse quality across the full production run"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "View All Product Lines",
+                "href": "/products.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Built For Parts Where A Crisp Edge Is Expected",
+            "subtitle": "Any garment part where the customer's hand will feel the edge and the eye will judge the roll.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-user-tie",
+                    "title": "Formal Shirt Collars",
+                    "text": "Clean collar roll and point definition for dress and corporate shirting."
+                },
+                {
+                    "icon": "fas fa-tshirt",
+                    "title": "Casual Shirt Collars",
+                    "text": "Softer roll options for casual and semi-formal shirt styles."
+                },
+                {
+                    "icon": "fas fa-hand-paper",
+                    "title": "Cuffs",
+                    "text": "Firm, straight edge that resists rolling or curling after fusing."
+                },
+                {
+                    "icon": "fas fa-ruler",
+                    "title": "Plackets",
+                    "text": "Stable support for button plackets that face daily buttoning stress."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/collar-cuff/collar-cuff-showroom-02.jpg",
+            "imageAlt": "Close-up of collar and cuff interlining fabric structure",
+            "video": "",
+            "eyebrow": "Features",
+            "heading": "What Makes It Different From General Fusible",
+            "html": "",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-compress-arrows-alt",
+                    "title": "Calibrated Stiffness",
+                    "text": "Set specifically for a clean, consistent collar roll — not a general-purpose average."
+                },
+                {
+                    "icon": "fas fa-border-style",
+                    "title": "Edge Stability",
+                    "text": "Holds a sharp, straight edge through repeated pressing and ironing."
+                },
+                {
+                    "icon": "fas fa-temperature-high",
+                    "title": "Consistent Fuse",
+                    "text": "Even bond across every panel, so collar behaviour doesn't vary piece to piece."
+                },
+                {
+                    "icon": "fas fa-cut",
+                    "title": "Pre-Cut Or Roll Form",
+                    "text": "Supplied as ready-to-fuse panels or as roll fabric for in-house cutting."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Benefits",
+            "heading": "What This Means For Your Production Line",
+            "items": [
+                {
+                    "icon": "fas fa-shirt",
+                    "title": "Shirts Hold Their Silhouette",
+                    "text": "A collar that rolls correctly the first time keeps holding that shape wash after wash, not just off the iron table."
+                },
+                {
+                    "icon": "fas fa-ban",
+                    "title": "Fewer Quality Rejections",
+                    "text": "Consistent stiffness and fuse reduce collar and cuff-related rejections at inline and end-line inspection."
+                },
+                {
+                    "icon": "fas fa-clipboard-check",
+                    "title": "Meets Buying-House Standards",
+                    "text": "Edge sharpness and roll consistency built to match the quality expectations set for formal shirting orders."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Specifications",
+            "heading": "Typical Product Parameters",
+            "subtitle": "Ranges below are typical for this category. Exact specification is confirmed against your fabric and collar/cuff style before production.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Stiffness",
+                    "Calibrated for collar/cuff structure — Medium to Firm"
+                ],
+                [
+                    "Bond Type",
+                    "Heat-activated fusible"
+                ],
+                [
+                    "Cut Form",
+                    "Pre-cut collar/cuff panels or roll form available"
+                ],
+                [
+                    "Roll Form",
+                    "Standard widths, custom cutting available on request"
+                ],
+                [
+                    "Application Method",
+                    "Fusing press, temperature and pressure set per fabric"
+                ],
+                [
+                    "Colour Options",
+                    "White and standard shades, matched to shirting fabric on request"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Variants",
+            "heading": "Choose The Roll Grade That Matches Your Collar Style",
+            "subtitle": "Stiffness and cut form vary by variant. Tell us your shirt style and we'll recommend the right grade.",
+            "items": [
+                {
+                    "image": "/assets/images/products/collar-cuff/collar-cuff-flatlay-05.jpg",
+                    "imageAlt": "Soft roll collar interlining variant",
+                    "title": "Soft Roll Grade",
+                    "text": "Lower stiffness for a relaxed, casual collar roll — button-downs and casual shirting."
+                },
+                {
+                    "image": "/assets/images/products/collar-cuff/collar-cuff-showroom-02.jpg",
+                    "imageAlt": "Medium stiffness collar interlining variant",
+                    "title": "Medium Roll Grade",
+                    "text": "Balanced stiffness suited to most formal and semi-formal shirt collars."
+                },
+                {
+                    "image": "/assets/images/products/collar-cuff/collar-cuff-flatlay-05.jpg",
+                    "imageAlt": "Firm collar interlining variant",
+                    "title": "Firm Grade",
+                    "text": "Higher stiffness for a sharp, structured collar and cuff edge on formal dress shirts."
+                },
+                {
+                    "image": "/assets/images/products/collar-cuff/collar-cuff-showroom-02.jpg",
+                    "imageAlt": "Pre-cut collar and cuff panel variant",
+                    "title": "Pre-Cut Panel Form",
+                    "text": "Die-cut collar and cuff panels, ready to fuse — cuts down cutting-room time on the line."
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "titleTag": "h4",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Readymade Collar & Cuff FAQs",
+            "intro": "Have a question specific to your shirt style or fabric? Ask us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "collarCuffFaq",
+            "itemPrefix": "ccFaq",
+            "items": [
+                {
+                    "q": "Do you supply pre-cut collar and cuff panels or only roll form?",
+                    "a": "Both. We supply die-cut, ready-to-fuse collar and cuff panels for buyers who want to save cutting-room time, and standard roll form for units that cut in-house. Let us know your preference when you enquire."
+                },
+                {
+                    "q": "Can stiffness be adjusted for a softer collar roll?",
+                    "a": "Yes. We produce this category across soft, medium and firm roll grades. Share your shirt style — formal, casual or button-down — and we'll recommend the grade that fits, or arrange a sample for evaluation."
+                },
+                {
+                    "q": "What is the minimum order quantity for pre-cut panels?",
+                    "a": "Minimum quantities for pre-cut panels depend on the collar/cuff pattern and sizing you need. Share your specification through our contact form and we'll confirm feasible order sizes and lead time."
+                },
+                {
+                    "q": "Can I get a sample matched to my shirt fabric?",
+                    "a": "Yes. Send us a swatch of your shirting fabric along with your collar style and we'll arrange a matched sample for fuse and roll testing before you commit to a bulk order."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "Related Products",
+            "heading": "You May Also Need",
+            "center": true,
+            "items": [
+                {
+                    "page": "fusible-interlining",
+                    "summary": "General-purpose fusible interlining with even resin coating for a clean, bubble-free fuse.",
+                    "imageAlt": "Fusible interlining fabric for general garment use"
+                },
+                {
+                    "page": "shoulder-pad"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Readymade Collar & Cuff Matched To Your Shirt Fabric?",
+            "text": "Tell us your collar style, stiffness preference and order quantity — our team will confirm samples, pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Readymade Collar & Cuff",
+        "tag": "Precision Cut",
+        "summary": "Purpose-built stiffness for a sharp collar roll and cuff edge that survives ironing.",
+        "image": "/assets/images/products/collar-cuff/collar-cuff-flatlay-05.jpg",
+        "imageAlt": "Readymade collar and cuff interlining for formal shirts"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

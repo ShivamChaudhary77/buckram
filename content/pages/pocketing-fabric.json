@@ -1,0 +1,323 @@
+{
+    "id": "pocketing-fabric",
+    "type": "product",
+    "status": "published",
+    "path": "/product/pocketing-fabric.html",
+    "title": "Pocketing Cloth",
+    "source": "product/pocketing-fabric.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Pocketing Cloth Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Pocketing cloth manufacturer in Delhi since 1977. Tightly woven, tear-resistant pocketing cloth for trouser, jacket and jean pockets in cotton, poly-cotton and polyester. Bulk and export supply.",
+        "ogTitle": "Pocketing Cloth Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Tightly woven pocketing cloth built to outlast the outer garment fabric through repeated wash and wear cycles. Manufactured in Delhi since 1977."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-layer-group",
+            "eyebrow": "Durable Pocketing Cloth · Est. 1977",
+            "heading": "Pocketing Cloth Built to Outlast the Garment Around It",
+            "intro": "A tightly woven fabric for trouser, jacket and jean pockets — engineered to survive more wash and wear cycles than the outer fabric it sits behind, since a torn pocket is one of the most common garment failure points.",
+            "image": "/assets/images/products/pocketing-fabric/pocketing-fabric-ring-display-04.png",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/pocketing-fabric/pocketing-fabric-ring-display-04.png",
+            "imageAlt": "Tightly woven pocketing cloth rolls used for trouser and jacket pockets",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "A Pocket That Fails Before the Garment Does Is a Returned Garment",
+            "html": "<p class=\"mb-4\">Pocketing cloth doesn't get noticed when it works — it only gets noticed when it splits at the corner, frays at the seam or lets a coin pocket sag after a few washes. Because pockets take constant hand contact, friction from wallets and keys, and the same wash cycles as the rest of the garment, the fabric behind them has to outlast the shell fabric it's stitched into, not just match it.</p>\n          <p class=\"mb-4\">We manufacture pocketing cloth as a tightly woven, stable-construction fabric in cotton, poly-cotton and polyester options, supplied in standard rolls or custom widths to match your cutting layout. It's built for one job: hold its shape and its seams through the full working life of the garment.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Tight, stable weave resistant to tearing and seam-slip",
+                "Smooth hand-feel suited to constant hand and pocket contact",
+                "Consistent width and weight across every production batch"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Our Quality Standards",
+                "href": "/quality.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "frame": "product-hero-img"
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Built for Every Pocket That Takes Daily Wear",
+            "subtitle": "From trouser waistbands to jean back pockets, this fabric is chosen wherever a pocket needs to survive more handling than the garment fabric around it.",
+            "items": [
+                {
+                    "icon": "fas fa-socks",
+                    "title": "Trouser Pockets",
+                    "text": "Side and slant pockets in formal and casual trousers that see daily hand use."
+                },
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Jacket Pockets",
+                    "text": "Inner and outer jacket pockets built to hold shape under repeated use."
+                },
+                {
+                    "icon": "fas fa-people-carry-box",
+                    "title": "Jean Pockets",
+                    "text": "Back and front pockets on denim, built to match denim's own wash-durability demands."
+                },
+                {
+                    "icon": "fas fa-coins",
+                    "title": "Coin & Utility Pockets",
+                    "text": "Small watch, coin and utility pockets that face concentrated point-load stress."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/pocketing-fabric/pocketing-fabric-stack-swatches-05.png",
+            "imageAlt": "Close weave of pocketing cloth ready for garment cutting",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes This Weave Hold Up Where Others Give Out",
+            "html": "<p class=\"mb-4\">Pocketing cloth doesn't need to look impressive — it needs to disappear inside the garment and keep working. Every feature below is chosen for that job, not for how it photographs.</p>",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-border-all",
+                    "title": "Tight, Stable Weave",
+                    "text": "Close construction that resists shifting and thinning with wear."
+                },
+                {
+                    "icon": "fas fa-scissors",
+                    "title": "Tear & Seam-Slip Resistance",
+                    "text": "Holds the stitch line under pulling and repeated stress at seams."
+                },
+                {
+                    "icon": "fas fa-hand-paper",
+                    "title": "Smooth Hand-Feel",
+                    "text": "Comfortable against skin and hands for pockets in constant use."
+                },
+                {
+                    "icon": "fas fa-water",
+                    "title": "Wash-Cycle Durability",
+                    "text": "Constructed to stay intact through the garment's full laundering life."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Matters to Your Line",
+            "heading": "Fewer Pocket Complaints, Consistent Batch After Batch",
+            "items": [
+                {
+                    "icon": "fas fa-thumbs-up",
+                    "title": "Fewer Pocket-Related Returns",
+                    "text": "A pocket that outlasts the garment reduces one of the most common after-sale complaints in trouser and jacket production."
+                },
+                {
+                    "icon": "fas fa-sync-alt",
+                    "title": "Consistent Across Wash Cycles",
+                    "text": "Weave stability is held through repeated laundering, so pockets don't loosen or thin out faster than the rest of the garment."
+                },
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "Reliable for High-Volume Production",
+                    "text": "Batch-to-batch consistency in width and weight means fewer line stoppages when you reorder for repeat production runs."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Technical Reference",
+            "heading": "Pocketing Cloth Specifications",
+            "subtitle": "Typical construction and supply parameters. Exact specification is confirmed against your order requirement.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Weave",
+                    "Tight plain or twill weave for stability and tear resistance"
+                ],
+                [
+                    "Composition",
+                    "Cotton, polyester or poly-cotton blend options available"
+                ],
+                [
+                    "Weight",
+                    "Light to medium weight, matched to pocket application and garment type"
+                ],
+                [
+                    "Color",
+                    "White, natural or dyed options, subject to availability and order quantity"
+                ],
+                [
+                    "Finish",
+                    "Smooth hand-feel finish suited to skin and hand contact"
+                ],
+                [
+                    "Roll Form",
+                    "Standard rolls; custom widths available on request"
+                ],
+                [
+                    "Recommended For",
+                    "Trousers, jackets, jeans, uniforms and workwear pockets"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Product Range",
+            "heading": "Available Pocketing Cloth Variants",
+            "subtitle": "Choose by composition and weight grade to match your garment category and budget.",
+            "items": [
+                {
+                    "icon": "fas fa-seedling fa-2x text-gold mb-3",
+                    "title": "Cotton Pocketing",
+                    "text": "Natural fibre construction with a soft hand-feel, suited to formal trousers and premium garment lines."
+                },
+                {
+                    "icon": "fas fa-layer-group fa-2x text-gold mb-3",
+                    "title": "Poly-Cotton Blend",
+                    "text": "Balances natural feel with added strength and shrink stability — a common choice across garment categories."
+                },
+                {
+                    "icon": "fas fa-industry fa-2x text-gold mb-3",
+                    "title": "Polyester Pocketing",
+                    "text": "Higher strength-to-weight and wash durability, suited to workwear and high-volume budget production."
+                },
+                {
+                    "icon": "fas fa-shield-alt fa-2x text-gold mb-3",
+                    "title": "Heavy-Duty Grade",
+                    "text": "Denser construction for denim and workwear pockets that face the heaviest daily handling and load."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h4",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Pocketing Cloth FAQs",
+            "intro": "Have a question specific to your order? Send it to us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "pocketingFaq",
+            "itemPrefix": "pocketFaq",
+            "items": [
+                {
+                    "q": "Does pocketing cloth come pre-shrunk?",
+                    "a": "Shrinkage treatment depends on the composition and the finish you order. Tell us the garment type and wash conditions your pocket needs to survive, and we'll confirm the right fabric option for that requirement."
+                },
+                {
+                    "q": "Can you match a specific pocket fabric colour?",
+                    "a": "We supply pocketing in white, natural and dyed options depending on order quantity and availability. Share a swatch or shade reference and we'll confirm whether we can match it for your run."
+                },
+                {
+                    "q": "What composition do you recommend for jeans vs. formal trousers?",
+                    "a": "Denim pockets generally benefit from our polyester or heavy-duty grade for added abrasion resistance, while formal trousers are often paired with cotton or poly-cotton pocketing for a softer hand-feel. We're happy to advise once we know your garment specification."
+                },
+                {
+                    "q": "What is the minimum order quantity?",
+                    "a": "Minimum quantities vary by composition, colour and roll width. Share your requirement through our <a href=\"/contact.html\">contact form</a> and we'll confirm feasible order sizes and lead time for your specific fabric."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "Related Products",
+            "heading": "You May Also Need",
+            "subtitle": "Pocketing cloth is often ordered alongside these categories for the same garment run. See our <a href=\"/products.html\">full product range</a> for all ten lines we manufacture.",
+            "center": true,
+            "items": [
+                {
+                    "page": "fusible-interlining"
+                },
+                {
+                    "page": "buckram-fabric"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Pocketing Cloth for Your Next Production Run?",
+            "text": "Tell us your composition, colour and quantity — our team will confirm pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Pocketing Cloth",
+        "tag": "Durable",
+        "summary": "Tightly woven cloth built to outlast the outer garment through repeated wash cycles.",
+        "image": "/assets/images/products/pocketing-fabric/pocketing-fabric-ring-display-04.png",
+        "imageAlt": "Pocketing cloth rolls for trouser and jacket pockets"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

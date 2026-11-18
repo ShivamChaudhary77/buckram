@@ -1,0 +1,323 @@
+{
+    "id": "velcro-tape",
+    "type": "product",
+    "status": "published",
+    "path": "/product/velcro-tape.html",
+    "title": "Velcro Tape",
+    "source": "product/velcro-tape.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Velcro Tape Manufacturer | Hook & Loop Fastener Tape — Jaibaba Interlinings, Delhi",
+        "description": "Velcro-style hook-and-loop fastener tape manufacturer in Delhi since 1977. Sew-on woven tape for waistbands, plackets, cuffs and closures. Standard and custom widths, bulk and export supply.",
+        "ogTitle": "Velcro Tape Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Sew-on hook-and-loop fastener tape for waistbands, plackets, cuffs and closures, manufactured in Delhi since 1977 and supplied in bulk to garment units and export buyers."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-link",
+            "eyebrow": "Hook & Loop Fastener",
+            "heading": "Velcro Tape",
+            "intro": "Sew-on hook-and-loop fastener tape built to open and close thousands of times without losing grip — for waistbands, plackets, cuffs and closures that need to be quick and reliable.",
+            "image": "/assets/images/products/velcro-tape/velcro-tape-warehouse-01.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/velcro-tape/velcro-tape-warehouse-01.jpg",
+            "imageAlt": "Velcro hook and loop fastener tape rolls for garment closures",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "A Fastener That Still Grips After Thousands Of Uses",
+            "html": "<p class=\"mb-4\">Velcro tape is a two-part hook-and-loop fastening system — one woven strip of fine hooks, one of soft loops — that grips on contact and releases cleanly on demand, without buttons, zips or snaps. It's a reusable closure, so the part that matters most is what happens after the first hundred uses, not just the first one.</p>\n          <p class=\"mb-4\">We manufacture sew-on hook and loop tape to a consistent grip strength across the roll, so a waistband or placket closes with the same hold on use one thousand as it did on use one. Both the hook and loop strips are supplied together, cut and matched to the width your application calls for.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Consistent grip strength across thousands of open-close cycles",
+                "Sew-on hook and loop strips supplied matched and ready to stitch",
+                "Standard and custom widths, manufactured in-house in Delhi"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Request a Quote",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Applications",
+            "subtitle": "Velcro tape goes anywhere a garment or accessory needs a fast, reusable closure instead of a fixed one.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-ruler-horizontal",
+                    "title": "Waistbands",
+                    "text": "Adjustable waist closures on trousers, skirts and uniforms."
+                },
+                {
+                    "icon": "fas fa-grip-lines",
+                    "title": "Plackets",
+                    "text": "Quick-fasten plackets on shirts, uniforms and workwear."
+                },
+                {
+                    "icon": "fas fa-hand-paper",
+                    "title": "Cuffs",
+                    "text": "Adjustable sleeve and ankle cuff closures on jackets and workwear."
+                },
+                {
+                    "icon": "fas fa-box-open",
+                    "title": "Bags & Accessories",
+                    "text": "Flap and pocket closures on bags, aprons and garment accessories."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/velcro-tape/velcro-tape-branding-05.png",
+            "imageAlt": "Close view of woven hook and loop tape texture",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes Our Velcro Tape Different",
+            "html": "",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-recycle",
+                    "title": "Reusable Grip",
+                    "text": "Holds strong across thousands of open-and-close cycles."
+                },
+                {
+                    "icon": "fas fa-bolt",
+                    "title": "Quick Fastening",
+                    "text": "Opens and closes instantly, without tools or fine motor effort."
+                },
+                {
+                    "icon": "fas fa-tint-slash",
+                    "title": "Moisture Resistant",
+                    "text": "Holds grip in humid conditions and after washing."
+                },
+                {
+                    "icon": "fas fa-cut",
+                    "title": "Sew-On Ready",
+                    "text": "Woven edges that stitch cleanly without fraying."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Works For Your Line",
+            "heading": "Benefits",
+            "items": [
+                {
+                    "icon": "fas fa-thumbs-up",
+                    "title": "Fewer Closure Failures",
+                    "text": "Consistent grip strength reduces the loose-closure complaints that come with worn-out fasteners."
+                },
+                {
+                    "icon": "fas fa-child",
+                    "title": "Easy For Any Wearer",
+                    "text": "No buttons or zips to manage, which matters for uniforms, workwear and adaptive clothing."
+                },
+                {
+                    "icon": "fas fa-history",
+                    "title": "Consistent On Reorder",
+                    "text": "The same grip strength and width come back on every reorder, batch after batch."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Product Specifications",
+            "heading": "Typical Specifications",
+            "subtitle": "Figures below are typical production ranges, not guaranteed exact values. Confirm your specification sheet with us before ordering.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Construction",
+                    "Woven hook strip + woven loop strip, supplied as a matched pair"
+                ],
+                [
+                    "Fastening Type",
+                    "Sew-on hook-and-loop; adhesive-backed available on request"
+                ],
+                [
+                    "Grip Cycles",
+                    "Rated for repeated open-close use over the garment's working life"
+                ],
+                [
+                    "Roll Form",
+                    "Standard widths; custom widths cut on request"
+                ],
+                [
+                    "Colour",
+                    "White / Black / Natural — subject to availability, custom on bulk orders"
+                ],
+                [
+                    "Recommended Use",
+                    "Waistbands, plackets, cuffs, bags and garment accessories"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Options",
+            "heading": "Velcro Tape Variants",
+            "subtitle": "Choose a fastening style based on how the tape will be applied.",
+            "items": [
+                {
+                    "title": "Sew-On Tape",
+                    "text": "Woven edges built to stitch cleanly into a garment seam or panel."
+                },
+                {
+                    "title": "Adhesive-Backed Tape",
+                    "text": "Self-adhesive backing for bag, accessory and non-sewn applications."
+                },
+                {
+                    "title": "Custom Width Rolls",
+                    "text": "Hook and loop cut to a matched width for your specific closure design, on confirmed bulk quantities."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Velcro Tape FAQs",
+            "intro": "Don't see your question here? Ask us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "velcroFaq",
+            "itemPrefix": "velcroFaq",
+            "items": [
+                {
+                    "q": "Do you supply both the hook and loop strips together?",
+                    "a": "Yes. We supply the hook and loop strips together as a matched pair, cut to the width your closure design needs, so you're not sourcing the two sides separately."
+                },
+                {
+                    "q": "Is sew-on or adhesive-backed better for my application?",
+                    "a": "Sew-on tape suits garments where the fastener is stitched into a seam or panel, while adhesive-backed tape suits bags, accessories and applications where sewing isn't practical. Tell us your application and we'll recommend the right type."
+                },
+                {
+                    "q": "What is the minimum order quantity?",
+                    "a": "Minimum quantities depend on width, colour and fastening type. Share your requirement through our contact form and we'll confirm feasible order sizes and lead time."
+                },
+                {
+                    "q": "Does the tape hold grip after repeated washing?",
+                    "a": "Our tape is manufactured to hold grip strength through normal home and institutional laundering. For very high-wash-frequency use, let us know so we can confirm the most suitable grade."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "belt-roll"
+                },
+                {
+                    "page": "woven-knitted-elastics"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Velcro Tape In Bulk?",
+            "text": "Tell us the width, fastening type and quantity you need — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Velcro Tape",
+        "tag": "Hook & Loop",
+        "summary": "Sew-on hook-and-loop fastener tape for waistbands, plackets, cuffs and closures.",
+        "image": "/assets/images/products/velcro-tape/velcro-tape-warehouse-01.jpg",
+        "imageAlt": "Velcro hook and loop fastener tape rolls"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

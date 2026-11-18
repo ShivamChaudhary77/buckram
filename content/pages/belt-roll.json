@@ -1,0 +1,310 @@
+{
+    "id": "belt-roll",
+    "type": "product",
+    "status": "published",
+    "path": "/product/belt-roll.html",
+    "title": "Belt Roll & Placket (Patti)",
+    "source": "product/belt-roll.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Belt Roll & Placket (Patti) Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Firm-bodied belt roll & placket (patti) interlining cut and rolled to precise, repeatable widths for fabric belt and placket manufacturing. Manufactured in Delhi since 1977. Custom widths available on bulk order.",
+        "ogTitle": "Belt Roll & Placket (Patti) Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Firm-bodied belt roll & placket (patti) interlining cut and rolled to precise, repeatable widths for fabric belt and placket manufacturing. Manufactured in Delhi since 1977."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-ruler-horizontal",
+            "eyebrow": "Roll Widths",
+            "heading": "Belt Roll & Placket (Patti)",
+            "intro": "Firm-bodied interlining fabric cut and rolled to precise, repeatable widths for fabric belt and placket (patti) manufacturing.",
+            "image": "/assets/images/products/belt-roll/belt-roll-export-warehouse-01.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/belt-roll/belt-roll-export-warehouse-01.jpg",
+            "imageAlt": "Belt roll and placket (patti) interlining fabric cut and rolled to precise widths",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "Built For Belt And Placket Lines That Can't Afford Width Variance",
+            "html": "<p class=\"mb-4\">Belt roll &amp; placket (patti) is a firm-bodied interlining fabric that we cut and roll to specific widths before it ever reaches your cutting table. Where general-purpose interlining is sold as bulk yardage and cut down at the buyer's end, this category arrives pre-sized — so every metre that comes off the roll matches the width your belt or placket design calls for.</p>\n          <p class=\"mb-4\">That width consistency matters more on a belt or placket line than almost anywhere else in garment production. A soft fabric belt gets its shape entirely from the interlining inside it, and a trouser or shirt placket needs the same firm, even strip behind it to sit flat and stitch straight. If the roll width drifts even a few millimetres across a batch, the finished belts and plackets drift with it — and a procurement team ends up sorting rejects instead of shipping.</p>\n          <p class=\"mb-0\">We manufacture belt roll &amp; placket (patti) for fabric belts, waist ties, sash belts, uniform belts and trouser or shirt plackets, supplying garment units and buying houses that run belt and placket assembly as a dedicated production line, not a side task.</p>",
+            "miniFeatures": [],
+            "checklist": [],
+            "afterHtml": "",
+            "button": null,
+            "frame": "product-hero-img"
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Applications",
+            "subtitle": "Belt roll &amp; placket (patti) is built specifically for structures that need a firm, consistent core inside a soft outer fabric.",
+            "center": true,
+            "items": [
+                {
+                    "icon": "fas fa-grip-lines",
+                    "title": "Fabric Belts",
+                    "text": "Structure and shape retention for cloth belts on trousers, dresses and uniforms."
+                },
+                {
+                    "icon": "fas fa-grip-lines-vertical",
+                    "title": "Plackets (Patti)",
+                    "text": "A firm, even strip behind trouser and shirt plackets so they sit flat and stitch straight."
+                },
+                {
+                    "icon": "fas fa-people-arrows",
+                    "title": "Waist Ties",
+                    "text": "Firm body so a tied waist detail holds its form instead of collapsing flat."
+                },
+                {
+                    "icon": "fas fa-ribbon",
+                    "title": "Sash Belts",
+                    "text": "Consistent width and stiffness for sash-style belts on dresses and formalwear."
+                },
+                {
+                    "icon": "fas fa-user-tie",
+                    "title": "Uniform Belts",
+                    "text": "Repeatable structure for institutional and corporate uniform belt production."
+                }
+            ],
+            "delayMode": "custom",
+            "delays": [
+                0,
+                100,
+                200,
+                300,
+                0
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/belt-roll/belt-roll-placket-loops-02.png",
+            "imageAlt": "Firm-bodied belt roll and placket interlining fabric with stable, consistent edges",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes Belt Roll & Placket (Patti) Different From Cut-To-Size Yardage",
+            "html": "",
+            "miniFeatures": [],
+            "checklist": [
+                "Firm body that gives a soft belt or placket its structure and consistent shape",
+                "Cut and rolled to precise, repeatable roll widths, not trimmed on-site",
+                "Stable edges that hold together through belt and placket assembly without fraying"
+            ],
+            "afterHtml": "<p class=\"mb-0\">Because the width is set at our end during production, your belt-line and placket-line operators work from a roll that's already correct — no re-measuring, no trimming station, no width checks before assembly.</p>",
+            "button": null
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Works",
+            "heading": "Benefits On The Production Floor",
+            "items": [
+                {
+                    "icon": "fas fa-ruler-combined",
+                    "title": "Less Width Variance",
+                    "text": "Rolls are cut to a fixed width at our end, so batch-to-batch variance stays low without your team re-checking every metre."
+                },
+                {
+                    "icon": "fas fa-bolt",
+                    "title": "Faster Belt Assembly",
+                    "text": "Pre-sized rolls skip the trimming step, letting belt-line operators move straight from roll to assembly."
+                },
+                {
+                    "icon": "fas fa-redo",
+                    "title": "Consistent On Reorder",
+                    "text": "The same width, body and feel come back on every reorder, so your belt spec doesn't need re-approval each time."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Technical Details",
+            "heading": "Specifications",
+            "subtitle": "Typical specification ranges — confirm exact width and composition for your order at the time of enquiry.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Body",
+                    "Firm, structured, holds shape under a soft outer fabric"
+                ],
+                [
+                    "Roll Widths",
+                    "Standard widths available; custom widths cut on request"
+                ],
+                [
+                    "Composition",
+                    "Cotton or blended base, selected for firmness and edge stability"
+                ],
+                [
+                    "Edge Finish",
+                    "Stable, resists fraying during cutting and assembly"
+                ],
+                [
+                    "Color",
+                    "Natural / dyed options, subject to availability"
+                ],
+                [
+                    "Roll Format",
+                    "Supplied as full rolls; cut-length options on bulk orders"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Options",
+            "heading": "Available Variants",
+            "subtitle": "Belt roll &amp; placket (patti) is offered across a few standard configurations. Tell us your belt or placket design and we'll confirm the closest match or a custom cut.",
+            "items": [
+                {
+                    "image": "/assets/images/products/belt-roll/belt-roll-export-warehouse-01.jpg",
+                    "imageAlt": "Narrow width belt roll variant",
+                    "title": "Narrow Width",
+                    "text": "For slim fabric belts, waist ties and sash-style details."
+                },
+                {
+                    "image": "/assets/images/products/belt-roll/belt-roll-placket-loops-02.png",
+                    "imageAlt": "Standard width belt roll variant",
+                    "title": "Standard Width",
+                    "text": "Our most-ordered width, suited to everyday trouser and uniform belts."
+                },
+                {
+                    "image": "/assets/images/products/belt-roll/belt-roll-export-warehouse-01.jpg",
+                    "imageAlt": "Wide width belt roll variant",
+                    "title": "Wide Width",
+                    "text": "For statement belts and sash belts that need a broader, firmer base."
+                },
+                {
+                    "image": "/assets/images/products/belt-roll/belt-roll-placket-loops-02.png",
+                    "imageAlt": "Custom cut belt roll variant",
+                    "title": "Custom Cut",
+                    "text": "Width and stiffness matched to your belt design on confirmed bulk orders."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h4",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Belt Roll & Placket (Patti) FAQs",
+            "intro": "Have a question specific to your belt or placket design, or order size? Ask us directly.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "beltRollFaq",
+            "itemPrefix": "beltRollFaq",
+            "items": [
+                {
+                    "q": "What belt widths do you stock as standard?",
+                    "a": "We keep a set of standard roll widths that cover the most common fabric belt, waist tie and uniform belt designs. Share your belt design or target width and we'll confirm the closest standard match."
+                },
+                {
+                    "q": "Can you cut custom widths for our belt design?",
+                    "a": "Yes. On confirmed bulk orders we cut and roll belt interlining to the exact width your belt design calls for. Send your specification and we'll confirm feasibility and lead time."
+                },
+                {
+                    "q": "What is the minimum order quantity for belt roll & placket (patti)?",
+                    "a": "Minimum quantities depend on the width and whether it's a standard or custom cut. Share your requirement through our contact form and we'll confirm a feasible order size for your specification."
+                },
+                {
+                    "q": "Do you supply pre-cut lengths or only full rolls?",
+                    "a": "Belt roll is supplied as full rolls by default. For larger bulk orders we can also discuss cut-length options — raise this with our team when you share your order quantity."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "buckram-fabric"
+                },
+                {
+                    "page": "eva-foam"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Belt Roll & Placket (Patti) Cut To Your Exact Width?",
+            "text": "Send us your belt or placket design and target width — we'll confirm the closest standard match or a custom cut, along with pricing and lead time. See our <a href=\"/manufacturing.html\">manufacturing process</a> for how we hold width consistency across every roll.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Belt Roll & Placket (Patti)",
+        "tag": "Roll Widths",
+        "summary": "Firm-bodied fabric cut and rolled to the exact belt and placket widths your line runs.",
+        "image": "/assets/images/products/belt-roll/belt-roll-export-warehouse-01.jpg",
+        "imageAlt": "Belt roll and placket interlining fabric in various widths"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

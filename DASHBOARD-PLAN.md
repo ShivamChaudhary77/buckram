@@ -156,3 +156,26 @@ What stays untouched: `assets/` (all CSS, JS and images), `php/contact-form.php`
 **Run locally**: `php -S localhost:8000 deploy/dev-router.php`. To preview the PHP site against a content folder, prefix `JAIBABA_ENABLED=1 JAIBABA_CONTENT_DIR=/path/to/content`.
 
 **Next: Phase 2 (Migration).** Needs the 9 uncommitted page edits committed first.
+
+### Phase 2: Migration ✅ (2026-11-18)
+**Built**
+- `scripts/migrate.php` (+ `scripts/lib/migrate-lib.php`, `scripts/lib/html-compare.php`): turns the 18 static pages and 3 includes into `content/site.json` + `content/pages/*.json`.
+  - `php scripts/migrate.php --dry-run --verbose` shows the report without writing.
+  - It works in a scratch folder and only then copies into `content/`, so a failed run never leaves half a snapshot. Re-runnable until go-live; **never run it after go-live.**
+- **Fidelity check built in:** every section is converted into fields, rendered back through the real templates and compared with the original (tags, attributes and text). Only exact matches are kept as fields; anything else is kept as an unchanged HTML section. Finally, each page's whole `<main>` is rendered and compared again.
+- New block options found during migration: comparison tables (`spec-table` with `style: compare-table` and a note line), dark section headings, centred card rows, the dark "talk to us" tile in product lists, image frame/column/animation-delay variants.
+- Local preview of the PHP site: `JAIBABA_ENABLED=1 JAIBABA_PREVIEW_PHP=1 php -S localhost:8000 deploy/dev-router.php`.
+- Tests: `php tests/run.php` → **177 passed** (adds: migration has no problems, product pages fully structured, repeatable, every page renders with one H1).
+
+**Result**
+| | |
+|---|---|
+| Header, menu, footer (`site.json`) | rendered **identical** to `includes/*.html` |
+| Main content of all 18 pages | rendered **identical** to the static files |
+| Sections | **143 editable** as fields, **21 kept as HTML** |
+| Product pages (10) | **100 % fields** (no HTML sections) |
+| Product cards | one set of card fields per product; listings that show different wording (e.g. the longer summaries on the Products page) keep their own override |
+
+**Kept as HTML (one-off layouts, still editable as HTML)**: home hero, trust strip, "Who we are" (contains a commented-out list), testimonials, the commented-out statistics band; About story, journey, leadership and timeline; Applications category grid; Contact cards, enquiry form and business details; Exports documents list; Manufacturing six stages and gallery; Products overview, "which category" grid and buying guide; Quality raw-material checks and packing.
+
+**Not yet compared (Phase 3)**: `<head>` tags and JSON-LD per page, links and images across the whole document.

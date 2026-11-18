@@ -1,0 +1,326 @@
+{
+    "id": "shoulder-pad",
+    "type": "product",
+    "status": "published",
+    "path": "/product/shoulder-pad.html",
+    "title": "Shoulder Pads",
+    "source": "product/shoulder-pad.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Shoulder Pads Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Shoulder pad manufacturer in Delhi since 1977. Moulded shoulder pads for blazers, suit jackets, coats and uniforms, in set-in and raglan styles, supplied in bulk with pad-to-pad shape consistency.",
+        "ogDescription": "Moulded shoulder pads for blazers, suit jackets, coats and uniforms. Manufactured in Delhi since 1977, supplied in bulk to garment units and export buyers."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-vest",
+            "eyebrow": "Moulded Structure",
+            "heading": "Shoulder Pads",
+            "intro": "Moulded structural inserts that shape the shoulder line of blazers, suit jackets, coats and uniforms, produced to consistent shape and density from pad to pad.",
+            "image": "/assets/images/products/shoulder-pad/shoulder-pad-warehouse-01.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/shoulder-pad/shoulder-pad-warehouse-01.jpg",
+            "imageAlt": "Moulded shoulder pads used for structuring blazers and jackets",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "Structure That Sets Behind Every Clean Shoulder Line",
+            "html": "<p class=\"mb-4\">Shoulder pads are moulded inserts placed inside a jacket, blazer or coat to build and hold the shoulder shape the outer fabric alone cannot hold on its own. They sit at the point of the garment a buyer's eye goes to first — a jacket can be well cut everywhere else and still look wrong if the pad underneath is uneven or has gone flat.</p>\n          <p class=\"mb-4\">Moulded consistency is the whole job here. A pair of pads that differ even slightly in curve, thickness or density will throw off the left-right symmetry of a finished garment, and that defect only shows up after the jacket is assembled — by which point the cost of the mistake has multiplied. We mould every pad to the same shape and density profile, run after run, so a left pad and right pad match, and so pad 5,000 in an order matches pad 1.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Manufactured in-house in Delhi, not sourced through a middleman",
+                "Consistent moulded shape and density, pad to pad, order to order",
+                "Thickness, curvature and style options available on request"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Request a Quote",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Applications",
+            "subtitle": "Shoulder pads go into any structured garment where the shoulder line needs to be built up and held, not left to the outer fabric alone.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-user-tie",
+                    "title": "Blazers",
+                    "text": "Structured shoulder shaping for a defined, tailored silhouette."
+                },
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Suit Jackets",
+                    "text": "Set-in and raglan style options to match the sleeve construction."
+                },
+                {
+                    "icon": "fas fa-cloud-showers-heavy",
+                    "title": "Coats",
+                    "text": "Firmer grades for outerwear that needs to hold shape over layers."
+                },
+                {
+                    "icon": "fas fa-shield-alt",
+                    "title": "Uniforms & Structured Dresses",
+                    "text": "Consistent shoulder shaping across large institutional and corporate uniform orders."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/shoulder-pad/shoulder-pad-blazer-02.png",
+            "imageAlt": "Close view of moulded shoulder pad structure and fabric cover",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes Our Shoulder Pads Different",
+            "html": "",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-balance-scale",
+                    "title": "Matched Shape & Density",
+                    "text": "Every pad in a pair, and every pair in a batch, moulded to the same profile."
+                },
+                {
+                    "icon": "fas fa-layer-group",
+                    "title": "Thickness & Curvature Options",
+                    "text": "Light to heavy grades and curve profiles suited to different garment styles."
+                },
+                {
+                    "icon": "fas fa-shield-alt",
+                    "title": "Stable Shape Retention",
+                    "text": "Holds its moulded form through handling, pressing and garment assembly."
+                },
+                {
+                    "icon": "fas fa-cut",
+                    "title": "Set-In & Raglan Styles",
+                    "text": "Profiles built for both standard set-in and raglan sleeve constructions."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Works For Your Line",
+            "heading": "Benefits",
+            "items": [
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Symmetrical, Professional Shoulder Line",
+                    "text": "Matched left-right shaping that reads as tailored, not off-balance."
+                },
+                {
+                    "icon": "fas fa-undo",
+                    "title": "Fewer Returns For Shape Defects",
+                    "text": "Consistent pads reduce the shoulder asymmetry issues that trigger buyer rejections."
+                },
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "Reliable Matching Across Large Orders",
+                    "text": "Bulk cutting orders draw from batches that hold the same shape and density throughout."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Product Specifications",
+            "heading": "Typical Specifications",
+            "subtitle": "Figures below are typical production ranges, not guaranteed exact values. Confirm your specification sheet with us before ordering.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Shape",
+                    "Moulded, set-in and raglan style options"
+                ],
+                [
+                    "Thickness",
+                    "Light to heavy options available"
+                ],
+                [
+                    "Composition",
+                    "Foam or fibre-fill core with fabric cover"
+                ],
+                [
+                    "Density",
+                    "Soft to firm grades available"
+                ],
+                [
+                    "Cover Finish",
+                    "Woven or non-woven fabric cover, by grade"
+                ],
+                [
+                    "Recommended Use",
+                    "Blazers, suit jackets, coats, uniforms, structured dresses"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Options",
+            "heading": "Shoulder Pad Variants",
+            "subtitle": "Choose a thickness and style suited to your garment's construction and desired silhouette.",
+            "items": [
+                {
+                    "title": "Thin / Light Grade",
+                    "text": "A subtle shoulder lift for softer-structured jackets and lighter garments where minimal build is needed."
+                },
+                {
+                    "title": "Medium Grade",
+                    "text": "Our most commonly ordered grade, giving a standard tailored shoulder shape for blazers and suit jackets."
+                },
+                {
+                    "title": "Thick / Heavy Grade",
+                    "text": "Maximum build for coats and structured uniforms that need a pronounced, defined shoulder line."
+                },
+                {
+                    "title": "Raglan Style Pads",
+                    "text": "Curved profile suited to raglan sleeve construction, as an alternative to standard set-in shaping."
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "titleTag": "h3",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Shoulder Pad FAQs",
+            "intro": "Don't see your question here? Ask us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "shoulderPadFaq",
+            "itemPrefix": "shoulderPadFaq",
+            "items": [
+                {
+                    "q": "Do you supply pads for both set-in and raglan sleeve styles?",
+                    "a": "Yes. We manufacture pad profiles for standard set-in sleeve construction as well as curved profiles built for raglan-style garments. Tell us which construction your pattern uses and we'll confirm the right profile."
+                },
+                {
+                    "q": "Can pad thickness be customised per style?",
+                    "a": "Yes, thickness can be matched to your garment style, from a light lift for softer jackets to a heavier build for coats and structured uniforms. Share your target silhouette and we'll recommend a grade."
+                },
+                {
+                    "q": "What is the minimum order quantity for shoulder pads?",
+                    "a": "Minimum quantity depends on the thickness grade and style you need. Contact us with your requirement and we'll confirm feasible order sizes and pricing directly."
+                },
+                {
+                    "q": "Do the pads hold shape after dry cleaning?",
+                    "a": "Our pads are moulded for stable shape retention through normal handling and pressing. For garments going through repeated dry cleaning cycles, let us know so we can confirm the most suitable grade for that use."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "collar-cuff"
+                },
+                {
+                    "page": "eva-foam"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Shoulder Pads In Bulk?",
+            "text": "Tell us the thickness, style and quantity you need — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Shoulder Pads",
+        "tag": "Moulded",
+        "summary": "Consistent moulded shape and density for blazers, jackets and uniforms.",
+        "image": "/assets/images/products/shoulder-pad/shoulder-pad-warehouse-01.jpg",
+        "imageAlt": "Shoulder pads for blazers and jackets"
+    },
+    "created": "2026-11-18T23:15:21+05:30",
+    "updated": "2026-11-18T23:15:21+05:30"
+}

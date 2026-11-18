@@ -3,19 +3,25 @@
  * Image (or video) beside text.
  * @var array $b
  *   bg, textFirst (bool: text column comes first in the code and the image is
- *   moved left with order classes), image, imageAlt, video,
+ *   moved left with order classes), image, imageAlt, video, frame (img-frame | product-hero-img),
+ *   advanced layout: mediaCol, textCol, mediaAos, textAos, mediaDelay, textDelay, featureCol,
  *   eyebrow, heading, html (paragraphs), miniFeatures [{icon,title,text}],
  *   checklist [text…], afterHtml, button {label,href,class,iconAfter}
  */
 $textFirst = !empty($b['textFirst']);
-$mediaCol = 'col-lg-6' . ($textFirst ? ' order-lg-1' : '');
-$textCol = 'col-lg-6' . ($textFirst ? ' order-lg-2' : '');
+$mediaCol = (string) (($b['mediaCol'] ?? '') ?: 'col-lg-6' . ($textFirst ? ' order-lg-1' : ''));
+$textCol = (string) (($b['textCol'] ?? '') ?: 'col-lg-6' . ($textFirst ? ' order-lg-2' : ''));
+$frame = (string) (($b['frame'] ?? '') ?: 'img-frame');
+$featureCol = (string) (($b['featureCol'] ?? '') ?: 'col-sm-6');
+$delay = function ($ms) {
+    return (int) $ms > 0 ? ' data-aos-delay="' . (int) $ms . '"' : '';
+};
 $mediaAos = (string) ($b['mediaAos'] ?? 'fade-right');
 $textAos = (string) ($b['textAos'] ?? 'fade-left');
 
 ob_start(); ?>
-        <div class="<?= $mediaCol ?>" data-aos="<?= $mediaAos ?>">
-          <div class="img-frame">
+        <div class="<?= e($mediaCol) ?>" data-aos="<?= e($mediaAos) ?>"<?= $delay($b['mediaDelay'] ?? 0) ?>>
+          <div class="<?= e($frame) ?>">
 <?php if (($b['video'] ?? '') !== ''): ?>
             <video class="w-100 d-block" controls playsinline preload="metadata">
               <source src="<?= e($b['video']) ?>" type="video/mp4">
@@ -29,7 +35,7 @@ ob_start(); ?>
 <?php $media = ob_get_clean();
 
 ob_start(); ?>
-        <div class="<?= $textCol ?>" data-aos="<?= $textAos ?>">
+        <div class="<?= e($textCol) ?>" data-aos="<?= e($textAos) ?>"<?= $delay($b['textDelay'] ?? 0) ?>>
 <?php if (($b['eyebrow'] ?? '') !== ''): ?>
           <span class="section-eyebrow"><?= e($b['eyebrow']) ?></span>
 <?php endif; ?>
@@ -43,7 +49,7 @@ ob_start(); ?>
 <?php if (!empty($b['miniFeatures'])): ?>
           <div class="row g-3 mb-4">
 <?php foreach ($b['miniFeatures'] as $f): ?>
-            <div class="col-sm-6">
+            <div class="<?= e($featureCol) ?>">
               <div class="feature-mini">
                 <div class="feature-mini-icon"><?= icon($f['icon'] ?? '') ?></div>
                 <div>
