@@ -197,3 +197,47 @@ What stays untouched: `assets/` (all CSS, JS and images), `php/contact-form.php`
 **What a crawler sees differently (deliberate, invisible to visitors):** the static pages ship empty `data-include` placeholders, so search engines and AI tools that don't run JavaScript see no menu, footer, phone or address. The PHP site sends them in the HTML. In a browser, both versions end up with identical markup, which is exactly what this test compares.
 
 **Next: Phase 4 (Dashboard).** The SEO improvements from section 3 (schema, og:url, sitemap…) come in Phase 5. Each one will then be listed in `parity_accepted()` with its reason, so the parity report keeps separating deliberate changes from accidents.
+
+### Phase 4: Dashboard ✅ (2026-11-18)
+**Built** (`/admin`, plain PHP + the site's own Bootstrap, one `admin.js`, no build step)
+| Screen | What it does |
+|---|---|
+| `setup.php` | First password, only with a one-time link (`php app/cli.php setup-link`, valid 24 h, dead after use) |
+| `login.php` / `logout.php` | One password. Logout is a POST |
+| `index.php` | All pages: search as you type, filter by type and status, status pills (Live / Draft / Hidden from Google), last edited |
+| `new.php` | New product page or information page (with starter sections), or a copy of any page. Always starts as a draft |
+| `edit.php` | Three tabs: **Page content** (sections: open, move, add, remove, hide), **Google & sharing** (with a Google result preview and character counters), **Page settings** (name, address, product card, breadcrumb, advanced). Side panel: Save / Publish / Preview, a quick Google check, earlier versions, unpublish, delete. "Unsaved changes" marker and leave-page warning. Refuses to overwrite a page that was saved in another window meanwhile |
+| `preview.php` | Shows unsaved changes (noindex, not cached, nothing saved) |
+| `history.php` | Last 30 versions, restore (the replaced version is kept too) |
+| `delete.php` / `trash.php` | Delete moves to the Trash and offers a 301 to another page. Restore (also removes that redirect), delete for good, empty |
+| `media.php` | Website pictures + uploads, search, folder filter, "used / not used", sizes, copy address, picture picker inside the editor. Only unused uploads can be deleted |
+| `redirects.php` | Add / remove 301 and 410, with loop, chain and live-page checks |
+| `settings.php` | Business details, phones, addresses, WhatsApp, social profiles, logo and pictures, menu (with drop-down), menu button, newsletter bar, footer, tracking IDs (checked format). Password change |
+
+- The forms are **generated from one field map** (`app/admin_fields.php`), with plain-language labels. Technical options sit under "More options".
+- Rich text: a small editor (bold, italic, link, list, paragraph, clear, view HTML). Pasting from Word or Google Docs comes in as plain text.
+- **Renaming a live page** automatically creates a 301 from the old address and updates older redirects, so there are no chains. Moving a page back removes its redirect.
+
+**Security**
+- Password hashed (Argon2id) in `<content>/.auth.json` (chmod 600, not in git).
+- Session cookie is HttpOnly, SameSite=Lax, Secure on HTTPS and limited to `/admin`; new id on login; 2 h idle timeout.
+- CSRF token on every POST.
+- Login locked for 15 minutes after 5 wrong passwords (per IP).
+- Allow-list HTML cleaner on every rich-text and HTML field: scripts, `on*` attributes, `javascript:` links, unknown iframes and CSS tricks are removed. All 76 HTML values of the current site pass through **unchanged**.
+- Uploads: checks the real file type, 8 MB limit, random safe names, resized above 2000 px. The `uploads/` folder gets an `.htaccess` that never runs scripts.
+- Admin pages send `noindex`, `X-Frame-Options: DENY`, `nosniff` and `no-store`. Helper files (`admin/_*.php`) are blocked.
+
+**Tests**
+- `php tests/run.php` → **226 passed**. Key guarantee: **for all 18 pages, opening the editor and saving without changes gives exactly the same website**, and the same for Settings (header, menu, footer).
+- `php tests/dashboard-http.php` → **50 passed**, over real HTTP with a temporary content copy: setup, login, wrong password, create, preview, publish, edit, stale-form protection, history restore, rename → 301, upload (and a disguised PHP file refused), delete → 301 → restore, manual redirect and loop refusal, settings, tracking-ID check, CSRF refused on all 9 POST screens, private files 403, lockout after 5 wrong passwords, no PHP warnings in the server log.
+- Checked by hand in the browser: login, page list, editing and moving a section, saving (only the intended change differs from the static page), picture picker, phone width (no sideways scrolling).
+
+**Try it locally**
+```bash
+cp -R content /tmp/jb-content
+JAIBABA_CONTENT_DIR=/tmp/jb-content JAIBABA_BASE_URL=http://localhost:8000 php app/cli.php setup-link
+JAIBABA_ENABLED=1 JAIBABA_PREVIEW_PHP=1 JAIBABA_CONTENT_DIR=/tmp/jb-content php -S localhost:8000 deploy/dev-router.php
+```
+Open the printed link to choose a password, then go to `http://localhost:8000/admin/`.
+
+**Next: Phase 5 (SEO automation).** Generated `sitemap.xml`, `robots.txt` and `llms.txt`; the full JSON-LD graph (Organization, WebSite, WebPage, BreadcrumbList, FAQPage, Product, …); `og:url`, `og:site_name` and Twitter tags; tracking tags; broken-link check; full SEO checks in the editor and a site-wide SEO report. Each change will be listed as accepted in the parity test.

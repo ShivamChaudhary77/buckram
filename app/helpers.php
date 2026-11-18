@@ -32,9 +32,10 @@ function slugify(string $text): string
     return trim((string) $text, '-');
 }
 
+/** ISO 8601 time with milliseconds, so two saves in the same second still differ. */
 function now_iso(): string
 {
-    return date('c');
+    return (new DateTime())->format('Y-m-d\TH:i:s.vP');
 }
 
 /** Path inside the content folder. */

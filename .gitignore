@@ -6,3 +6,5 @@ content/_*
 content/.auth*
 content/**/.lock
 content/.lock
+uploads/
+uploads-test-*/

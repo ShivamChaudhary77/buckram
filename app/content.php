@@ -18,7 +18,7 @@ const INDEX_VERSION = 1;
 const HISTORY_KEEP = 30;
 const PAGE_TYPES = ['home', 'product', 'listing', 'about', 'contact', 'page'];
 const PAGE_STATUSES = ['draft', 'published'];
-const RESERVED_PREFIXES = ['/admin', '/app', '/assets', '/content', '/includes', '/php', '/templates', '/tests', '/scripts', '/deploy'];
+const RESERVED_PREFIXES = ['/admin', '/app', '/assets', '/content', '/includes', '/php', '/templates', '/tests', '/scripts', '/deploy', '/uploads'];
 
 class ContentError extends RuntimeException
 {
@@ -186,6 +186,45 @@ function page_save(array $page): array
     index_rebuild();
     cache_clear();
     return $page;
+}
+
+/**
+ * Save a page edited in the dashboard. When a live page gets a new web address,
+ * the old address is redirected (301) to the new one automatically, and older
+ * redirects that pointed at the old address are updated so there are no chains.
+ * Returns [savedPage, messages[]].
+ */
+function page_save_from_editor(array $page, ?array $old): array
+{
+    $messages = [];
+    $newPath = normalize_page_path((string) ($page['path'] ?? ''));
+    $oldPath = $old['path'] ?? null;
+    $list = redirects_load();
+    $changed = false;
+    // A redirect from the new address would hide the page: drop it.
+    $filtered = array_values(array_filter($list, function ($r) use ($newPath) {
+        return $r['from'] !== $newPath;
+    }));
+    if (count($filtered) !== count($list)) {
+        $list = $filtered;
+        $changed = true;
+    }
+    if ($changed) {
+        redirects_save($list);
+    }
+    $saved = page_save($page);
+    if ($oldPath && $oldPath !== $saved['path'] && ($old['status'] ?? '') === 'published') {
+        foreach ($list as &$r) {
+            if ($r['code'] === 301 && $r['to'] === $oldPath) {
+                $r['to'] = $saved['path'];
+            }
+        }
+        unset($r);
+        $list[] = ['from' => $oldPath, 'to' => $saved['path'], 'code' => 301];
+        redirects_save($list);
+        $messages[] = 'The old address ' . $oldPath . ' now sends visitors (and Google) to ' . $saved['path'] . '.';
+    }
+    return [$saved, $messages];
 }
 
 /* ------------------------------------------------------------- URL index */

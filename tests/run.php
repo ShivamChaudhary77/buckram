@@ -331,6 +331,189 @@ try {
     check('parity notices a changed link', $has('/product/belt-roll.html', 'links'));
     check('parity leaves untouched pages alone', $par['identical'] === $par['total'] - 6);
 
+    /* ------------------------------------------------------------ dashboard */
+    $section('dashboard: security');
+    require_once APP_DIR . '/security.php';
+    require_once APP_DIR . '/sanitize.php';
+    require_once APP_DIR . '/media.php';
+    require_once APP_DIR . '/admin_fields.php';
+    require_once APP_DIR . '/admin_form.php';
+    $dirs[] = $sec = fresh_content();
+    check('no password at first', !password_is_set());
+    check('short password rejected', password_problem('short', 'short') !== null);
+    check('mismatch rejected', password_problem('long enough pw', 'long enough pX') !== null);
+    $tok = setup_token_create();
+    check('setup token valid once created', setup_token_valid($tok));
+    check('wrong setup token rejected', !setup_token_valid('nope') && !setup_token_valid(''));
+    password_set('correct horse battery');
+    check('password set and checked', password_is_set() && password_check('correct horse battery') && !password_check('wrong'));
+    check('password file not readable by others', (fileperms(content_path('.auth.json')) & 0077) === 0);
+    check('password stored as a hash', strpos((string) file_get_contents(content_path('.auth.json')), 'correct horse') === false);
+    check('setup token dead after password set', !setup_token_valid($tok));
+    $_SERVER['REMOTE_ADDR'] = '203.0.113.9';
+    for ($i = 0; $i < LOGIN_MAX_FAILURES - 1; $i++) {
+        login_record_failure();
+    }
+    check('not locked before 5 failures', login_locked_for() === 0);
+    login_record_failure();
+    check('locked after 5 failures', login_locked_for() > 800);
+    $_SERVER['REMOTE_ADDR'] = '203.0.113.10';
+    check('other visitors not locked', login_locked_for() === 0);
+    login_clear_failures();
+    check('csrf: missing / wrong token rejected', !csrf_valid(null) && !csrf_valid('x'));
+    check('csrf: right token accepted', csrf_valid(csrf_token()));
+
+    $section('dashboard: HTML cleaning');
+    $s = sanitize_html('<p onclick="x()">Hi <script>alert(1)</script><a href="javascript:alert(1)">a</a><a href="/ok.html" target="_blank">b</a><img src="x" onerror="y"><iframe src="https://evil.example/"></iframe><iframe src="https://www.google.com/maps?q=x&output=embed"></iframe><span style="background:url(javascript:x)">s</span></p>');
+    check('script removed', stripos($s, 'script') === false && stripos($s, 'alert') === false);
+    check('on* attributes removed', stripos($s, 'onclick') === false && stripos($s, 'onerror') === false);
+    check('javascript: links removed', stripos($s, 'javascript') === false);
+    check('new-tab links get rel=noopener', strpos($s, 'href="/ok.html" target="_blank" rel="noopener"') !== false);
+    check('only allowed iframes kept', strpos($s, 'evil.example') === false && strpos($s, 'www.google.com/maps') !== false);
+    check('dangerous inline style removed', strpos($s, 'style=') === false);
+    check('site markup kept (data-aos, classes, form)', sanitize_html('<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><form id="f" novalidate><input type="tel" pattern="[0-9]{10}" required></form></div>')
+        === '<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100"><form id="f" novalidate><input type="tel" pattern="[0-9]{10}" required></form></div>');
+    $htmlValues = 0;
+    $changed = 0;
+    foreach (glob("$mig/pages/*.json") as $f) {
+        $pgData = json_read($f);
+        array_walk_recursive($pgData, function ($v) use (&$htmlValues, &$changed) {
+            if (is_string($v) && strpos($v, '<') !== false) {
+                $htmlValues++;
+                $changed += token_diff(fragment_tokens($v), fragment_tokens(sanitize_html($v))) === null ? 0 : 1;
+            }
+        });
+    }
+    check("cleaning keeps all $htmlValues HTML values of the site unchanged", $htmlValues > 50 && $changed === 0);
+
+    $section('dashboard: editor form round trip (save without changes = same website)');
+    config_set(['content_dir' => $mig, 'enabled' => true, 'cache' => false]);
+    rm_tree($mig);
+    ensure_dir($mig . '/pages');
+    migrate_site(ROOT_DIR, $mig);
+    $post_from_form = function (string $html): array {
+        $doc = dom_fragment($html);
+        $x = new DOMXPath($doc);
+        $pairs = [];
+        foreach ($x->query('//input[@name] | //textarea[@name] | //select[@name]') as $el) {
+            $n = $el->getAttribute('name');
+            if ($el->nodeName === 'input') {
+                $t = strtolower($el->getAttribute('type') ?: 'text');
+                if ($t === 'checkbox' && !$el->hasAttribute('checked')) {
+                    continue;
+                }
+                $pairs[] = rawurlencode($n) . '=' . rawurlencode($el->getAttribute('value'));
+            } elseif ($el->nodeName === 'textarea') {
+                $pairs[] = rawurlencode($n) . '=' . rawurlencode($el->textContent);
+            } else {
+                $sel = $x->query('.//option[@selected]', $el)->item(0) ?? $x->query('.//option', $el)->item(0);
+                $pairs[] = rawurlencode($n) . '=' . rawurlencode($sel ? $sel->getAttribute('value') : '');
+            }
+        }
+        parse_str(implode('&', $pairs), $out);
+        return $out;
+    };
+    $roundOk = 0;
+    $total = 0;
+    foreach (pages_all() as $pid => $pg) {
+        $total++;
+        $html = form_fields(page_fields($pg['type']), $pg, ['page']);
+        foreach (array_values($pg['blocks']) as $i => $b) {
+            $html .= form_block($b, $i);
+        }
+        $errs = [];
+        $back = form_collect_page($post_from_form($html), $pg, $errs);
+        $a = parity_extract(render_page($pg));
+        $b2 = parity_extract(render_page($back));
+        $diff = parity_compare($a, $b2);
+        if (!$errs && !$diff) {
+            $roundOk++;
+        } else {
+            echo "      $pid: " . implode('; ', $errs) . ' ' . implode(' | ', array_map(function ($k, $v) { return "$k: $v"; }, array_keys($diff), $diff)) . "\n";
+        }
+    }
+    check("all $total pages: editor form → save renders the identical page", $roundOk === $total);
+    $site0 = site_load();
+    $errs = [];
+    $siteBack = form_collect(settings_fields(), $post_from_form(form_fields(settings_fields(), $site0, ['site']))['site'] ?? [], $site0, $errs);
+    $partials = function ($s) {
+        return render_template('partials/topbar', ['site' => $s]) . render_template('partials/navbar', ['site' => $s, 'page' => []]) . render_template('partials/footer', ['site' => $s]);
+    };
+    check('settings form → save renders identical header, menu and footer', !$errs && token_diff(fragment_tokens($partials($site0)), fragment_tokens($partials($siteBack))) === null);
+    // Edits do arrive.
+    $pg = page_load('tatron');
+    $html = form_fields(page_fields('product'), $pg, ['page']) . implode('', array_map('form_block', $pg['blocks'], array_keys($pg['blocks'])));
+    $post = $post_from_form($html);
+    $post['page']['seo']['title'] = 'New <b>title</b>';
+    $post['blocks'][1]['html'] = '<p>Hello <script>x()</script><strong>world</strong></p>';
+    $post['blocks'][2]['hidden'] = '1';
+    $errs = [];
+    $edited = form_collect_page($post, $pg, $errs);
+    check('edited text field saved as plain text', $edited['seo']['title'] === 'New <b>title</b>');
+    check('edited rich text cleaned', $edited['blocks'][1]['html'] === '<p>Hello <strong>world</strong></p>');
+    check('hide a section', !empty($edited['blocks'][2]['hidden'])
+        && substr_count(render_blocks($edited, site_load()), '<section') === substr_count(render_blocks($pg, site_load()), '<section') - 1);
+    check('text is escaped on the page', strpos(render_page($edited), '<title>New &lt;b&gt;title&lt;/b&gt;</title>') !== false);
+    $post['page']['jsonld'] = '{not json';
+    $errs = [];
+    form_collect_page($post, $pg, $errs);
+    check('broken JSON is reported, not saved', count($errs) === 1);
+    $post['page']['jsonld'] = '[]';
+    $post['page']['path'] = '/product/tatron-lining.html';
+    $errs = [];
+    [$saved, $msgs] = page_save_from_editor(form_collect_page($post, $pg, $errs), $pg);
+    check('renaming a live page creates a 301 from the old address', redirect_find('/product/tatron.html')['to'] === '/product/tatron-lining.html' && $msgs);
+    check('the new address works, the old one redirects', get('/product/tatron-lining.html')['status'] === 200 && get('/product/tatron.html')['status'] === 301);
+    $post['page']['path'] = '/product/tatron-fabric.html';
+    page_save_from_editor(form_collect_page($post, $saved, $errs), $saved);
+    check('renaming again updates the old redirect (no chains)', redirect_find('/product/tatron.html')['to'] === '/product/tatron-fabric.html'
+        && redirect_find('/product/tatron-lining.html')['to'] === '/product/tatron-fabric.html');
+    $post['page']['path'] = '/product/tatron.html';
+    [$back3] = page_save_from_editor(form_collect_page($post, page_load('tatron'), $errs), page_load('tatron'));
+    check('moving back to the original address removes its redirect', redirect_find('/product/tatron.html') === null && get('/product/tatron.html')['status'] === 200);
+
+    $section('dashboard: pictures');
+    $dirs[] = $up = sys_get_temp_dir() . '/jaibaba-up-' . bin2hex(random_bytes(3));
+    config_set(['uploads_dir' => $up, 'uploads_url' => 'uploads']);
+    $png = sys_get_temp_dir() . '/jb-test-' . bin2hex(random_bytes(3)) . '.png';
+    $im = imagecreatetruecolor(2400, 10);
+    imagepng($im, $png);
+    $url = media_upload(['name' => 'My Photo!.png', 'tmp_name' => $png, 'error' => UPLOAD_ERR_OK, 'size' => filesize($png)]);
+    check('upload saved with a safe name', preg_match('#^/uploads/\d{4}/\d{2}/my-photo-[0-9a-f]{6}\.png$#', $url) === 1);
+    check('wide picture made smaller', getimagesize($up . substr($url, strlen('/uploads')))[0] === MEDIA_MAX_WIDTH);
+    check('uploads folder blocks scripts', strpos((string) file_get_contents("$up/.htaccess"), 'Require all denied') !== false);
+    $fake = sys_get_temp_dir() . '/jb-test-' . bin2hex(random_bytes(3)) . '.jpg';
+    file_put_contents($fake, '<?php echo 1;');
+    try {
+        media_upload(['name' => 'shell.jpg', 'tmp_name' => $fake, 'error' => UPLOAD_ERR_OK, 'size' => 13]);
+        check('non-picture upload refused', false);
+    } catch (ContentError $e) {
+        check('non-picture upload refused', true);
+    }
+    check('uploaded picture listed', (bool) array_filter(media_list(), function ($m) use ($url) { return $m['url'] === $url; }));
+    $pg = page_load('about');
+    $pg['seo']['ogImage'] = $url;
+    page_save($pg);
+    try {
+        media_delete($url);
+        check('used picture cannot be deleted', false);
+    } catch (ContentError $e) {
+        check('used picture cannot be deleted', true);
+    }
+    $pg['seo']['ogImage'] = '';
+    page_save($pg);
+    media_delete($url);
+    check('unused upload deleted', !is_file($up . substr($url, strlen('/uploads'))));
+    try {
+        media_delete('/assets/images/logo.jpeg');
+        check('site pictures cannot be deleted', false);
+    } catch (ContentError $e) {
+        check('site pictures cannot be deleted', is_file(ROOT_DIR . '/assets/images/logo.jpeg'));
+    }
+    @unlink($png);
+    @unlink($fake);
+    config_set(['uploads_dir' => null, 'uploads_url' => null]);
+
     /* ------------------------------------------------------- whole fixtures */
     config_set(['content_dir' => $dirs[1], 'enabled' => true]);
     $section('every fixture page renders');

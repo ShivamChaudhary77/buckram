@@ -6,6 +6,8 @@
  *   php app/cli.php check                  render every page, report errors and status codes
  *   php app/cli.php clear-cache            delete stored rendered pages
  *   php app/cli.php rebuild-index          rebuild the address → page list
+ *   php app/cli.php setup-link             print a one-time link to choose the first dashboard password
+ *   php app/cli.php set-password           set or reset the dashboard password (typed, or piped in)
  *
  * Add --content=/path/to/content to use another content folder.
  * Rendering always works as if the site were switched on, so it can be checked before go-live.
@@ -75,6 +77,41 @@ switch ($cmd) {
         echo count($pages) . " pages, $fail problems\n";
         exit($fail ? 1 : 0);
 
+    case 'setup-link':
+        require_once APP_DIR . '/security.php';
+        if (password_is_set()) {
+            echo "A dashboard password already exists. To replace it, run: php app/cli.php set-password\n";
+            exit(1);
+        }
+        $token = setup_token_create();
+        echo "Open this link within 24 hours to choose the dashboard password (it works once):\n";
+        echo config('base_url') . '/admin/setup.php?token=' . $token . "\n";
+        exit(0);
+
+    case 'set-password':
+        require_once APP_DIR . '/security.php';
+        // Reads the password from the keyboard (hidden) or from piped input, never from the command line.
+        if (function_exists('posix_isatty') && posix_isatty(STDIN)) {
+            echo 'New dashboard password: ';
+            system('stty -echo');
+            $pw = rtrim((string) fgets(STDIN), "\r\n");
+            echo "\nType it again: ";
+            $pw2 = rtrim((string) fgets(STDIN), "\r\n");
+            system('stty echo');
+            echo "\n";
+        } else {
+            $pw = rtrim((string) fgets(STDIN), "\r\n");
+            $pw2 = $pw;
+        }
+        $problem = password_problem($pw, $pw2);
+        if ($problem) {
+            fwrite(STDERR, $problem . "\n");
+            exit(1);
+        }
+        password_set($pw);
+        echo "Password saved.\n";
+        exit(0);
+
     case 'clear-cache':
         cache_clear();
         echo "Cache cleared.\n";
@@ -86,6 +123,6 @@ switch ($cmd) {
         exit(0);
 
     default:
-        echo "Usage: php app/cli.php render <path> [--status] | check | clear-cache | rebuild-index [--content=DIR]\n";
+        echo "Usage: php app/cli.php render <path> [--status] | check | clear-cache | rebuild-index | setup-link | set-password [--content=DIR]\n";
         exit($cmd === 'help' ? 0 : 1);
 }

@@ -35,6 +35,10 @@ function config_defaults(): array
         'debug'           => false,
 
         'timezone'        => 'Asia/Kolkata',
+
+        // Pictures uploaded in the dashboard. Must be inside the public web folder.
+        'uploads_dir'     => ROOT_DIR . '/uploads',
+        'uploads_url'     => 'uploads',
     ];
 }
 
@@ -47,6 +51,7 @@ function config_env(): array
         'JAIBABA_HOME_PATH'   => 'home_path',
         'JAIBABA_CACHE'       => 'cache',
         'JAIBABA_DEBUG'       => 'debug',
+        'JAIBABA_UPLOADS_DIR' => 'uploads_dir',
     ];
     $bools = ['enabled', 'cache', 'debug'];
     $out = [];
