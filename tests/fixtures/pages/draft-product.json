@@ -1,0 +1,9 @@
+{
+  "id": "draft-product",
+  "type": "product",
+  "status": "draft",
+  "path": "/product/draft-product.html",
+  "title": "Draft Product",
+  "card": {"tag": "New", "summary": "Not public yet."},
+  "blocks": [{"type": "page-hero", "heading": "Draft Product"}]
+}

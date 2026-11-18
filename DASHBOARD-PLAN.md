@@ -1,0 +1,158 @@
+# Jaibaba Interlinings: Dashboard Plan (Phase 0 review)
+
+Goal: keep every URL, every word and every SEO tag the same, but let the owner edit all pages at `/admin`.
+Stack: **plain PHP 8.0+ and JSON files.** No database, no Composer, no build step.
+
+Review date: 2026-11-18. Nothing in the project was changed during this review except this file.
+
+---
+
+## 1. What the site is today
+
+| Item | Finding |
+|---|---|
+| Pages | 18 HTML pages: 8 top-level pages and 10 product pages under `/product/` |
+| Shared parts | `includes/header.html` (top bar), `includes/navbar.html`, `includes/footer.html` (newsletter bar, footer, WhatsApp button, back-to-top button) |
+| How shared parts load | **In the browser with JavaScript** (`fetch()` in `assets/js/main.js`). Search engines and AI crawlers that don't run JS see **no menu, no footer, no address or phone number** |
+| Generators | None. The pages were written by hand, following `BUILD_SPEC.md` |
+| Forms | Enquiry form on `contact.html` → `php/contact-form.php` (PHP `mail()`), which stays as it is. The newsletter form in the footer only *pretends* to subscribe: it has no back end |
+| Server files | No `.htaccess`, no `robots.txt`, no sitemap, no redirects file |
+| Tracking | **None.** No GA4, GTM or Meta Pixel on any page |
+| Assets | Local CSS/JS (Bootstrap 5, AOS, Swiper, jQuery) plus Google Fonts and Font Awesome from a CDN. ~120 local images |
+| External media | Home page video comes from **another website** (`antardrishtiyog.com/jaibaba-video.mp4`). `applications.html` uses **7 Unsplash images** loaded from unsplash.com |
+| Repo state | 9 pages have **uncommitted edits** ("client feedback"). They must be committed before the migration runs |
+
+### URL list (all must keep working)
+`/` and `/index.html`, `/about.html`, `/manufacturing.html`, `/products.html`, `/quality.html`, `/applications.html`, `/exports.html`, `/contact.html`, and `/product/` + `buckram-fabric`, `fusible-interlining`, `pocketing-fabric`, `collar-cuff`, `belt-roll`, `shoulder-pad`, `eva-foam`, `woven-knitted-elastics`, `tatron`, `velcro-tape` (each `.html`).
+
+---
+
+## 2. Page types → editable fields
+
+### a) Product page (10 pages: same layout, so fully structured fields)
+Every product page has the same 10 sections in the same order. Small differences found:
+- `belt-roll` shows its "Features" as a tick list plus a paragraph; the other pages show 4 small icon boxes.
+- `tatron` and `velcro-tape` have 3 variants; the others have 4. Some variants have a photo, some don't.
+- `fusible-interlining` and `pocketing-fabric` have one extra row in the specification table.
+
+| Section | Fields |
+|---|---|
+| Top banner | label + icon, page heading (H1), intro sentence, background image |
+| Breadcrumb | automatic (Home / Products / *name*) |
+| Overview | image + alt text, small label, heading, paragraphs (rich text), tick list, button |
+| Applications | label, heading, intro, cards (icon, title, text), link |
+| Features | label, heading, image + alt, *either* icon boxes (icon, title, text) *or* tick list + paragraph |
+| Benefits | label, heading, cards (icon, title, text) |
+| Specifications | label, heading, note, table rows (parameter, value) |
+| Variants | label, heading, intro, cards (title, text, optional photo) |
+| FAQ | label, heading, intro, questions and answers |
+| Related products | pick 2 products (the card is built from that product's card fields) |
+| Closing call-to-action | heading, text |
+| **Product card** (used on Home, Products page and in "Related products") | short label ("Structured"), one-line summary, card image + alt |
+
+If the parity test shows that the same product's card text differs between Home, Products and Related, each listing gets its own override field. Nothing is silently merged.
+
+### b) Home page (one page)
+Hero (label, H1, intro, 2 buttons, background, 4 stat boxes), trust strip, "Who we are" (video link, text), featured products (choose which), manufacturing, industries, "why choose us" cards, quality, export, testimonials, FAQ, closing call-to-action. Each one becomes a section with its own fields.
+
+### c) Information pages (About, Manufacturing, Quality, Applications, Exports, Products, Contact)
+Each page is laid out differently. Plan:
+- Top banner + breadcrumb, FAQ and the closing call-to-action become **structured fields** (they repeat across pages).
+- Everything else becomes a list of **sections**: the common card, tick-list and image-plus-text patterns get proper fields. Any one-off layout (for example the About timeline, the comparison tables) is kept as a **cleaned HTML section** so that nothing is lost, and it is edited with a simple rich-text editor.
+
+### d) Site-wide settings (`site.json`, one "Settings" screen)
+Business name, legal name, 2 phone numbers, email, head office and branch address, Google Maps link, opening hours, WhatsApp number and its pre-filled message, social links (Facebook, Instagram, X, YouTube), the main menu and the Products drop-down, footer columns and "about" text, newsletter bar text, default share image, and tracking IDs (empty for now).
+
+---
+
+## 3. SEO, AEO and GEO findings
+
+### Problems the new templates fix automatically
+| # | Problem | Pages | Fix |
+|---|---|---|---|
+| 1 | **Menu, footer, phone and address are invisible without JavaScript** (no internal links from the menu, no NAP for Google or AI tools) | all 18 | Server-render the header, menu and footer in PHP. The visible page looks identical. `main.js` keeps working (with nothing left to fetch, it simply skips that step) |
+| 2 | **FAQs shown but no `FAQPage` schema** | 12 (home, quality, 10 products) | Build the schema from the same visible questions |
+| 3 | **Breadcrumbs shown but no `BreadcrumbList` schema** | 17 | Generate it from the page's breadcrumb |
+| 4 | **Structured data only on the home page** | 17 have none | Every page gets an `Organization` + `WebSite` + `WebPage` graph; `AboutPage`, `ContactPage`, `CollectionPage` (Products) and `Product` (no prices or ratings) where they fit |
+| 5 | Organization address only says "Delhi" | home | Use the full head-office address that is already on the site (8710 Roshanara Road, Delhi 110007). Both phone numbers |
+| 6 | `og:image` is a **relative path** and points to the **placeholder** `logo.svg` (the real logo is `logo.jpeg`) | all | Absolute URL. Default to the real logo, or a per-page image |
+| 7 | No `og:url`, `og:site_name`, Twitter card tags or `robots` meta | all | Generated |
+| 8 | No `robots.txt`, `sitemap.xml` or `llms.txt` | site | Generated automatically from the pages |
+| 9 | Favicon is the placeholder `logo.svg` | all | Settings field (keeps the current file until the owner changes it) |
+| 10 | Images have no `width`/`height` | all | Added from the real file sizes (avoids layout shift) |
+
+### Problems shown to the editor as warnings (not auto-changed, because this is wording)
+| # | Problem | Pages |
+|---|---|---|
+| 11 | Meta descriptions **too long** (Google cuts at ~160 characters) | all 18 (167–379 characters) |
+| 12 | Titles **too long** (over ~60 characters) | 11 of 18 |
+| 13 | No short "direct answer" paragraph under the H1 (AEO) | all; the field will exist but stay empty until the owner writes it |
+
+### Content risks (owner must decide; nothing will be invented)
+- **Home page testimonials** are anonymous ("Procurement Manager", "Export Buyer", "OEM Buyer") and show 5 stars. They will **not** be marked up as reviews or ratings. Please confirm that they are real quotes, or replace or remove them.
+- **Newsletter form** does nothing. Options: remove it, or send sign-ups to the same email as the enquiry form.
+- **Home page video** is hosted on another domain. If that site goes down, the video disappears. It would be better to host it on this site (the file exists locally in `assets/videos/` but is not in git because of its size).
+- **Unsplash hotlinks** on Applications: better to download them into `assets/images/` (fewer outside dependencies, faster).
+- The home page canonical is `/index.html`, while `/` serves the same page. See question 4.
+
+---
+
+## 4. Hosting facts
+
+| Item | Finding |
+|---|---|
+| Domain | `www.jaibabainterlinings.com` (from the canonicals). **It does not resolve in DNS today**, so the site doesn't appear to be live yet. Good news: no Google ranking to protect yet |
+| Server | Unknown (no `.htaccess`, `.cpanel.yml` or host docs in the repo). The contact form needs PHP, so the host must have PHP |
+| Local PHP | 8.5 with `dom`, `json`, `mbstring`, `fileinfo`, `gd`, so everything can be built and tested locally |
+| Deploys | Unknown (git, FTP or File Manager?) |
+| Hostinger | A Hostinger connection is available in this workspace. If the site is hosted there, the steps can be tailored to hPanel |
+
+The build will ship with: `.htaccess` (Apache/LiteSpeed: Hostinger, cPanel, Plesk), an Nginx snippet, the content folder **outside the public folder** when the host allows it, and cron-based steps for hosts without SSH.
+
+---
+
+## 5. Plan (one phase per request; each finishes with tests, then stops for review)
+
+| Phase | What gets built | Done when |
+|---|---|---|
+| **1. Foundation** | `app/` core (config, JSON storage with atomic writes, routing, rendering, cache), `templates/`, `index.php`, `.htaccess`, Nginx snippet. A feature switch (`enabled`) is **off** by default, so the static site keeps serving | Unit tests pass |
+| **2. Migration** | `scripts/migrate.py`: turns the 18 pages + 3 includes into `content/pages/*.json` + `content/site.json`. Re-runnable until go-live | Every page has a JSON file; nothing dropped |
+| **3. Parity** | `tests/compare-site.php`: renders every URL in PHP and compares it with the static file (text, title, meta, canonical, OG, JSON-LD, H1, links, images) | "All 18 pages identical", apart from the documented improvements in section 3 |
+| **4. Dashboard** | `/admin`: login (one password), page list, editor with SEO panel and character counters, preview, history and restore (last 30 versions), trash, images, redirects, settings. CSRF, login lockout, HTML cleaning. Brand colours (navy/gold) | Dashboard HTTP test passes |
+| **5. SEO automation** | `sitemap.xml`, `robots.txt`, `llms.txt`, all JSON-LD, automatic 301 when a URL changes, broken-link check, live SEO checks in the editor, site-wide SEO report | SEO tests pass |
+| **6. Go-live** | `GO-LIVE.md` (for your host), `scripts/go-live.sh` (dry run by default; `--apply` backs up the static files and prints the undo command), `rollback-go-live.sh`, `backup-content.sh`, plain-language `DASHBOARD-GUIDE.md`, live checker, `CLAUDE.md` notes | Live checker passes on the real domain |
+
+What stays untouched: `assets/` (all CSS, JS and images), `php/contact-form.php`, the visual design.
+
+---
+
+## 6. Questions for you
+1. **Hosting:** which host and plan (Hostinger, cPanel or other)? Do you have SSH or only File Manager? How do you upload: git, FTP or File Manager?
+2. **Editors:** who will use the dashboard? One owner password is planned; say so if more than one person needs separate logins.
+3. **Languages:** English only? (Assumed yes; no hreflang.)
+4. **Home page URL:** keep `/index.html` as the official address (exactly as now), or make `/` the official one with a 301 from `/index.html` (cleaner, and safe because the site isn't live yet)? Recommended: `/`.
+5. **Tracking:** do you want GA4, GTM or Meta Pixel? If yes, the IDs can be entered later in Settings.
+6. **Content risks** in section 3: testimonials, newsletter form, video hosting, Unsplash images. Fix now, or leave as they are?
+
+---
+
+## 7. Progress
+
+### Phase 1: Foundation ✅ (2026-11-18)
+**Built**
+- `app/`: `config.php` (defaults → env vars `JAIBABA_*` → untracked `config.local.php`), `bootstrap.php`, `helpers.php` (escaping, atomic locked JSON writes), `content.php` (pages, site settings, URL index, history of the last 30 versions, trash, redirects with loop/chain checks), `cache.php`, `render.php`, `front.php` (routing), `cli.php`.
+- `templates/`: `layout.php`; `partials/` (head, top bar, menu, footer, section heading); `blocks/` (`page-hero`, `media-text`, `card-grid`, `spec-table`, `faq`, `product-cards`, `cta`, `html`).
+- `index.php`, `.htaccess` (Apache/LiteSpeed), `deploy/nginx.conf.example`, `deploy/dev-router.php` (local preview), `content/.htaccess` (deny all).
+- Tests: `php tests/run.php` → **112 passed, 0 failed**. `php app/cli.php check` renders every page through PHP.
+
+**Decisions made**
+- **Pages are an ordered list of blocks**, not one rigid template per type. The product pages differ in small ways (h3 vs h4, 3 vs 4 columns, optional photos), so each block has a few display options. In Phase 2 a section becomes a structured block only if it renders identically; otherwise it is kept as an `html` block.
+- **Product cards** (Home, Products page, Related products) are built from the product page's own `card` fields, so they are edited in one place.
+- The **header, menu and footer** are rendered on the server from `site.json`. `main.js` needs no change: with no `data-include` placeholders it skips the fetch step.
+- The home page address stays **`/index.html`** for now (setting `home_path`; switch it to `/` to make `/` official with a 301).
+- **Feature switch `enabled` is off by default.** While it is off, `.htaccess` keeps serving the static `.html` files (`DirectoryIndex index.html index.php`), and `index.php` serves a static file if the server passes one to it anyway.
+- Address clean-up when on: uppercase → lowercase, `//` → `/`, `/page.html/` → `/page.html`, `/page` → `/page.html` (all 301). Unknown → real 404 (noindex). Dashboard redirects → 301 / 410.
+
+**Run locally**: `php -S localhost:8000 deploy/dev-router.php`. To preview the PHP site against a content folder, prefix `JAIBABA_ENABLED=1 JAIBABA_CONTENT_DIR=/path/to/content`.
+
+**Next: Phase 2 (Migration).** Needs the 9 uncommitted page edits committed first.

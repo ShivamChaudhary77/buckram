@@ -1,1 +1,8 @@
 assets/videos/jaibaba-video.mp4
+
+# Dashboard (PHP site)
+app/config.local.php
+content/_*
+content/.auth*
+content/**/.lock
+content/.lock

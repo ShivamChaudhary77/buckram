@@ -1,0 +1,22 @@
+{
+  "id": "buckram-fabric",
+  "type": "product",
+  "status": "published",
+  "path": "/product/buckram-fabric.html",
+  "title": "Buckram Fabric",
+  "breadcrumb": [{"label": "Home", "href": "/index.html"}, {"label": "Products", "href": "/products.html"}],
+  "seo": {"title": "Buckram Fabric Manufacturer | Jaibaba Interlinings, Delhi", "description": "Stiff buckram fabric."},
+  "card": {"tag": "Structured", "summary": "Stiff, shape-holding fabric for caps & belts.", "image": "/assets/images/products/buckram-fabric/buckram-fabric-branded-rolls-04.jpg", "imageAlt": "Buckram fabric rolls"},
+  "blocks": [
+    {"type": "page-hero", "icon": "fas fa-shapes", "eyebrow": "Structured Fabric", "heading": "Buckram Fabric", "intro": "Stiff, sized fabric.", "image": "/assets/images/products/buckram-fabric/buckram-fabric-branded-rolls-04.jpg"},
+    {"type": "media-text", "image": "/x.jpg", "imageAlt": "Roll", "eyebrow": "Product Overview", "heading": "Fabric Built To Hold Its Shape", "html": "<p class=\"mb-4\">Buckram is sized.</p>", "checklist": ["Made in Delhi"], "button": {"label": "Request a Quote", "href": "/contact.html"}},
+    {"type": "card-grid", "bg": "bg-soft", "heading": "Applications", "centered": true, "col": "col-lg-3 col-sm-6", "items": [
+      {"icon": "fas fa-hat-cowboy", "title": "Caps & Cap Peaks", "text": "Front panel."},
+      {"icon": "fas fa-grip-lines", "title": "Belts", "text": "Core."}
+    ]},
+    {"type": "spec-table", "heading": "Typical Specifications", "rows": [["Composition", "Cotton"], ["Stiffness", "Firm"]]},
+    {"type": "card-grid", "card": "variant", "titleTag": "h4", "col": "col-lg-3 col-sm-6", "items": [{"title": "Narrow", "text": "Slim.", "image": "/n.jpg", "imageAlt": "Narrow"}]},
+    {"type": "faq", "accordionId": "buckramFaq", "itemPrefix": "buckramFaq", "items": [{"q": "What widths?", "a": "Standard."}]},
+    {"type": "cta", "heading": "Need Buckram In Bulk?", "text": "Tell us."}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "home",
+  "type": "home",
+  "status": "published",
+  "path": "/index.html",
+  "title": "Home",
+  "seo": {
+    "title": "Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977, Delhi",
+    "description": "Interlining fabrics made in Delhi since 1977."
+  },
+  "jsonld": [{"@context": "https://schema.org", "@type": "Organization", "name": "Jai Baba Nanak Cloth Trading Co.", "foundingDate": "1977"}],
+  "blocks": [
+    {"type": "html", "html": "  <section class=\"hero\">\n    <div class=\"container-custom\"><h1>Interlining Fabric That Holds Its Shape</h1></div>\n  </section>"},
+    {"type": "product-cards", "bg": "bg-soft", "heading": "Ten Product Lines", "col": "col-lg-3 col-md-6", "items": [{"page": "buckram-fabric"}, {"page": "draft-product"}]},
+    {"type": "faq", "accordionId": "homeFaq", "itemPrefix": "faq", "eyebrow": "Common Questions", "items": [
+      {"q": "Do you export outside India?", "a": "Yes. See our <a href=\"/exports.html\">Exports page</a>."},
+      {"q": "Can you supply custom widths?", "a": "Yes."}
+    ]},
+    {"type": "cta", "heading": "Ready To Discuss Your Next Bulk Order?", "text": "Tell us your product."}
+  ]
+}
