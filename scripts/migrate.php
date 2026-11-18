@@ -24,7 +24,15 @@ require dirname(__DIR__) . '/app/bootstrap.php';
 require __DIR__ . '/lib/html-compare.php';
 require __DIR__ . '/lib/migrate-lib.php';
 
-$opts = getopt('', ['out:', 'dry-run', 'verbose']);
+$opts = getopt('', ['out:', 'dry-run', 'verbose', 'force']);
+
+// After go-live the dashboard is the only source of truth: re-migrating would throw away edits.
+if (config('enabled') && !isset($opts['dry-run']) && !isset($opts['force'])) {
+    fwrite(STDERR, "The new website is switched on (app/config.local.php: enabled => true).\n"
+        . "Running the migration now would replace pages edited in the dashboard with the old .html files.\n"
+        . "Nothing was changed. (Use --dry-run to only look, or --force if you really mean it.)\n");
+    exit(1);
+}
 $out = rtrim((string) ($opts['out'] ?? ROOT_DIR . '/content'), '/');
 $dry = isset($opts['dry-run']);
 $verbose = isset($opts['verbose']);

@@ -281,3 +281,48 @@ Open the printed link to choose a password, then go to `http://localhost:8000/ad
 **For the owner to decide (not changed, because it is wording):**
 - `seo-report` lists 29 points: 11 titles over 60 characters, and all 18 descriptions over 160.
 - The business description in Settings still lists 7 product lines; the site now has 10.
+
+### Phase 6: Go-live kit ✅ (2026-11-18), not yet run on the real server
+**Built**
+- `scripts/go-live.sh`:
+  - **dry run by default:** checks PHP and its extensions, checks the content folder can be written, renders every page and lists the old files.
+  - **`--apply`:**
+    1. backs up the old files (`site-backups/static-….tar.gz`)
+    2. copies the content outside the web root (`site-content`), never overwriting existing content
+    3. writes `app/config.local.php` (`enabled => true`)
+    4. sets the password: asks for it in a terminal, otherwise prints a one-time setup link
+    5. removes the old files
+    6. checks every page and prints the undo command
+  - Works from a run-once cron job when there is no SSH.
+- `scripts/rollback-go-live.sh <backup>`: restores the old files and switches the PHP site off. Content is kept.
+- `scripts/backup-content.sh`: daily `.tar.gz` of the content and uploads (no cache or sessions), keeps 14.
+- `scripts/lib/common.sh`: finds a command-line PHP 8+ even where cron's `php` is php-cgi (cPanel, CloudLinux, Plesk paths).
+- New CLI commands: `preflight`, `static-files`, `write-config`.
+- `scripts/migrate.php` now **refuses to run while the site is switched on** (it would overwrite dashboard edits).
+- `tests/verify-live.php URL`: reads the live sitemap. Checks every page (200, title, description, self-canonical, one H1, indexable), the generated files, the 301 clean-up, real 404s, 11 private paths blocked, and the dashboard login (not indexable).
+- Docs:
+  - `GO-LIVE.md`: Hostinger, cPanel, Plesk and Nginx; with SSH or cron only; after-go-live list; rollback
+  - `DASHBOARD-GUIDE.md`: for the owner, no jargon
+  - `CLAUDE.md`: project notes for future work
+  - README pointer
+
+**Rehearsed** on a copy of the project laid out like a host (`home/public_html` + `site-content` + `site-backups`):
+1. dry run: "Everything is ready"
+2. `--apply` with no terminal: backup made, content copied outside the web folder, config written, setup link printed, 21 old files removed, 18 pages render
+3. `verify-live.php` against it: **111 passed, 0 failed**
+4. rollback: all 18 pages back **byte-identical**, switch off
+5. a change was made to the live content, then `--apply` again: content **kept**, the change is live
+6. migration refused while live
+7. backup made, without cache or sessions
+
+**Hosting:** the Hostinger account connected here has no site for this domain, and the domain doesn't resolve yet. The runbook therefore covers each host type; the owner picks theirs.
+
+**Left for the real go-live (see GO-LIVE.md):**
+1. merge `php-dashboard` and deploy
+2. run go-live on the server
+3. set the password
+4. run `verify-live.php`
+5. remove the static files from git
+6. add the daily backup cron
+7. Force HTTPS and the www redirect
+8. submit the sitemap in Search Console

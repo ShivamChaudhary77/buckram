@@ -10,6 +10,9 @@
  *   php app/cli.php set-password           set or reset the dashboard password (typed, or piped in)
  *   php app/cli.php seo-report             list SEO problems on every page
  *   php app/cli.php apply-fixes F.json     bulk-fix titles/descriptions (dry run; add --apply)
+ *   php app/cli.php preflight [--target=DIR]   server check used by scripts/go-live.sh
+ *   php app/cli.php static-files           list the old .html files the PHP site replaces
+ *   php app/cli.php write-config --enabled=1 [--content-dir=DIR] [--base-url=URL]
  *
  * Add --content=/path/to/content to use another content folder.
  * Rendering always works as if the site were switched on, so it can be checked before go-live.
@@ -38,6 +41,65 @@ if (isset($opts['content'])) {
 $cmd = $args[0] ?? 'help';
 
 switch ($cmd) {
+    case 'preflight':
+        // Server check used by scripts/go-live.sh. Prints one line per check; exit 1 if anything blocks.
+        $ok = true;
+        $line = function (bool $good, string $text) use (&$ok) {
+            echo ($good ? '  ok    ' : '  FAIL  ') . $text . "\n";
+            $ok = $ok && $good;
+        };
+        $line(PHP_VERSION_ID >= 80000, 'PHP ' . PHP_VERSION . ' (needs 8.0 or newer)');
+        foreach (['json', 'mbstring', 'dom', 'fileinfo'] as $ext) {
+            $line(extension_loaded($ext), "PHP extension $ext");
+        }
+        echo (extension_loaded('gd') ? '  ok    ' : '  note  ') . 'PHP extension gd' . (extension_loaded('gd') ? '' : ' (missing: big uploads are not made smaller; everything else works)') . "\n";
+        $dir = (string) ($opts['target'] ?? '');
+        if ($dir !== '') {
+            $parent = is_dir($dir) ? $dir : dirname($dir);
+            $line(is_dir($parent) && is_writable($parent), "content folder can be written: $dir");
+            $root = realpath(ROOT_DIR);
+            $real = realpath($parent);
+            if ($real && $root && strpos($real . '/', $root . '/') === 0) {
+                echo "  note  the content folder is inside the website folder; it is protected by content/.htaccess (Apache/LiteSpeed only)\n";
+            }
+        }
+        $line(is_writable(APP_DIR), 'app/ can be written (for app/config.local.php)');
+        exit($ok ? 0 : 1);
+
+    case 'static-files':
+        // The old static files the PHP site replaces (pages migrated into content + the includes).
+        $files = [];
+        foreach (pages_all() as $p) {
+            if (!empty($p['source']) && is_file(ROOT_DIR . '/' . $p['source'])) {
+                $files[] = $p['source'];
+            }
+        }
+        foreach (glob(ROOT_DIR . '/includes/*.html') ?: [] as $f) {
+            $files[] = 'includes/' . basename($f);
+        }
+        sort($files);
+        echo implode("\n", $files) . ($files ? "\n" : '');
+        exit(0);
+
+    case 'write-config':
+        // php app/cli.php write-config --enabled=1|0 [--content-dir=…] [--base-url=…]
+        $file = APP_DIR . '/config.local.php';
+        $cur = is_file($file) ? (require $file) : [];
+        $cur = is_array($cur) ? $cur : [];
+        if (isset($opts['enabled'])) {
+            $cur['enabled'] = in_array((string) $opts['enabled'], ['1', 'true', 'yes', 'on'], true);
+        }
+        if (isset($opts['content-dir'])) {
+            $cur['content_dir'] = (string) $opts['content-dir'];
+        }
+        if (isset($opts['base-url'])) {
+            $cur['base_url'] = rtrim((string) $opts['base-url'], '/');
+        }
+        file_write_atomic($file, "<?php\n// Written by app/cli.php write-config on " . date('Y-m-d H:i') . ". Not in git.\nreturn " . var_export($cur, true) . ";\n");
+        @chmod($file, 0640);
+        echo 'app/config.local.php: ' . json_encode($cur, JSON_UNESCAPED_SLASHES) . "\n";
+        exit(0);
+
     case 'render':
         config_set(['enabled' => true, 'cache' => false]);
         $resp = front_dispatch('GET', $args[1] ?? '/');

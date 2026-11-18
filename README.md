@@ -1,5 +1,9 @@
 # Jaibaba Interlinings — Corporate Website
 
+> **Dashboard version.** This site is now also a small PHP + JSON site with an editing dashboard at `/admin`
+> (branch `php-dashboard`). Start with `CLAUDE.md` (how it works and how to test), `GO-LIVE.md` (switching over)
+> and `DASHBOARD-GUIDE.md` (for the person editing the site). Until go-live, the `.html` files below still serve the site.
+
 Premium B2B website for **Jai Baba Nanak Cloth Trading Co.** ("Jaibaba Interlinings"), a Delhi-based garment interlining fabric manufacturer established in 1977.
 
 Built with plain **HTML5, CSS3, Bootstrap 5, JavaScript, jQuery, AOS and Swiper.js** — no frameworks, no build step. PHP is used only for the contact form email handler.
