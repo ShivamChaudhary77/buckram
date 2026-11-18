@@ -1,0 +1,215 @@
+{
+    "id": "quality",
+    "type": "page",
+    "status": "published",
+    "path": "/quality.html",
+    "title": "Quality",
+    "source": "quality.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "Quality Assurance | Jaibaba Interlinings — Fabric Inspection & Testing Process",
+        "description": "How Jai Baba Nanak Cloth Trading Co. inspects, tests, packs and verifies interlining fabric before dispatch — width, weight, bond strength and colour consistency checked at every stage since 1977.",
+        "ogDescription": "Inside the inspection, testing, packing and dispatch checks that keep every roll of Jaibaba interlining fabric consistent, order after order."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-check-double",
+            "eyebrow": "Quality Assurance",
+            "heading": "Inspection, Testing And Verification Behind Every Roll",
+            "intro": "Quality at Jaibaba Interlinings is checked during production, not just at the end of it — so the fabric you reorder performs exactly like the fabric you first approved.",
+            "image": "/assets/images/banners/quality-page-hero-banner.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-left",
+            "textAos": "fade-right",
+            "image": "/assets/images/general/general-spinning-line-21.jpg",
+            "imageAlt": "Fabric roll being inspected on the production floor at Jaibaba Interlinings",
+            "video": "",
+            "eyebrow": "Our Quality Philosophy",
+            "heading": "Quality Is Checked Throughout Production",
+            "html": "<p class=\"mb-4\">A roll that only gets checked after it comes off the machine is a roll where the damage is already done. We build our checks into the production run itself — width, weight per metre, colour consistency and bond strength are verified at intervals as the fabric is being made, not after it is wound and ready to ship.</p>\n          <p class=\"mb-4\">This matters most on repeat orders. Buyers don't just need one good batch — they need batch three, batch twelve and batch forty to match the sample that got them to say yes in the first place. Our <a href=\"/manufacturing.html\">manufacturing process</a> is built around that repeatability, with quality checkpoints placed at the same stages on every single run.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Width and weight per metre measured at intervals through the run",
+                "Colour consistency checked against the approved reference",
+                "Bond strength verified on fusible product before it is cleared"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "mediaCol": "col-lg-6",
+            "textCol": "col-lg-6"
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Inspection Process</span>\n        <h2 class=\"section-title\">Checks Start With The Raw Material</h2>\n        <p class=\"section-subtitle mx-auto\">Every roll that reaches your dispatch has already passed through checkpoints at intake, mid-production and pre-packing.</p>\n      </div>\n      <div class=\"row g-4\">\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">01</div>\n            <div class=\"step-icon\"><i class=\"fas fa-dolly\"></i></div>\n            <h3>Raw Material Intake</h3>\n            <p>Base fabric and resin inputs are checked on arrival for weight, weave and grade before they are approved to enter production.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">02</div>\n            <div class=\"step-icon\"><i class=\"fas fa-ruler-combined\"></i></div>\n            <h3>In-Line Width &amp; Weight Checks</h3>\n            <p>Width and weight per metre are measured at set intervals while the run is in progress, not only when it finishes.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">03</div>\n            <div class=\"step-icon\"><i class=\"fas fa-eye\"></i></div>\n            <h3>Colour &amp; Surface Check</h3>\n            <p>Colour consistency and surface finish are checked against the approved reference so shade doesn't drift across a run.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">04</div>\n            <div class=\"step-icon\"><i class=\"fas fa-ban\"></i></div>\n            <h3>Out-Of-Tolerance Hold</h3>\n            <p>Any section that falls outside tolerance is flagged and set aside before it reaches the packing stage.</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Checks Start With The Raw Material"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/fusible-interlining/fusible-interlining-qc-inspection-02.png",
+            "imageAlt": "Fusible interlining bond strength testing at Jaibaba Interlinings",
+            "video": "",
+            "eyebrow": "Testing",
+            "heading": "Fusing And Durability Tested In-House Before Approval",
+            "html": "<p class=\"mb-4\">Fusible interlining is only as good as its bond. Before a fusible batch is cleared, we run internal fusing tests to check that the resin coating bonds evenly and holds under the heat and pressure settings the fabric will actually see on a buyer's press.</p>\n          <p class=\"mb-4\">We also check for wash-durability behaviour on relevant product lines — how the bond and hand-feel hold up after repeated wash cycles — since garments made with our interlining are expected to survive laundering, not just a single wear. These are internal quality checks built into our own process, run to confirm the fabric performs the way it's specified, not third-party certifications.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Bond strength checked on fusible product before dispatch clearance",
+                "Wash-durability behaviour checked on relevant product lines",
+                "Results compared against the order's approved specification"
+            ],
+            "afterHtml": "",
+            "button": null
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"row align-items-center g-5\">\n        <div class=\"col-lg-6 order-lg-2\" data-aos=\"fade-left\">\n          <span class=\"section-eyebrow\">Packing</span>\n          <h2 class=\"section-title\">Packed Carefully For Safe Transit</h2>\n          <p class=\"mb-4\">A roll that passes every quality check can still arrive damaged if it isn't packed for the actual journey ahead — a truck ride across the city or a container crossing the sea. Every roll is wrapped to protect against moisture, dust and edge crushing before it goes into cartons or bulk packing for transit.</p>\n          <div class=\"row g-3 mb-4\">\n            <div class=\"col-sm-6\">\n              <div class=\"feature-mini\">\n                <div class=\"feature-mini-icon\"><i class=\"fas fa-layer-group\"></i></div>\n                <div>\n                  <h4>Protective Roll-Wrapping</h4>\n                  <p>Each roll wrapped to guard against moisture and dust in transit.</p>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-sm-6\">\n              <div class=\"feature-mini\">\n                <div class=\"feature-mini-icon\"><i class=\"fas fa-box\"></i></div>\n                <div>\n                  <h4>Edge &amp; Corner Protection</h4>\n                  <p>Packing built to prevent crushing during loading and handling.</p>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-sm-6\">\n              <div class=\"feature-mini\">\n                <div class=\"feature-mini-icon\"><i class=\"fas fa-tags\"></i></div>\n                <div>\n                  <h4>Roll-Wise Labelling</h4>\n                  <p>Each roll marked for width, weight and batch for easy identification.</p>\n                </div>\n              </div>\n            </div>\n            <div class=\"col-sm-6\">\n              <div class=\"feature-mini\">\n                <div class=\"feature-mini-icon\"><i class=\"fas fa-ship\"></i></div>\n                <div>\n                  <h4>Container-Ready Packing</h4>\n                  <p>Export orders packed to <a href=\"/exports.html\">shipping and container standards</a>.</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-6 order-lg-1\" data-aos=\"fade-right\">\n          <div class=\"img-frame\">\n            <img src=\"/assets/images/general/general-buckram-export-03.jpg\" alt=\"Interlining fabric rolls wrapped and packed for dispatch\" loading=\"lazy\" class=\"w-100\">\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Packed Carefully For Safe Transit"
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Dispatch",
+            "heading": "One Final Check Against Your Order Before It Leaves",
+            "subtitle": "Before dispatch, we compare the packed order against what was actually ordered.",
+            "items": [
+                {
+                    "icon": "fas fa-clipboard-list",
+                    "title": "Specification Match",
+                    "text": "Roll count, width, weight and product category verified against the confirmed order sheet."
+                },
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "Quantity Verification",
+                    "text": "Packed cartons and rolls counted and matched before loading begins, not after."
+                },
+                {
+                    "icon": "fas fa-file-invoice",
+                    "title": "Documentation Check",
+                    "text": "Invoice, packing list and, for export orders, shipment paperwork confirmed before dispatch."
+                }
+            ],
+            "col": "col-lg-4",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-navy",
+            "eyebrow": "Buyer Confidence",
+            "heading": "Why Buyers Trust Our Consistency",
+            "dark": true,
+            "subtitle": "Reordering fabric shouldn't mean re-testing it. Here's what keeps our repeat buyers confident batch after batch.",
+            "items": [
+                {
+                    "icon": "fas fa-industry",
+                    "title": "In-House Manufacturing",
+                    "text": "We control our own production and inspection, so quality isn't dependent on a third-party factory's schedule."
+                },
+                {
+                    "icon": "fas fa-check-double",
+                    "title": "Checks At Every Stage",
+                    "text": "Intake, in-line, testing and pre-dispatch checks — not a single inspection at the very end."
+                },
+                {
+                    "icon": "fas fa-history",
+                    "title": "In One Category Since 1977",
+                    "text": "We have manufactured interlining fabric for decades — the same process, refined, not reinvented each season."
+                },
+                {
+                    "icon": "fas fa-globe-asia",
+                    "title": "Consistency Across Markets",
+                    "text": "The same checkpoints apply whether the order ships across Delhi or through an <a href=\"/exports.html\">export</a> container."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "faq",
+            "bg": "bg-soft",
+            "eyebrow": "Common Questions",
+            "heading": "Quality & Inspection FAQs",
+            "intro": "Have a question specific to your order or specification? Send it to us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "qualityFaq",
+            "itemPrefix": "qFaq",
+            "items": [
+                {
+                    "q": "How do you ensure batch-to-batch consistency?",
+                    "a": "We check width, weight per metre, colour and bond strength at intervals through every production run, using the same raw material sourcing and machine settings on every batch. Checks happen while the fabric is being made, so any drift is caught before the roll is packed, not after it reaches you."
+                },
+                {
+                    "q": "Can I get a pre-shipment inspection report?",
+                    "a": "Yes, we can share pre-shipment details covering roll count, width, weight and specification match for your order. Raise this requirement when you place your order so it's built into the dispatch checklist for that shipment."
+                },
+                {
+                    "q": "What happens if a roll doesn't meet specification?",
+                    "a": "Any section found outside tolerance during in-line checks is held back at that stage and does not proceed to packing. If an issue is found after delivery, contact us with the batch details and we will work with you directly to resolve it."
+                },
+                {
+                    "q": "Do you test bond strength on fusible products?",
+                    "a": "Yes. Fusible interlining is tested in-house for fusing quality before a batch is cleared for dispatch, so the resin bonds evenly under the heat and pressure conditions the fabric is expected to see on your production line."
+                },
+                {
+                    "q": "Can quality checks be adjusted for my specific order?",
+                    "a": "Share your specification sheet and any tolerance requirements when you place your order. We confirm what we can match within our <a href=\"/manufacturing.html\">manufacturing capability</a> before production begins, so expectations are set upfront."
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "heading": "Have A Specification You Need Matched Exactly?",
+            "text": "Send us your width, weight and bond requirement — we'll confirm what our inspection and testing process can guarantee for your order.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}

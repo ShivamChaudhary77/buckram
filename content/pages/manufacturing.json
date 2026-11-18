@@ -1,0 +1,147 @@
+{
+    "id": "manufacturing",
+    "type": "page",
+    "status": "published",
+    "path": "/manufacturing.html",
+    "title": "Manufacturing",
+    "source": "manufacturing.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "Manufacturing Process | Jaibaba Interlinings — Interlining Fabric Production, Delhi",
+        "description": "Inside the Jaibaba Interlinings production floor in Delhi: raw material sourcing, inspection, calibrated production runs, finishing, packing and dispatch — the six-step process behind every roll we manufacture since 1977.",
+        "ogTitle": "Manufacturing Process | Jaibaba Interlinings",
+        "ogDescription": "How Jaibaba Interlinings manufactures interlining fabric — from raw material intake to dispatch — with consistent checkpoints on every production run."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-industry",
+            "eyebrow": "Inside The Factory",
+            "heading": "Manufacturing Process",
+            "intro": "A look at how raw material becomes dispatch-ready interlining fabric on our Delhi production floor — the same six checkpoints on every run, whether it's a trial order or a repeat container.",
+            "image": "/assets/images/manufacturing-page/manufacturing-production-line-02.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/manufacturing-page/manufacturing-production-line-02.jpg",
+            "imageAlt": "Textile machinery running a calibrated interlining production cycle at Jaibaba's Delhi facility",
+            "video": "",
+            "eyebrow": "Manufacturing Philosophy",
+            "heading": "Consistent Quality On Every Order",
+            "html": "<p class=\"mb-4\">Any workshop can produce one good metre of fabric on a good day. What a garment buyer actually needs is the 5th metre matching the 500th — same hand-feel, same width, same bond, order after order. That is the standard we build our floor around.</p>\n          <p class=\"mb-4\">We hold that standard by controlling the variables that usually drift: the same raw material sourcing on every batch, the same machine settings logged and reused for a repeat order, and the same inspection checkpoints at every stage rather than a single check at the end.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Consistent raw material sourcing and grading before production starts",
+                "Machine settings held constant across a production run and repeat orders",
+                "Checkpoints at intake, production, finishing and packing — not just final inspection"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Our Quality Standards",
+                "href": "/quality.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">How We Produce</span>\n        <h2 class=\"section-title\">Six Stages, Same Standard Every Time</h2>\n        <p class=\"section-subtitle mx-auto\">From raw material intake to the dispatch bay, every roll passes through the same sequence of checkpoints before it leaves our floor.</p>\n      </div>\n      <div class=\"row g-4\">\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">01</div>\n            <div class=\"step-icon\"><i class=\"fas fa-layer-group\"></i></div>\n            <h3>Raw Material</h3>\n            <p>Base fabric and resin are sourced against fixed specification and graded on arrival before anything is released to production.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">02</div>\n            <div class=\"step-icon\"><i class=\"fas fa-magnifying-glass\"></i></div>\n            <h3>Inspection</h3>\n            <p>Incoming material is checked for width, weight per metre and colour consistency before it is cleared to enter the production line.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">03</div>\n            <div class=\"step-icon\"><i class=\"fas fa-cogs\"></i></div>\n            <h3>Production</h3>\n            <p>Machines run to calibrated settings held constant across the batch, so output at the start of a run matches output at the end.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">04</div>\n            <div class=\"step-icon\"><i class=\"fas fa-temperature-high\"></i></div>\n            <h3>Finishing</h3>\n            <p>Fusing, coating or calendering is applied as the product requires, with bond strength and finish checked across the width of the roll.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">05</div>\n            <div class=\"step-icon\"><i class=\"fas fa-box-open\"></i></div>\n            <h3>Packing</h3>\n            <p>Finished rolls are wrapped to protect against moisture, creasing and abrasion, whether the shipment is moving by truck or by container.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"step-card\">\n            <div class=\"step-num\">06</div>\n            <div class=\"step-icon\"><i class=\"fas fa-truck-fast\"></i></div>\n            <h3>Dispatch</h3>\n            <p>Every packed order is matched against its original specification and paperwork before it is cleared to leave the floor.</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Six Stages, Same Standard Every Time"
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Our Facility</span>\n        <h2 class=\"section-title\">Infrastructure On The Production Floor</h2>\n        <p class=\"section-subtitle mx-auto\">A working view of the Delhi facility where raw material is turned into finished, dispatch-ready interlining fabric.</p>\n      </div>\n      <div class=\"row g-4\">\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\">\n          <div class=\"gallery-item\">\n            <img src=\"/assets/images/general/general-production-line-20.jpg\" alt=\"Fabric rolls in process at Jaibaba's manufacturing facility\" loading=\"lazy\">\n            <div class=\"gallery-caption\">Fabric Processing</div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"gallery-item\">\n            <img src=\"/assets/images/general/general-buckram-factory-01.jpg\" alt=\"Machine line running interlining fabric production\" loading=\"lazy\">\n            <div class=\"gallery-caption\">Machine Line</div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"gallery-item\">\n            <img src=\"/assets/images/manufacturing-page/manufacturing-warehouse-04.jpg\" alt=\"Interior of the interlining fabric production facility in Delhi\" loading=\"lazy\">\n            <div class=\"gallery-caption\">Production Floor</div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"gallery-item\">\n            <img src=\"/assets/images/manufacturing-page/manufacturing-container-loading-01.jpg\" alt=\"Finished fabric rolls staged in the packing and dispatch area\" loading=\"lazy\">\n            <div class=\"gallery-caption\">Packing &amp; Dispatch Area</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Infrastructure On The Production Floor"
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/manufacturing-page/manufacturing-roller-closeup-03.jpg",
+            "imageAlt": "Calibrated production run of interlining fabric on the factory floor",
+            "video": "",
+            "eyebrow": "Production Capability",
+            "heading": "Built For Bulk And Repeat Orders",
+            "html": "<p class=\"mb-4\">Our production planning is built around ongoing, high-volume relationships with garment manufacturers and buying houses, not one-off small lots. That means batch settings, raw material sourcing and inspection routines are designed to hold steady across long production runs and to be reproduced accurately when you reorder months later.</p>\n          <p class=\"mb-4\">When you place a repeat order, we work from the same specification and process record used on your original run — so onboarding a reorder does not mean re-testing a new batch from scratch.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Production scheduling structured for bulk and recurring orders",
+                "Batch specifications retained for accurate reorders",
+                "Firm delivery timelines confirmed at order confirmation"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "View Our Product Range",
+                "href": "/products.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-buckram-about-02.jpg",
+            "imageAlt": "Fabric finishing and quality checkpoint at Jaibaba Interlinings",
+            "video": "",
+            "eyebrow": "Quality Process",
+            "heading": "Checked At Every Stage Of Production",
+            "html": "<p class=\"mb-4\">Manufacturing and quality control run alongside each other on our floor. Width, weight, colour and bond are checked during production, and again before packing, so a deviation is caught early rather than discovered after dispatch.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "In-line checks during production, not only final inspection",
+                "Fusing tested for bond strength and wash durability",
+                "Packed orders verified against specification before leaving the floor"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Full Quality Process",
+                "href": "/quality.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "cta",
+            "heading": "Ready To Put Our Process To Work On Your Order?",
+            "text": "Share your product, specification and quantity — we'll confirm feasibility, pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}

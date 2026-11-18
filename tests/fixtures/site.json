@@ -1,0 +1,53 @@
+{
+  "name": "Jai Baba Nanak Cloth Trading Co.",
+  "brand": "Jaibaba Interlinings",
+  "lang": "en",
+  "phones": [
+    {"display": "+91 9910555033", "tel": "+919910555033"},
+    {"display": "+91 8750555033", "tel": "+918750555033"}
+  ],
+  "email": "Jaibabananakclothtrading@gmail.com",
+  "hours": "Mon – Sat, 10:30 AM – 8:00 PM",
+  "topbarLocation": "Delhi, India",
+  "mapUrl": "https://maps.app.goo.gl/yrF43yPRu44NsjyJ6",
+  "addresses": [
+    {"label": "H.O", "text": "8710 Roshanara Road, near Palace Cinema Hall, Pulbangash Metro Station, Delhi – 110007"},
+    {"label": "Branch", "text": "5509, Katra Moti, Nai Sarak, Chandni Chowk, Delhi – 06"}
+  ],
+  "whatsapp": {"number": "919910555033", "message": "Hello, I would like to enquire about your interlining products."},
+  "social": [
+    {"label": "Facebook", "icon": "fab fa-facebook-f", "url": "https://www.facebook.com/share/1DKBwKzXMC/"},
+    {"label": "Instagram", "icon": "fab fa-instagram", "url": "https://www.instagram.com/jaibabananakclothtrading?utm_source=qr&igsh=cjZhZmdnNjA3ZXVy"},
+    {"label": "X (Twitter)", "icon": "fab fa-x-twitter", "url": "https://x.com/JB_GROUP_DELHI"},
+    {"label": "YouTube", "icon": "fab fa-youtube", "url": "https://youtube.com/@jaibabananakclothtradingco9486?si=rJO-E0v-yD0mcDOB"},
+    {"label": "WhatsApp", "icon": "fab fa-whatsapp", "url": "https://wa.me/919910555033"}
+  ],
+  "logo": {"src": "/assets/images/logo.jpeg", "alt": "Jaibaba Interlinings – Garment Interlining Manufacturer Since 1977"},
+  "favicon": "/assets/images/logo.svg",
+  "defaultOgImage": "/assets/images/logo.svg",
+  "nav": [
+    {"label": "Home", "href": "/index.html", "page": "index.html"},
+    {"label": "About Us", "href": "/about.html", "page": "about.html"},
+    {"label": "Products", "href": "/products.html", "page": "products.html", "dropdownId": "productsDropdown", "children": [
+      {"label": "All Products", "href": "/products.html", "icon": "fas fa-th-large me-2 text-gold"},
+      {"divider": true},
+      {"label": "Buckram Fabric", "href": "/product/buckram-fabric.html"}
+    ]},
+    {"label": "Contact", "href": "/contact.html", "page": "contact.html"}
+  ],
+  "navCta": {"label": "Get Bulk Quote", "href": "/contact.html"},
+  "newsletter": {"enabled": true, "heading": "Stay Updated on Interlining Solutions", "text": "Product updates, capacity alerts and export notices — no spam, ever.", "placeholder": "Enter your business email", "button": "Subscribe"},
+  "footer": {
+    "logoAlt": "Jaibaba Interlinings Logo",
+    "about": "Jai Baba Nanak Cloth Trading Co. has been manufacturing and supplying interlining fabrics to garment producers across India and abroad since 1977.",
+    "columns": [
+      {"title": "Company", "class": "col-lg-2 col-md-6", "links": [{"label": "About Us", "href": "/about.html"}]},
+      {"title": "Our Products", "class": "col-lg-3 col-md-6", "links": [{"label": "Buckram Fabric", "href": "/product/buckram-fabric.html"}]}
+    ],
+    "contactTitle": "Get In Touch",
+    "contactPerson": "Sales Team",
+    "copyright": "Jai Baba Nanak Cloth Trading Co. All Rights Reserved.",
+    "tagline": "Manufacturer • Supplier • Wholesaler • Exporter • Trader — Since 1977"
+  },
+  "tracking": {"ga4": "", "gtm": "", "metaPixel": ""}
+}

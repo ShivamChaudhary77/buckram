@@ -1,0 +1,23 @@
+# Jaibaba Interlinings – Nginx server block snippet (VPS / managed Nginx).
+# Adjust root and the PHP-FPM socket to your server.
+
+root /var/www/jaibaba;
+index index.html index.php;   # static index.html wins until go-live removes it
+
+location ~ ^/(app|templates|content|tests|scripts|deploy|\.git|\.claude|\.vscode)(/|$) { deny all; return 404; }
+location ~ /\.(?!well-known/) { deny all; return 404; }
+location ~ \.(md|py|sh|sql|yml|yaml|lock|log|json|bak|tar|gz|zip)$ { deny all; return 404; }
+
+location / {
+    try_files $uri $uri/ /index.php$is_args$args;
+}
+
+location ~ \.php$ {
+    try_files $uri =404;
+    include fastcgi_params;
+    fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+
+location ~* \.(css|js)$ { expires 7d; }
+location ~* \.(jpe?g|png|webp|svg|mp4)$ { expires 30d; }

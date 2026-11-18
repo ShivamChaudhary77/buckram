@@ -1,0 +1,200 @@
+{
+    "id": "exports",
+    "type": "page",
+    "status": "published",
+    "path": "/exports.html",
+    "title": "Exports",
+    "source": "exports.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "Export Capability | Jaibaba Interlinings — International Bulk Supply",
+        "description": "Jaibaba Interlinings supplies garment interlining fabric — buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pads, EVA foam, woven & knitted elastics, tatron and velcro tape — to overseas buying houses and export merchants, with export documentation, container-ready packing and bulk logistics coordination.",
+        "ogDescription": "Manufacturer-backed export supply of garment interlining fabric from Delhi, India. Export documentation, container-ready packing and bulk logistics coordination for overseas buying houses and merchant exporters."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-globe-asia",
+            "eyebrow": "Export Capability",
+            "heading": "Interlining Fabric Supply For Export Orders",
+            "intro": "Manufacturer-backed export supply of garment interlining fabric from Delhi — documentation, container-ready packing and bulk logistics coordinated for overseas buying houses and merchant exporters.",
+            "image": "/assets/images/banners/export-page-banner.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Export Reach",
+            "heading": "Equipped To Supply International Buyers",
+            "subtitle": "We manufacture and supply garment interlining fabrics for domestic and international buyers. Tell us where your order needs to go, and we will confirm what we can supply and ship.",
+            "link": {
+                "label": "Discuss Your Export Region",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-industry",
+                    "title": "Manufacturer-Backed Supply",
+                    "text": "We produce our own fabric across all ten product lines, so an export order draws on the same production floor as our domestic supply — not a third-party sourcing chain."
+                },
+                {
+                    "icon": "fas fa-file-signature",
+                    "title": "Process Built For Customs",
+                    "text": "Our documentation and packing workflow is set up for cross-border shipment, so an export order is handled as an export order from the day it's confirmed — not adapted after the fact."
+                },
+                {
+                    "icon": "fas fa-comments",
+                    "title": "Region-Specific Discussion",
+                    "text": "Every export destination has its own paperwork, packing and freight requirements. Tell us your country of import and order volume, and we'll confirm exactly what we can commit to."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Documentation</span>\n        <h2 class=\"section-title\">Export Documents Prepared Before Shipment</h2>\n        <p class=\"section-subtitle mx-auto\">Export shipments stall at customs when paperwork doesn't match the cargo. We prepare export documentation against the confirmed order specification before the shipment moves.</p>\n      </div>\n      <div class=\"row g-3\">\n        <div class=\"col-md-6 col-lg-3\" data-aos=\"fade-up\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-file-invoice-dollar\"></i></div>\n            <div>\n              <h4>Commercial Invoice</h4>\n              <p>Prepared against the confirmed order quantity, specification and agreed terms.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-clipboard-list\"></i></div>\n            <div>\n              <h4>Packing List</h4>\n              <p>Roll counts, weights and carton or container breakdown matched to the actual shipment.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-stamp\"></i></div>\n            <div>\n              <h4>Shipment Paperwork</h4>\n              <p>Supporting documents prepared to move cleanly through customs on the receiving end.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-md-6 col-lg-3\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-clipboard-check\"></i></div>\n            <div>\n              <h4>Pre-Shipment QC Record</h4>\n              <p>Every export order is checked against our standard <a href=\"/quality.html\">quality process</a> before packing is signed off.</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Export Documents Prepared Before Shipment"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-warehouse-dispatch-22.jpg",
+            "imageAlt": "Container-ready fabric roll packaging for export shipment",
+            "video": "",
+            "eyebrow": "Packaging",
+            "heading": "Roll Packing For Long-Distance Transit",
+            "html": "<p class=\"mb-4\">Fabric that travels by sea or by road for days needs packing that protects it the whole way, not just off the factory floor. We pack export rolls with moisture protection and secure wrapping suited to container transit, so what arrives matches what was inspected and dispatched.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Moisture-protected wrapping for extended transit time",
+                "Secure roll wrapping that resists shifting inside the container",
+                "Packing verified against order specification before loading"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-brand-range-15.png",
+            "imageAlt": "International supply coordination for garment interlining fabric export orders",
+            "video": "",
+            "eyebrow": "International Supply",
+            "heading": "Export Orders Run Alongside Our Domestic Supply",
+            "html": "<p class=\"mb-4\">We supply garment units across India and overseas buying houses and merchant exporters from the same production floor. An export order for buckram, fusible interlining, pocketing cloth, readymade collar &amp; cuff, belt roll &amp; placket (patti), shoulder pads, EVA foam, woven &amp; knitted elastics, tatron or velcro tape is planned into our schedule with the same discipline as a domestic bulk order.</p>\n          <p class=\"mb-4\">If you're a buying house or export merchant sourcing interlining fabric on behalf of a garment brand, we can work directly against your specification sheet and confirm feasibility before you commit.</p>",
+            "miniFeatures": [],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "",
+            "eyebrow": "Bulk Handling",
+            "heading": "Production Planning Built For Repeat Export Volume",
+            "subtitle": "An export order is rarely a one-time lot. We plan production around repeat, high-volume orders so that a reorder six months later still matches the roll you first approved.",
+            "items": [
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "Volume-Ready Scheduling",
+                    "text": "Production runs are planned around confirmed bulk quantities, not adjusted piecemeal after the order is placed."
+                },
+                {
+                    "icon": "fas fa-ruler-combined",
+                    "title": "Consistent Batch Specification",
+                    "text": "Width, weight and bond strength are held to the same tolerance across the full production run, not just the first roll."
+                },
+                {
+                    "icon": "fas fa-calendar-check",
+                    "title": "Firm Delivery Commitments",
+                    "text": "Lead time is confirmed at order confirmation based on quantity and current schedule, so your shipment planning isn't left guessing."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "bg-soft",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/general/general-warehouse-aisle-18.jpg",
+            "imageAlt": "Coordinated freight dispatch for interlining fabric export shipments",
+            "video": "",
+            "eyebrow": "Global Logistics",
+            "heading": "Container-Ready Dispatch, Coordinated End To End",
+            "html": "<p class=\"mb-4\">Once packing and documentation are cleared, we coordinate dispatch to Indian ports for onward shipment with your appointed freight or logistics partner. If you haven't finalised a forwarder, we can work alongside the one you nominate to keep loading and paperwork aligned with your sailing schedule.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Coordinated dispatch timed to your shipment schedule",
+                "Container loading planned around confirmed packing lists",
+                "Direct coordination with your nominated freight forwarder"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Talk To Our Export Team",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "cta",
+            "heading": "Ready To Discuss Your Export Requirement?",
+            "text": "Share your product, quantity, destination country and shipment timeline — our team will confirm feasibility, documentation and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Discuss Your Export Requirement",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}

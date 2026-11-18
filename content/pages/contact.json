@@ -1,0 +1,69 @@
+{
+    "id": "contact",
+    "type": "contact",
+    "status": "published",
+    "path": "/contact.html",
+    "title": "Contact",
+    "source": "contact.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "Contact Us | Jaibaba Interlinings — Request Bulk Quote",
+        "description": "Get in touch with Jai Baba Nanak Cloth Trading Co. for bulk interlining fabric enquiries. Call, email or WhatsApp our Delhi office, or send your product, quantity and city — we respond within one business day.",
+        "ogDescription": "Reach our Delhi-based team for buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pad, EVA foam, woven & knitted elastics, tatron and velcro tape enquiries. Phone, email, WhatsApp and enquiry form."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-headset",
+            "eyebrow": "Get In Touch",
+            "heading": "Contact Jaibaba Interlinings",
+            "intro": "Tell us your product, quantity and city — we respond within one business day.",
+            "image": "/assets/images/banners/contact-page-banner.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"row g-4\">\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\">\n          <div class=\"contact-info-card\">\n            <div class=\"contact-icon\"><i class=\"fas fa-phone-alt\"></i></div>\n            <h3>Phone</h3>\n            <p class=\"mb-1\"><a href=\"tel:+919910555033\">+91 9910555033</a></p>\n            <p class=\"mb-0\"><a href=\"tel:+918750555033\">+91 8750555033</a></p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"contact-info-card\">\n            <div class=\"contact-icon\"><i class=\"fas fa-envelope\"></i></div>\n            <h3>Email</h3>\n            <p class=\"mb-0\"><a href=\"mailto:Jaibabananakclothtrading@gmail.com\">Jaibabananakclothtrading@gmail.com</a></p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"contact-info-card\">\n            <div class=\"contact-icon\"><i class=\"fas fa-map-marker-alt\"></i></div>\n            <h3>Location</h3>\n            <p class=\"mb-1\"><a href=\"https://maps.app.goo.gl/yrF43yPRu44NsjyJ6\" target=\"_blank\" rel=\"noopener\">H.O: 8710 Roshanara Road, near Palace Cinema Hall, Pulbangash Metro Station, Delhi – 110007</a></p>\n            <p class=\"mb-0\"><a href=\"https://maps.app.goo.gl/yrF43yPRu44NsjyJ6\" target=\"_blank\" rel=\"noopener\">Branch: 5509, Katra Moti, Nai Sarak, Chandni Chowk, Delhi – 06</a></p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"contact-info-card\">\n            <div class=\"contact-icon\"><i class=\"fab fa-whatsapp\"></i></div>\n            <h3>WhatsApp</h3>\n            <p class=\"mb-0\"><a href=\"https://wa.me/919910555033\" target=\"_blank\" rel=\"noopener\">Chat With Us</a></p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>"
+        },
+        {
+            "type": "html",
+            "html": "  <section class=\"bg-soft\">\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Send An Enquiry</span>\n        <h2 class=\"section-title\">Request A Bulk Quote</h2>\n        <p class=\"section-subtitle mx-auto\">Share your product, quantity and city — our team confirms pricing and lead time within one business day.</p>\n      </div>\n      <div class=\"row g-5 align-items-stretch\">\n        <div class=\"col-lg-5\" data-aos=\"fade-right\">\n          <div class=\"map-placeholder\">\n            <iframe src=\"https://www.google.com/maps?q=8710+Roshanara+Road+Pulbangash+Delhi+110007&output=embed\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" title=\"Jaibaba Interlinings location map — Roshanara Road, Delhi\"></iframe>\n          </div>\n        </div>\n        <div class=\"col-lg-7\" data-aos=\"fade-left\">\n          <div class=\"form-box\">\n            <form id=\"enquiryForm\" novalidate>\n              <div class=\"row g-4\">\n                <div class=\"col-md-6\">\n                  <label for=\"full_name\" class=\"form-label-custom\">Full Name <span class=\"req\">*</span></label>\n                  <input type=\"text\" class=\"form-control-custom\" id=\"full_name\" name=\"full_name\" required>\n                  <div class=\"invalid-feedback\">This field is required.</div>\n                </div>\n                <div class=\"col-md-6\">\n                  <label for=\"company\" class=\"form-label-custom\">Company Name <span class=\"req\">*</span></label>\n                  <input type=\"text\" class=\"form-control-custom\" id=\"company\" name=\"company\" required>\n                  <div class=\"invalid-feedback\">This field is required.</div>\n                </div>\n                <div class=\"col-md-6\">\n                  <label for=\"phone\" class=\"form-label-custom\">Phone Number <span class=\"req\">*</span></label>\n                  <input type=\"tel\" class=\"form-control-custom\" id=\"phone\" name=\"phone\" pattern=\"[0-9]{10,12}\" minlength=\"10\" maxlength=\"12\" inputmode=\"numeric\" required>\n                  <div class=\"invalid-feedback\">Enter a valid phone number (10–12 digits).</div>\n                </div>\n                <div class=\"col-md-6\">\n                  <label for=\"city\" class=\"form-label-custom\">City <span class=\"req\">*</span></label>\n                  <input type=\"text\" class=\"form-control-custom\" id=\"city\" name=\"city\" required>\n                  <div class=\"invalid-feedback\">This field is required.</div>\n                </div>\n                <div class=\"col-md-6\">\n                  <label for=\"product\" class=\"form-label-custom\">Product Required <span class=\"req\">*</span></label>\n                  <select class=\"form-select-custom\" id=\"product\" name=\"product\" required>\n                    <option value=\"\" disabled selected>Select a product</option>\n                    <option value=\"Buckram Fabric\">Buckram Fabric</option>\n                    <option value=\"Fusible Interlining\">Fusible Interlining</option>\n                    <option value=\"Pocketing Cloth\">Pocketing Cloth</option>\n                    <option value=\"Readymade Collar & Cuff\">Readymade Collar &amp; Cuff</option>\n                    <option value=\"Belt Roll & Placket (Patti)\">Belt Roll &amp; Placket (Patti)</option>\n                    <option value=\"Shoulder Pads\">Shoulder Pads</option>\n                    <option value=\"EVA Foam\">EVA Foam</option>\n                    <option value=\"Woven & Knitted Elastics\">Woven &amp; Knitted Elastics</option>\n                    <option value=\"Tatron\">Tatron</option>\n                    <option value=\"Velcro Tape\">Velcro Tape</option>\n                    <option value=\"Not Sure / Multiple Products\">Not Sure / Multiple Products</option>\n                  </select>\n                  <div class=\"invalid-feedback\">This field is required.</div>\n                </div>\n                <div class=\"col-md-6\">\n                  <label for=\"quantity\" class=\"form-label-custom\">Quantity Required <span class=\"req\">*</span></label>\n                  <input type=\"text\" class=\"form-control-custom\" id=\"quantity\" name=\"quantity\" placeholder=\"e.g. 5000 metres / 10000 pieces\" required>\n                  <div class=\"invalid-feedback\">This field is required.</div>\n                </div>\n                <div class=\"col-12\">\n                  <label for=\"message\" class=\"form-label-custom\">Additional Details</label>\n                  <textarea class=\"form-control-custom\" id=\"message\" name=\"message\" rows=\"4\" placeholder=\"Specification, GSM, delivery timeline or any other detail\"></textarea>\n                </div>\n                <div class=\"col-12\">\n                  <div id=\"formAlert\" class=\"alert\" role=\"alert\"></div>\n                  <button type=\"submit\" class=\"btn btn-gold btn-lg-custom w-100\">Send Enquiry <i class=\"fas fa-paper-plane ms-2\"></i></button>\n                </div>\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Request A Bulk Quote"
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Business Details</span>\n        <h2 class=\"section-title\">Registered Business Information</h2>\n      </div>\n      <div class=\"row g-4 justify-content-center text-center\">\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\">\n          <div class=\"feature-mini flex-column text-center\">\n            <div class=\"feature-mini-icon mx-auto\"><i class=\"fas fa-building\"></i></div>\n            <div>\n              <h4>Legal Name</h4>\n              <p>Jai Baba Nanak Cloth Trading Co.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"feature-mini flex-column text-center\">\n            <div class=\"feature-mini-icon mx-auto\"><i class=\"fas fa-user-tie\"></i></div>\n            <div>\n              <h4>Contact</h4>\n              <p>Sales Team</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"feature-mini flex-column text-center\">\n            <div class=\"feature-mini-icon mx-auto\"><i class=\"fas fa-industry\"></i></div>\n            <div>\n              <h4>Business Type</h4>\n              <p>Manufacturer, Supplier, Wholesaler, Exporter, Trader</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"feature-mini flex-column text-center\">\n            <div class=\"feature-mini-icon mx-auto\"><i class=\"fas fa-calendar-alt\"></i></div>\n            <div>\n              <h4>Established</h4>\n              <p>Since 1977</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "Registered Business Information"
+        },
+        {
+            "type": "cta",
+            "heading": "Prefer To Talk It Through First?",
+            "text": "Message us on WhatsApp with your product and quantity — our sales team will reply to you directly.",
+            "buttons": [
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                },
+                {
+                    "label": "Call +91 9910555033",
+                    "href": "tel:+919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fas fa-phone-alt me-2",
+                    "iconAfter": ""
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}

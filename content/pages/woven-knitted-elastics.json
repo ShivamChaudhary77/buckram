@@ -1,0 +1,327 @@
+{
+    "id": "woven-knitted-elastics",
+    "type": "product",
+    "status": "published",
+    "path": "/product/woven-knitted-elastics.html",
+    "title": "Woven & Knitted Elastics",
+    "source": "product/woven-knitted-elastics.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        },
+        {
+            "label": "Products",
+            "href": "/products.html"
+        }
+    ],
+    "seo": {
+        "title": "Woven & Knitted Elastics Manufacturer | Jaibaba Interlinings, Delhi",
+        "description": "Woven and knitted elastic tape manufacturer in Delhi since 1977. Consistent stretch recovery for waistbands, cuffs and closures, in standard and custom widths. Bulk and export supply.",
+        "ogTitle": "Woven & Knitted Elastics Manufacturer | Jaibaba Interlinings",
+        "ogDescription": "Woven and knitted elastic tapes built for consistent stretch recovery on waistbands, cuffs and stretch closures. Manufactured in Delhi since 1977, supplied in bulk to garment units and export buyers."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-arrows-left-right",
+            "eyebrow": "Stretch Trims",
+            "heading": "Woven & Knitted Elastics",
+            "intro": "Woven and knitted elastic tapes manufactured for consistent stretch recovery — the same give and snap-back on wash five as wash one.",
+            "image": "/assets/images/products/woven-knitted-elastics/woven-knitted-elastics-warehouse-01.jpg",
+            "breadcrumb": true
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": false,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/woven-knitted-elastics/woven-knitted-elastics-warehouse-01.jpg",
+            "imageAlt": "Woven and knitted elastic tape rolls used for waistbands and cuffs",
+            "video": "",
+            "eyebrow": "Product Overview",
+            "heading": "Elastic That Still Recovers After The Hundredth Wash",
+            "html": "<p class=\"mb-4\">An elastic tape that stretches well off the roll but goes slack after a season of washing hasn't done its job — it's simply failed slower. We manufacture woven and knitted elastic tape built around recovery, not just initial stretch, so a waistband holds its grip and a cuff holds its shape through the full working life of the garment.</p>\n          <p class=\"mb-4\">Woven and knitted construction serve different jobs: woven elastic holds a firmer, more stable width for structured waistbands, while knitted elastic gives a softer hand and better stretch-in-both-directions for cuffs and close-to-skin applications. We produce both, so you're not forced to compromise one job for the other.</p>",
+            "miniFeatures": [],
+            "checklist": [
+                "Consistent stretch recovery, wash after wash",
+                "Woven and knitted construction available from the same supplier",
+                "Standard and custom widths, manufactured in-house in Delhi"
+            ],
+            "afterHtml": "",
+            "button": {
+                "label": "Request a Quote",
+                "href": "/contact.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Where It's Used",
+            "heading": "Applications",
+            "subtitle": "Elastic tape goes wherever a garment needs to move with the body and then return to shape.",
+            "link": {
+                "label": "Explore All Applications",
+                "href": "/applications.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "icon": "fas fa-ruler-horizontal",
+                    "title": "Waistbands",
+                    "text": "Trouser, skirt and activewear waistbands that need a firm, lasting grip."
+                },
+                {
+                    "icon": "fas fa-hand-paper",
+                    "title": "Cuffs",
+                    "text": "Sleeve and ankle cuffs that need to sit close without cutting off circulation."
+                },
+                {
+                    "icon": "fas fa-vest",
+                    "title": "Innerwear & Activewear",
+                    "text": "Close-to-skin stretch panels that hold shape through repeated movement."
+                },
+                {
+                    "icon": "fas fa-shirt",
+                    "title": "Uniforms & Workwear",
+                    "text": "Stretch panels at the back and sides for uniforms that need freedom of movement."
+                }
+            ],
+            "col": "col-lg-3 col-sm-6",
+            "titleTag": "h3",
+            "centered": true,
+            "card": "value"
+        },
+        {
+            "type": "media-text",
+            "bg": "",
+            "textFirst": true,
+            "mediaAos": "fade-right",
+            "textAos": "fade-left",
+            "image": "/assets/images/products/woven-knitted-elastics/woven-knitted-elastics-collection-05.png",
+            "imageAlt": "Close texture of woven elastic tape construction",
+            "video": "",
+            "eyebrow": "Product Features",
+            "heading": "What Makes Our Elastic Different",
+            "html": "",
+            "miniFeatures": [
+                {
+                    "icon": "fas fa-recycle",
+                    "title": "Consistent Recovery",
+                    "text": "Snaps back to width after stretching, batch after batch."
+                },
+                {
+                    "icon": "fas fa-layer-group",
+                    "title": "Woven Or Knitted Base",
+                    "text": "Firmer woven body or softer knitted stretch, to match the application."
+                },
+                {
+                    "icon": "fas fa-ruler-combined",
+                    "title": "Width Consistency",
+                    "text": "Even width edge to edge, roll to roll, across the full production run."
+                },
+                {
+                    "icon": "fas fa-water",
+                    "title": "Wash-Cycle Durability",
+                    "text": "Holds stretch behaviour through repeated home and institutional laundering."
+                }
+            ],
+            "checklist": [],
+            "afterHtml": "",
+            "button": {
+                "label": "See Our Manufacturing Process",
+                "href": "/manufacturing.html",
+                "class": "btn btn-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            }
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Why It Works For Your Line",
+            "heading": "Benefits",
+            "items": [
+                {
+                    "icon": "fas fa-thumbs-up",
+                    "title": "Fewer Fit Complaints",
+                    "text": "Elastic that keeps its recovery reduces the loose-waistband and sagging-cuff complaints that trigger returns."
+                },
+                {
+                    "icon": "fas fa-history",
+                    "title": "Consistent On Reorder",
+                    "text": "The same width and stretch behaviour come back on every reorder, so your fit spec doesn't need re-approval."
+                },
+                {
+                    "icon": "fas fa-boxes-stacked",
+                    "title": "One Supplier, Both Constructions",
+                    "text": "Source woven and knitted elastic from the same manufacturer instead of managing two vendors."
+                }
+            ],
+            "col": "col-lg-4 col-md-6",
+            "titleTag": "h3",
+            "centered": false,
+            "card": "value"
+        },
+        {
+            "type": "spec-table",
+            "bg": "",
+            "eyebrow": "Product Specifications",
+            "heading": "Typical Specifications",
+            "subtitle": "Figures below are typical production ranges, not guaranteed exact values. Confirm your specification sheet with us before ordering.",
+            "columns": [
+                "Parameter",
+                "Typical Specification"
+            ],
+            "rows": [
+                [
+                    "Construction",
+                    "Woven or knitted elastic tape"
+                ],
+                [
+                    "Stretch Recovery",
+                    "Consistent recovery across repeated stretch and wash cycles"
+                ],
+                [
+                    "Hand-Feel",
+                    "Firm (woven) to soft (knitted), by construction"
+                ],
+                [
+                    "Roll Form",
+                    "Standard widths; custom widths available on request"
+                ],
+                [
+                    "Colour",
+                    "White / Black / Natural — subject to availability"
+                ],
+                [
+                    "Recommended Use",
+                    "Waistbands, cuffs, innerwear, activewear and uniform stretch panels"
+                ]
+            ]
+        },
+        {
+            "type": "card-grid",
+            "bg": "bg-soft",
+            "eyebrow": "Available Options",
+            "heading": "Elastic Variants",
+            "subtitle": "Choose a construction and width suited to your garment's stretch requirement.",
+            "items": [
+                {
+                    "title": "Woven Elastic",
+                    "text": "Firmer, more stable width — suited to structured waistbands that need to hold their line."
+                },
+                {
+                    "title": "Knitted Elastic",
+                    "text": "Softer hand and stretch in both directions — suited to cuffs and close-to-skin applications."
+                },
+                {
+                    "title": "Narrow Width",
+                    "text": "For cuffs, sleeve edges and lighter garment applications."
+                },
+                {
+                    "title": "Wide Width",
+                    "text": "For waistbands and applications needing a broader, firmer stretch panel."
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "titleTag": "h3",
+            "card": "variant"
+        },
+        {
+            "type": "faq",
+            "bg": "",
+            "eyebrow": "Common Questions",
+            "heading": "Woven & Knitted Elastics FAQs",
+            "intro": "Don't see your question here? Ask us directly and we'll respond within one business day.",
+            "button": {
+                "label": "Ask Us Directly",
+                "href": "/contact.html",
+                "class": "btn btn-navy mt-2",
+                "iconBefore": "",
+                "iconAfter": ""
+            },
+            "accordionId": "elasticFaq",
+            "itemPrefix": "elasticFaq",
+            "items": [
+                {
+                    "q": "Should I use woven or knitted elastic for my garment?",
+                    "a": "Woven elastic holds a firmer, more stable width and suits structured waistbands. Knitted elastic has a softer hand and stretches in both directions, which suits cuffs and close-to-skin applications. Tell us your garment and we'll recommend the right construction."
+                },
+                {
+                    "q": "What widths do you supply as standard?",
+                    "a": "We keep standard widths that cover the most common waistband, cuff and innerwear applications, and can cut custom widths on confirmed bulk orders. Share your target width and we'll confirm feasibility."
+                },
+                {
+                    "q": "What is the minimum order quantity?",
+                    "a": "Minimum quantities depend on construction, width and colour. Share your requirement through our contact form and we'll confirm feasible order sizes and lead time."
+                },
+                {
+                    "q": "Does the elastic hold recovery after repeated washing?",
+                    "a": "Our elastic is manufactured for stretch recovery across repeated wash cycles, not just off the roll. For institutional or high-wash-frequency use, let us know so we can confirm the most suitable grade."
+                }
+            ]
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft",
+            "eyebrow": "You May Also Need",
+            "heading": "Related Products",
+            "center": true,
+            "link": {
+                "label": "View Full Product Range",
+                "href": "/products.html",
+                "class": "btn btn-outline-navy",
+                "iconBefore": "",
+                "iconAfter": "fas fa-arrow-right ms-2"
+            },
+            "items": [
+                {
+                    "page": "belt-roll"
+                },
+                {
+                    "page": "velcro-tape"
+                }
+            ],
+            "col": "col-lg-4 col-md-6"
+        },
+        {
+            "type": "cta",
+            "heading": "Need Woven Or Knitted Elastic In Bulk?",
+            "text": "Tell us the construction, width and quantity you need — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "card": {
+        "title": "Woven & Knitted Elastics",
+        "tag": "Stretch",
+        "summary": "Woven and knitted elastic tapes for waistbands, cuffs and stretch closures.",
+        "image": "/assets/images/products/woven-knitted-elastics/woven-knitted-elastics-warehouse-01.jpg",
+        "imageAlt": "Woven and knitted elastic tape rolls for waistbands"
+    },
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}

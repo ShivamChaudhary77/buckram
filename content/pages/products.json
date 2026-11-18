@@ -1,0 +1,205 @@
+{
+    "id": "products",
+    "type": "listing",
+    "status": "published",
+    "path": "/products.html",
+    "title": "Products",
+    "source": "products.html",
+    "breadcrumb": [
+        {
+            "label": "Home",
+            "href": "/index.html"
+        }
+    ],
+    "seo": {
+        "title": "Products | Interlining Fabric Range — Jaibaba Interlinings",
+        "description": "Explore our full interlining fabric range: buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pads, EVA foam, woven & knitted elastics, tatron and velcro tape. Manufactured in Delhi since 1977 for bulk garment orders.",
+        "ogDescription": "Ten core interlining product lines manufactured in-house in Delhi — buckram, fusible interlining, pocketing cloth, readymade collar & cuff, belt roll & placket (patti), shoulder pads, EVA foam, woven & knitted elastics, tatron and velcro tape."
+    },
+    "jsonld": [],
+    "blocks": [
+        {
+            "type": "page-hero",
+            "icon": "fas fa-th-large",
+            "eyebrow": "Our Product Range",
+            "heading": "Ten Interlining Categories, Manufactured In-House",
+            "intro": "Buckram, fusible interlining, pocketing cloth, readymade collar &amp; cuff, belt roll &amp; placket (patti), shoulder pads, EVA foam, woven &amp; knitted elastics, tatron and velcro tape — produced to consistent width, weight and bond, order after order.",
+            "image": "/assets/images/banners/products-page-banner.png",
+            "breadcrumb": true
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">What We Manufacture</span>\n        <h2 class=\"section-title\">One Factory, Ten Product Lines, One Standard</h2>\n        <p class=\"section-subtitle mx-auto\">Since 1977, Jai Baba Nanak Cloth Trading Co. has manufactured and supplied interlining fabrics for garment makers across India and abroad. Every category below is produced on our own line and inspected before dispatch, so the roll you reorder performs exactly like the one you first sampled. Browse the range, compare categories against your application, or go straight to our <a href=\"/quality.html\">quality standards</a> and <a href=\"/applications.html\">garment applications</a> pages for more detail.</p>\n      </div>\n    </div>\n  </section>",
+            "label": "One Factory, Ten Product Lines, One Standard"
+        },
+        {
+            "type": "product-cards",
+            "bg": "bg-soft section-tight",
+            "center": false,
+            "items": [
+                {
+                    "page": "buckram-fabric",
+                    "summary": "A firm, stiff sew-in fabric that holds its shape without heat-fusing — used to structure caps, belts, bag panels and other rigid garment parts."
+                },
+                {
+                    "page": "fusible-interlining",
+                    "summary": "A resin-coated fabric that heat-bonds to the outer shell for a clean, bubble-free fuse — the standard choice for collars, cuffs and plackets."
+                },
+                {
+                    "page": "pocketing-fabric",
+                    "summary": "A tightly woven, hard-wearing cloth built for trouser, jeans and jacket pockets — made to outlast the outer garment through repeated wash cycles."
+                },
+                {
+                    "page": "collar-cuff",
+                    "summary": "Precision-cut, ready-to-fuse collar and cuff panels engineered for a sharp collar roll and a cuff edge that holds its line through ironing and repeated wear."
+                },
+                {
+                    "page": "belt-roll",
+                    "summary": "A firm-bodied interlining fabric cut and rolled to standard belt and placket widths, giving fabric belts, waistbands and plackets a body that resists sagging.",
+                    "imageAlt": "Belt roll and placket (patti) interlining fabric in various widths"
+                },
+                {
+                    "page": "shoulder-pad",
+                    "summary": "Moulded pads in consistent shape and density, used to build clean shoulder lines into blazers, jackets and uniforms."
+                },
+                {
+                    "page": "eva-foam",
+                    "summary": "Lightweight, cushioned foam sheeting used for garment padding, shoulder and chest inserts, and protective packaging."
+                },
+                {
+                    "page": "woven-knitted-elastics",
+                    "summary": "Woven and knitted elastic tapes for waistbands, cuffs and stretch closures that need to recover their shape wash after wash."
+                },
+                {
+                    "page": "tatron"
+                },
+                {
+                    "page": "velcro-tape",
+                    "summary": "Sew-on hook-and-loop fastener tape for waistbands, plackets, cuffs and closures that need to open and close thousands of times."
+                }
+            ],
+            "col": "col-lg-3 col-md-6",
+            "promo": {
+                "icon": "fas fa-comments",
+                "title": "Not Sure Which Category You Need?",
+                "text": "Tell us the garment and application — we'll recommend the right product and specification.",
+                "button": {
+                    "label": "Talk To Us",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-sm-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                }
+            }
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">Product To Garment Fit</span>\n        <h2 class=\"section-title\">Which Category Fits Which Garment</h2>\n        <p class=\"section-subtitle mx-auto\">Each product line is built for a specific job on the garment. Here's a quick view of where each one is typically used — see our <a href=\"/applications.html\">full applications page</a> for a garment-by-garment breakdown.</p>\n      </div>\n      <div class=\"row g-4\">\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-tshirt\"></i></div>\n            <div>\n              <h4>Shirts &amp; Formalwear</h4>\n              <p>Fusible interlining and readymade collar &amp; cuff for crisp collars, cuffs and plackets.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-user-tie\"></i></div>\n            <div>\n              <h4>Trousers &amp; Uniforms</h4>\n              <p>Pocketing cloth and belt roll &amp; placket (patti) for pockets and waistbands that outlast the garment.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-vest\"></i></div>\n            <div>\n              <h4>Blazers &amp; Jackets</h4>\n              <p>Shoulder pads and EVA foam for structured shoulders, chest panels and lapels.</p>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-sm-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"feature-mini\">\n            <div class=\"feature-mini-icon\"><i class=\"fas fa-hat-cowboy\"></i></div>\n            <div>\n              <h4>Caps, Belts &amp; Accessories</h4>\n              <p>Buckram fabric for rigid, shape-holding structure in caps, belts and bag components.</p>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"text-center mt-5\" data-aos=\"fade-up\">\n        <a href=\"/applications.html\" class=\"btn btn-outline-navy\">Explore All Applications <i class=\"fas fa-arrow-right ms-2\"></i></a>\n      </div>\n    </div>\n  </section>",
+            "label": "Which Category Fits Which Garment"
+        },
+        {
+            "type": "spec-table",
+            "bg": "bg-soft",
+            "eyebrow": "Compare Categories",
+            "heading": "Product Comparison At A Glance",
+            "subtitle": "A qualitative comparison to help you shortlist the right category before requesting a sample. Exact width, weight and bond specification is confirmed against your order on our <a href=\"/contact.html\">contact page</a>.",
+            "style": "compare-table",
+            "columns": [
+                "Attribute",
+                "Buckram",
+                "Fusible Interlining",
+                "Pocketing Cloth",
+                "Readymade Collar & Cuff",
+                "Belt Roll & Placket (Patti)",
+                "Shoulder Pads",
+                "EVA Foam",
+                "Woven & Knitted Elastics",
+                "Tatron",
+                "Velcro Tape"
+            ],
+            "rows": [
+                [
+                    "Primary Use",
+                    "Rigid shape-holding structure",
+                    "Heat-bonded collar/cuff support",
+                    "Pocket bag construction",
+                    "Collar &amp; cuff edge definition",
+                    "Belt &amp; placket body",
+                    "Shoulder line structure",
+                    "Padding &amp; cushioning",
+                    "Waistband &amp; cuff stretch recovery",
+                    "Lightweight lining",
+                    "Fastening &amp; closure"
+                ],
+                [
+                    "Typical Stiffness",
+                    "High",
+                    "Medium",
+                    "Low",
+                    "High",
+                    "High",
+                    "Medium",
+                    "Low",
+                    "Low (stretch)",
+                    "Low",
+                    "Medium"
+                ],
+                [
+                    "Fusible",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-check-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-check-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>",
+                    "<i class=\"fas fa-times-circle\"></i>"
+                ],
+                [
+                    "Common Garment Application",
+                    "Caps, belts, bag panels",
+                    "Shirt collars, cuffs, plackets",
+                    "Trouser, jeans &amp; jacket pockets",
+                    "Formal &amp; casual shirts",
+                    "Fabric belts, plackets, waistbands",
+                    "Blazers, jackets, uniforms",
+                    "Padding, inserts, packaging",
+                    "Waistbands, cuffs, stretch panels",
+                    "Jacket, blazer &amp; trouser linings",
+                    "Waistbands, plackets, cuffs, bags"
+                ]
+            ]
+        },
+        {
+            "type": "html",
+            "html": "  <section>\n    <div class=\"container-custom\">\n      <div class=\"section-header text-center mx-auto\" data-aos=\"fade-up\">\n        <span class=\"section-eyebrow justify-content-center\">How To Order</span>\n        <h2 class=\"section-title\">A Simple Buying Guide</h2>\n        <p class=\"section-subtitle mx-auto\">Most buyers move through these four steps between first enquiry and a confirmed bulk order.</p>\n      </div>\n      <div class=\"row g-4\">\n        <div class=\"col-lg-3 col-md-6\" data-aos=\"fade-up\">\n          <div class=\"guide-step\">\n            <div class=\"guide-num\">1</div>\n            <h4>Identify Your Garment Application</h4>\n            <p>Tell us the garment part — collar, cuff, pocket, belt, shoulder or padding — and we'll point you to the right product category.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"100\">\n          <div class=\"guide-step\">\n            <div class=\"guide-num\">2</div>\n            <h4>Confirm Width &amp; Quantity Needed</h4>\n            <p>Share your required roll width and order quantity so we can confirm feasibility and production scheduling.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"200\">\n          <div class=\"guide-step\">\n            <div class=\"guide-num\">3</div>\n            <h4>Request A Sample</h4>\n            <p>We arrange a sample against your specification so you can test fuse, hand-feel and stiffness before committing to bulk.</p>\n          </div>\n        </div>\n        <div class=\"col-lg-3 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"300\">\n          <div class=\"guide-step\">\n            <div class=\"guide-num\">4</div>\n            <h4>Confirm Bulk Order &amp; Lead Time</h4>\n            <p>Once the sample is approved, we confirm pricing, quantity and a firm delivery date before production begins.</p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>",
+            "label": "A Simple Buying Guide"
+        },
+        {
+            "type": "cta",
+            "heading": "Ready To Sample Or Order In Bulk?",
+            "text": "Tell us your product category, width and quantity — our team will respond with pricing and lead time within one business day.",
+            "buttons": [
+                {
+                    "label": "Request Bulk Quote",
+                    "href": "/contact.html",
+                    "class": "btn btn-gold btn-lg-custom",
+                    "iconBefore": "",
+                    "iconAfter": ""
+                },
+                {
+                    "label": "Chat on WhatsApp",
+                    "href": "https://wa.me/919910555033",
+                    "class": "btn btn-outline-light-custom btn-lg-custom",
+                    "iconBefore": "fab fa-whatsapp me-2",
+                    "iconAfter": "",
+                    "newTab": true
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
+}
