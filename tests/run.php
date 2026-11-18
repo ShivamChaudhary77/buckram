@@ -294,6 +294,43 @@ try {
     $chunks = migrate_split_main("<main>\n  <!-- LABEL -->\n  <!-- <section>\n  hidden\n  </section> -->\n  <section class=\"x\">\n    <p>a</p>\n  </section>\n</main>", 't');
     check('splitter: label skipped, comment kept, section found', array_column($chunks, 'kind') === ['label', 'comment', 'element']);
 
+    /* --------------------------------------------------------------- parity */
+    $section('parity: static pages vs PHP site');
+    require_once ROOT_DIR . '/scripts/lib/parity.php';
+    config_set(['content_dir' => $mig, 'enabled' => true, 'cache' => false]);
+    $par = parity_run(ROOT_DIR);
+    check("all {$par['total']} pages identical to the static site", $par['total'] === count($static) && $par['identical'] === $par['total']);
+    // The checker must notice real changes.
+    $mutate = function (string $id, callable $fn) use ($mig) {
+        $p = json_read("$mig/pages/$id.json");
+        $fn($p);
+        json_write("$mig/pages/$id.json", $p);
+    };
+    $mutate('about', function (&$p) { $p['seo']['title'] .= ' X'; });
+    $mutate('tatron', function (&$p) { $p['seo']['description'] = 'changed'; });
+    $mutate('home', function (&$p) { $p['jsonld'][0]['foundingDate'] = '1978'; });
+    $mutate('eva-foam', function (&$p) { $p['blocks'][1]['imageAlt'] = 'changed'; });
+    $mutate('quality', function (&$p) { $p['blocks'][1]['bg'] = 'bg-soft'; });
+    $mutate('belt-roll', function (&$p) {
+        foreach ($p['blocks'] as &$b) {
+            if ($b['type'] === 'cta') {
+                $b['buttons'][0]['href'] = '/elsewhere.html';
+            }
+        }
+    });
+    index_rebuild();
+    $par = parity_run(ROOT_DIR);
+    $has = function ($path, $check) use ($par) {
+        return isset($par['pages'][$path][$check]);
+    };
+    check('parity notices a changed title', $has('/about.html', 'title'));
+    check('parity notices a changed description', $has('/product/tatron.html', 'description'));
+    check('parity notices changed JSON-LD', $has('/index.html', 'JSON-LD'));
+    check('parity notices a changed image alt', $has('/product/eva-foam.html', 'images'));
+    check('parity notices a changed CSS class', $has('/quality.html', 'body markup'));
+    check('parity notices a changed link', $has('/product/belt-roll.html', 'links'));
+    check('parity leaves untouched pages alone', $par['identical'] === $par['total'] - 6);
+
     /* ------------------------------------------------------- whole fixtures */
     config_set(['content_dir' => $dirs[1], 'enabled' => true]);
     $section('every fixture page renders');

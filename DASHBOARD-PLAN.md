@@ -179,3 +179,21 @@ What stays untouched: `assets/` (all CSS, JS and images), `php/contact-form.php`
 **Kept as HTML (one-off layouts, still editable as HTML)**: home hero, trust strip, "Who we are" (contains a commented-out list), testimonials, the commented-out statistics band; About story, journey, leadership and timeline; Applications category grid; Contact cards, enquiry form and business details; Exports documents list; Manufacturing six stages and gallery; Products overview, "which category" grid and buying guide; Quality raw-material checks and packing.
 
 **Not yet compared (Phase 3)**: `<head>` tags and JSON-LD per page, links and images across the whole document.
+
+### Phase 3: Parity ✅ (2026-11-18)
+**Built**
+- `tests/compare-site.php` (+ `scripts/lib/parity.php`): for every static `.html` file, renders the same address through the PHP site and compares:
+  - title, meta description, canonical and robots
+  - every meta tag (Open Graph, Twitter) and every other `<head>` tag
+  - JSON-LD, decoded and compared as data
+  - H1s, every link target, every image `src` + `alt`
+  - the visible text and the full `<body>` markup (tags, attributes, text; whitespace and comments ignored)
+- **Baseline** = the static page as a browser shows it, with the `data-include` placeholders replaced by the include files (what `main.js` does).
+- The only normalisation is the footer year (static file says "2026", PHP prints the current year; `main.js` overwrites it anyway).
+- `php tests/run.php` now also runs parity and proves the checker catches real changes: a changed title, description, JSON-LD value, image alt, CSS class or link is each reported, and untouched pages stay "same". **185 passed.**
+
+**Result: all 18 pages identical.** No accepted differences.
+
+**What a crawler sees differently (deliberate, invisible to visitors):** the static pages ship empty `data-include` placeholders, so search engines and AI tools that don't run JavaScript see no menu, footer, phone or address. The PHP site sends them in the HTML. In a browser, both versions end up with identical markup, which is exactly what this test compares.
+
+**Next: Phase 4 (Dashboard).** The SEO improvements from section 3 (schema, og:url, sitemap…) come in Phase 5. Each one will then be listed in `parity_accepted()` with its reason, so the parity report keeps separating deliberate changes from accidents.
