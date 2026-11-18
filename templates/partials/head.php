@@ -26,8 +26,24 @@ $fonts = $site['fontsUrl'] ?? 'https://fonts.googleapis.com/css2?family=Poppins:
 <meta property="og:description" content="<?= e($head['ogDescription']) ?>">
 <?php endif; ?>
 <meta property="og:type" content="<?= e($head['ogType']) ?>">
+<meta property="og:url" content="<?= e($head['canonical']) ?>">
+<?php if ($head['siteName'] !== ''): ?>
+<meta property="og:site_name" content="<?= e($head['siteName']) ?>">
+<?php endif; ?>
 <?php if ($head['ogImage'] !== ''): ?>
 <meta property="og:image" content="<?= e($head['ogImage']) ?>">
+<?php if ($head['ogImageWidth']): ?>
+<meta property="og:image:width" content="<?= (int) $head['ogImageWidth'] ?>">
+<meta property="og:image:height" content="<?= (int) $head['ogImageHeight'] ?>">
+<?php endif; ?>
+<?php endif; ?>
+<meta name="twitter:card" content="<?= e($head['twitterCard']) ?>">
+<meta name="twitter:title" content="<?= e($head['ogTitle']) ?>">
+<?php if ($head['ogDescription'] !== ''): ?>
+<meta name="twitter:description" content="<?= e($head['ogDescription']) ?>">
+<?php endif; ?>
+<?php if ($head['ogImage'] !== ''): ?>
+<meta name="twitter:image" content="<?= e($head['ogImage']) ?>">
 <?php endif; ?>
 <?php if ($head['favicon'] !== ''): ?>
 <link rel="icon" href="<?= e($head['favicon']) ?>"<?= preg_match('/\.svg$/i', $head['favicon']) ? ' type="image/svg+xml"' : '' ?>>
@@ -47,3 +63,4 @@ $fonts = $site['fontsUrl'] ?? 'https://fonts.googleapis.com/css2?family=Poppins:
 
 </script>
 <?php endforeach; ?>
+<?= render_template('partials/tracking-head', ['t' => $head['tracking']]) ?>

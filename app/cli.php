@@ -8,6 +8,8 @@
  *   php app/cli.php rebuild-index          rebuild the address → page list
  *   php app/cli.php setup-link             print a one-time link to choose the first dashboard password
  *   php app/cli.php set-password           set or reset the dashboard password (typed, or piped in)
+ *   php app/cli.php seo-report             list SEO problems on every page
+ *   php app/cli.php apply-fixes F.json     bulk-fix titles/descriptions (dry run; add --apply)
  *
  * Add --content=/path/to/content to use another content folder.
  * Rendering always works as if the site were switched on, so it can be checked before go-live.
@@ -112,6 +114,38 @@ switch ($cmd) {
         echo "Password saved.\n";
         exit(0);
 
+    case 'seo-report':
+        $report = seo_report();
+        $pages = pages_all();
+        $n = 0;
+        foreach ($report as $id => $checks) {
+            if (!$checks) {
+                continue;
+            }
+            echo ($pages[$id]['path'] ?? $id) . "\n";
+            foreach ($checks as $c) {
+                echo '  ' . ($c['level'] === 'bad' ? '✗' : '!') . ' ' . $c['text'] . "\n";
+                $n++;
+            }
+        }
+        echo $n ? "$n things to look at.\n" : "No problems.\n";
+        exit(0);
+
+    case 'apply-fixes':
+        // php app/cli.php apply-fixes fixes.json [--apply]
+        // fixes.json: [{"page": "about", "field": "seo.title", "from": "current text", "to": "new text"}, …]
+        // Dry run by default. Only changes fields that still hold "from". History is kept.
+        $file = (string) ($args[1] ?? '');
+        if ($file === '' || !is_file($file)) {
+            fwrite(STDERR, "Usage: php app/cli.php apply-fixes <fixes.json> [--apply]\n");
+            exit(1);
+        }
+        foreach (seo_apply_fixes($file, isset($opts['apply'])) as $line) {
+            echo $line . "\n";
+        }
+        echo isset($opts['apply']) ? "Done.\n" : "Dry run: nothing changed. Add --apply to save.\n";
+        exit(0);
+
     case 'clear-cache':
         cache_clear();
         echo "Cache cleared.\n";
@@ -123,6 +157,6 @@ switch ($cmd) {
         exit(0);
 
     default:
-        echo "Usage: php app/cli.php render <path> [--status] | check | clear-cache | rebuild-index | setup-link | set-password [--content=DIR]\n";
+        echo "Usage: php app/cli.php render <path> [--status] | check | clear-cache | rebuild-index | setup-link | set-password | seo-report | apply-fixes <file> [--apply] [--content=DIR]\n";
         exit($cmd === 'help' ? 0 : 1);
 }

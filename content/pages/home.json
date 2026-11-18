@@ -11,31 +11,7 @@
         "ogTitle": "Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977",
         "ogDescription": "Manufacturer, supplier, wholesaler, exporter and trader of garment interlining fabrics from Delhi, India. Serving garment manufacturers and buying houses since 1977."
     },
-    "jsonld": [
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Jai Baba Nanak Cloth Trading Co.",
-            "alternateName": "Jaibaba Interlinings",
-            "url": "https://www.jaibabainterlinings.com/",
-            "logo": "https://www.jaibabainterlinings.com/assets/images/logo.svg",
-            "foundingDate": "1977",
-            "description": "Manufacturer, supplier, wholesaler, exporter and trader of garment interlining fabrics including buckram, fusible interlining, pocketing cloth, readymade collar and cuff, belt roll and placket (patti), shoulder pads and EVA foam.",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Delhi",
-                "addressCountry": "IN"
-            },
-            "telephone": "+91-9910555033",
-            "email": "Jaibabananakclothtrading@gmail.com",
-            "sameAs": [
-                "https://www.facebook.com/share/1DKBwKzXMC/",
-                "https://www.instagram.com/jaibabananakclothtrading",
-                "https://x.com/JB_GROUP_DELHI",
-                "https://youtube.com/@jaibabananakclothtradingco9486"
-            ]
-        }
-    ],
+    "jsonld": [],
     "blocks": [
         {
             "type": "html",
@@ -345,6 +321,6 @@
             ]
         }
     ],
-    "created": "2026-11-18T23:15:21+05:30",
-    "updated": "2026-11-18T23:15:21+05:30"
+    "created": "2026-11-18T23:48:54.177+05:30",
+    "updated": "2026-11-18T23:48:54.177+05:30"
 }

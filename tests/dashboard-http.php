@@ -236,6 +236,19 @@ try {
     [$s, , $b] = http('POST', '/admin/settings.php', $sv);
     ok('wrong tracking ID refused', $s === 200 && strpos($b, 'G-XXXXXXXXXX') !== false);
 
+    echo "• Google check and generated files\n";
+    [$s, , $b] = http('GET', '/admin/seo.php');
+    ok('Google check screen lists every page', $s === 200 && substr_count($b, 'class="page-row seo-row"') === 19);
+    [, , $b] = http('GET', '/admin/edit.php?id=about');
+    ok('editor shows the full check', strpos($b, 'Full check') !== false && strpos($b, 'Google title is') !== false);
+    foreach (['/sitemap.xml' => 'application/xml', '/robots.txt' => 'text/plain', '/llms.txt' => 'text/plain'] as $f => $type) {
+        [$s, $h, $b] = http('GET', $f);
+        ok("$f is served", $s === 200 && strpos($h['content-type'] ?? '', $type) === 0 && strlen($b) > 50);
+    }
+    [, , $sm] = http('GET', '/sitemap.xml');
+    ok('new product page is in the sitemap, the renamed one under its new address', strpos($sm, '/product/non-woven-interlining.html') !== false
+        && strpos($sm, '/product/tatron-lining.html') !== false && strpos($sm, '/product/tatron.html<') === false);
+
     echo "• safety\n";
     foreach (['/admin/edit.php?id=home' => ['action' => 'save'], '/admin/settings.php' => [], '/admin/redirects.php' => ['action' => 'add', 'from' => '/x.html', 'to' => '/'],
         '/admin/trash.php' => ['action' => 'empty'], '/admin/new.php' => ['title' => 'X'], '/admin/media.php' => ['action' => 'delete', 'url' => '/uploads/x.png'],

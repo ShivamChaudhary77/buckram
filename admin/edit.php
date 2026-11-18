@@ -124,9 +124,19 @@ echo errors_html($errors);
       <button class="btn btn-outline-secondary w-100 mb-3" type="submit" name="action" value="preview" formaction="<?= admin_url('preview.php') ?>" formtarget="_blank"><i class="fas fa-eye me-1"></i> Preview changes</button>
 
       <div class="seo-check" data-seo-check>
-        <div class="seo-check-title">Quick Google check</div>
+        <div class="seo-check-title">Quick Google check <small class="text-muted fw-normal">(as you type)</small></div>
         <ul class="seo-list" data-seo-list></ul>
       </div>
+<?php $full = seo_checks($stored); $issues = array_filter($full, function ($c) { return $c['level'] !== 'good'; }); ?>
+      <details class="seo-check mt-3"<?= array_filter($full, function ($c) { return $c['level'] === 'bad'; }) ? ' open' : '' ?>>
+        <summary class="seo-check-title">Full check <small class="text-muted fw-normal">(as last saved)</small>
+          <?= $issues ? '<span class="pill pill-draft">' . count($issues) . ' to look at</span>' : '<span class="pill pill-live">All good</span>' ?></summary>
+        <ul class="seo-list mt-2">
+<?php foreach ($full as $c): $icon = ['good' => 'fa-check-circle', 'warn' => 'fa-exclamation-circle', 'bad' => 'fa-times-circle', 'info' => 'fa-info-circle'][$c['level']]; ?>
+          <li class="<?= e($c['level']) ?>"><i class="fas <?= $icon ?>"></i><?= e($c['text']) ?></li>
+<?php endforeach; ?>
+        </ul>
+      </details>
 
       <div class="side-links">
         <a href="<?= e(admin_url('history.php', ['id' => $id])) ?>"><i class="fas fa-history"></i> Earlier versions (<?= count(history_list($id)) ?>)</a>

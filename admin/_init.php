@@ -125,6 +125,7 @@ function admin_page_start(string $title, string $active, bool $bare = false, str
     $nav = [
         ['index.php', 'pages', 'fa-file-alt', 'Pages', 'Edit the text and pictures of every page', count($pages)],
         ['media.php', 'media', 'fa-images', 'Pictures', 'Upload and find pictures', null],
+        ['seo.php', 'seo', 'fa-search', 'Google check', 'What to improve for Google, page by page', null],
         ['redirects.php', 'redirects', 'fa-random', 'Redirects', 'Send old web addresses to new ones', count(redirects_load())],
         ['settings.php', 'settings', 'fa-cog', 'Settings', 'Phone, address, menu, footer', null],
         ['trash.php', 'trash', 'fa-trash-alt', 'Trash', 'Deleted pages you can restore', $trash],

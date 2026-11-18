@@ -286,6 +286,23 @@ function settings_fields(): array
             ['key' => 'icon', 'label' => 'Icon', 'type' => 'icon', 'placeholder' => 'fab fa-instagram'],
         ]],
 
+        ['key' => '', 'type' => 'heading', 'label' => 'Facts for Google and AI search'],
+        ['key' => 'org', 'label' => 'Business facts', 'type' => 'group', 'help' => 'Google, ChatGPT, Perplexity and other tools read these from every page. Only enter facts that are true and shown on the website.', 'fields' => [
+            ['key' => 'description', 'label' => 'What the business does (one or two sentences)', 'type' => 'textarea', 'rows' => 3],
+            ['key' => 'foundingDate', 'label' => 'Year founded', 'type' => 'text', 'placeholder' => '1977'],
+            ['key' => 'address', 'label' => 'Head office address, in parts', 'type' => 'group', 'fields' => [
+                ['key' => 'streetAddress', 'label' => 'Street', 'type' => 'text'],
+                ['key' => 'addressLocality', 'label' => 'City', 'type' => 'text'],
+                ['key' => 'addressRegion', 'label' => 'State', 'type' => 'text'],
+                ['key' => 'postalCode', 'label' => 'PIN code', 'type' => 'text'],
+                ['key' => 'addressCountry', 'label' => 'Country code', 'type' => 'text', 'placeholder' => 'IN'],
+            ]],
+            ['key' => 'sameAs', 'label' => 'Official profiles elsewhere (links)', 'type' => 'list', 'item' => 'profile link', 'help' => 'Social media, IndiaMART, Google Business Profile… Helps Google know these all belong to you.'],
+        ]],
+        ['key' => 'robots', 'label' => 'AI tools', 'type' => 'group', 'fields' => [
+            ['key' => 'blockAI', 'label' => 'Block AI tools (ChatGPT, Claude, Perplexity, Google Gemini) from reading the website', 'type' => 'checkbox', 'help' => 'Usually leave this off: being read by AI tools helps buyers find you. Google Search is not affected.'],
+        ]],
+
         ['key' => '', 'type' => 'heading', 'label' => 'Logo & pictures'],
         ['key' => 'logo', 'label' => 'Logo', 'type' => 'group', 'fields' => [
             ['key' => 'src', 'label' => 'Logo picture', 'type' => 'image'],

@@ -240,6 +240,33 @@ function migrate_site_settings(string $root): array
     }
     $site['footer'] = $f;
     $site['tracking'] = ['ga4' => '', 'gtm' => '', 'metaPixel' => ''];
+
+    // Facts for Google and AI search, only from what the site already says
+    // (the home page Organization schema and the footer's head-office address).
+    $ho = $site['addresses'][0]['text'] ?? '';
+    $street = $ho;
+    $postal = '';
+    if (preg_match('/^(.*?),\s*Delhi\s*[–-]\s*(\d{6})\s*$/u', $ho, $m)) {
+        $street = trim($m[1]);
+        $postal = $m[2];
+    }
+    $site['org'] = [
+        'description' => (string) ($org['description'] ?? ''),
+        'foundingDate' => (string) ($org['foundingDate'] ?? ''),
+        'sameAs' => array_values(array_filter((array) ($org['sameAs'] ?? []), 'is_string')),
+        'address' => [
+            'streetAddress'   => $street,
+            'addressLocality' => (string) ($org['address']['addressLocality'] ?? 'Delhi'),
+            'addressRegion'   => 'Delhi',
+            'postalCode'      => $postal,
+            'addressCountry'  => (string) ($org['address']['addressCountry'] ?? 'IN'),
+        ],
+    ];
+    $site['robots'] = ['blockAI' => false];
+    // Share previews can't show SVG pictures: use the real logo instead of the SVG placeholder.
+    if (preg_match('/\.svg$/i', $site['defaultOgImage']) && !empty($site['logo']['src'])) {
+        $site['defaultOgImage'] = $site['logo']['src'];
+    }
     return $site;
 }
 
@@ -934,7 +961,10 @@ function main_tokens(string $html): array
 {
     $doc = dom_document($html);
     $main = $doc->getElementsByTagName('main')->item(0);
-    return $main ? html_tokens($main) : [];
+    // Picture width/height are added by the PHP site on purpose (no layout jumps): not a content change.
+    return $main ? array_map(function ($t) {
+        return strpos($t, '<img ') === 0 ? (string) preg_replace('/ (width|height)="\d+"/', '', $t) : $t;
+    }, html_tokens($main)) : [];
 }
 
 function migrate_head(DOMDocument $doc, array $site): array
@@ -1015,13 +1045,19 @@ function migrate_site(string $root, string $work, bool $verbose = false): array
     $log[] = 'Pages (structured sections / kept as HTML)';
     $pages = [];
     $now = now_iso();
+    $oldDefaultOg = migrate_most_common_og_image($root);
     foreach ($files as $f) {
         $raw = (string) file_get_contents($root . '/' . $f['file']);
         $doc = dom_document($raw);
         $head = migrate_head($doc, $site);
+        // The Organization schema is now built for every page from Settings (site.json "org"),
+        // so it is not kept as page-level extra data.
+        $extraLd = array_values(array_filter($head['jsonld'], function ($d) {
+            return ($d['@type'] ?? '') !== 'Organization';
+        }));
         $page = [
             'id' => $f['id'], 'type' => $f['type'], 'status' => 'published', 'path' => $f['path'],
-            'title' => '', 'source' => $f['file'], 'breadcrumb' => [], 'seo' => [], 'jsonld' => $head['jsonld'], 'blocks' => [],
+            'title' => '', 'source' => $f['file'], 'breadcrumb' => [], 'seo' => [], 'jsonld' => $extraLd, 'blocks' => [],
         ];
         $notes = [];
         $structured = 0;
@@ -1104,7 +1140,7 @@ function migrate_site(string $root, string $work, bool $verbose = false): array
         if ($seo['ogType'] !== '' && $seo['ogType'] !== 'website') {
             $page['seo']['ogType'] = $seo['ogType'];
         }
-        if ($seo['ogImage'] !== ($site['defaultOgImage'] ?? '')) {
+        if ($seo['ogImage'] !== $oldDefaultOg) {
             $page['seo']['ogImage'] = $seo['ogImage'];
         }
         if ($seo['noindex']) {

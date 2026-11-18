@@ -13,6 +13,9 @@ $scripts = $site['scripts'] ?? [
 <?= render_template('partials/head', ['head' => $head, 'site' => $site]) ?>
 </head>
 <body class="<?= e($page['bodyClass'] ?? 'header-fixed-offset') ?>">
+<?php $gtm = (string) ($head['tracking']['gtm'] ?? ''); if (preg_match('/^GTM-[A-Z0-9]{4,12}$/', $gtm)): ?>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $gtm ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<?php endif; ?>
 
 <header class="site-header">
 <?= render_template('partials/topbar', ['site' => $site]) ?>

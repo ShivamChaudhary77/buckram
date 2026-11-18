@@ -31,7 +31,92 @@ function parity_static_baseline(string $root, string $html): string
  */
 function parity_accepted(): array
 {
-    return [];
+    // Meta tags the PHP site adds (Phase 5). Anything else new is still a difference.
+    $added = ['robots', 'og:url', 'og:site_name', 'og:image:width', 'og:image:height', 'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
+    $ogOk = function (?string $static, ?string $php): bool {
+        if ($static === null) {
+            return $php === null || $php !== '';
+        }
+        $site = site_load();
+        // Same picture as a full address, or the SVG placeholder logo replaced by the real logo.
+        return $php === absolute_url($static)
+            || (preg_match('/\.svg$/i', $static) && $php === absolute_url((string) ($site['logo']['src'] ?? '')));
+    };
+    return [
+        'robots' => ['a robots tag now says "index, follow, large image previews" on every live page', function ($a, $b) {
+            return $a['robots'] === null && $b['robots'] === 'index,follow,max-image-preview:large';
+        }],
+        'meta tags' => ['og:url, og:site_name, Twitter tags and picture size added; share picture is a full address (and the real logo instead of the SVG placeholder)', function ($a, $b) use ($added, $ogOk) {
+            foreach ($a['meta'] as $k => $v) {
+                if ($k === 'og:image' ? !$ogOk($v, $b['meta'][$k] ?? null) : ($b['meta'][$k] ?? null) !== $v) {
+                    return false;
+                }
+            }
+            foreach (array_diff_key($b['meta'], $a['meta']) as $k => $v) {
+                if (!in_array($k, $added, true)) {
+                    return false;
+                }
+            }
+            return true;
+        }],
+        'other head tags' => ['only the meta tags listed above were added or changed', function ($a, $b) use ($added) {
+            $strip = function (array $tags) use ($added) {
+                return array_values(array_filter($tags, function ($t) use ($added) {
+                    return !preg_match('/(name|property)="(' . implode('|', array_map('preg_quote', array_merge($added, ['og:image']))) . ')"/', $t);
+                }));
+            };
+            return $strip($a['head']) === $strip($b['head']);
+        }],
+        'JSON-LD' => ['one structured-data graph per page (Organization, WebSite, WebPage, BreadcrumbList, FAQPage, ItemList); the home page facts are all kept', function ($a, $b) {
+            $graph = $b['jsonld'][0]['@graph'] ?? null;
+            if (!is_array($graph) || count($b['jsonld']) < 1) {
+                return false;
+            }
+            $byType = [];
+            foreach ($graph as $n) {
+                $byType[$n['@type']][] = $n;
+            }
+            foreach (['Organization', 'WebSite'] as $t) {
+                if (empty($byType[$t])) {
+                    return false;
+                }
+            }
+            $digits = function ($s) {
+                return preg_replace('/\D+/', '', (string) $s);
+            };
+            foreach ($a['jsonld'] as $old) {
+                $new = $byType[$old['@type'] ?? ''][0] ?? null;
+                if (!$new) {
+                    return false;
+                }
+                foreach (['name', 'alternateName', 'foundingDate', 'email', 'description', 'url'] as $k) {
+                    if (isset($old[$k]) && $old[$k] !== ($new[$k] ?? null)) {
+                        return false;
+                    }
+                }
+                if (isset($old['telephone']) && $digits($old['telephone']) !== $digits($new['telephone'] ?? '')) {
+                    return false;
+                }
+                foreach (['addressLocality', 'addressCountry'] as $k) {
+                    if (isset($old['address'][$k]) && $old['address'][$k] !== ($new['address'][$k] ?? null)) {
+                        return false;
+                    }
+                }
+                if (array_diff((array) ($old['sameAs'] ?? []), (array) ($new['sameAs'] ?? []))) {
+                    return false;
+                }
+            }
+            return true;
+        }],
+        'body markup' => ['pictures got width and height (from the real files) so the page does not jump while loading', function ($a, $b) {
+            $strip = function (array $tokens) {
+                return array_map(function ($t) {
+                    return strpos($t, '<img ') === 0 ? (string) preg_replace('/ (width|height)="\d+"/', '', $t) : $t;
+                }, $tokens);
+            };
+            return $strip($a['body']) === $strip($b['body']);
+        }],
+    ];
 }
 
 /**

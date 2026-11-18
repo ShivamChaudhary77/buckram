@@ -202,3 +202,12 @@ textarea.code { min-height: 80px; }
 .picker { padding: 16px; background: var(--bg); }
 .picker .media-thumb { cursor: pointer; }
 #pickerModal iframe { width: 100%; height: 75vh; border: 0; display: block; }
+
+/* Google check */
+.stat { display: flex; align-items: baseline; gap: 10px; }
+.stat strong { font: 700 30px Poppins, sans-serif; color: var(--navy); }
+.stat span { color: var(--muted); }
+.seo-row { display: block; }
+.seo-row summary { display: flex; align-items: center; gap: 12px; cursor: pointer; flex-wrap: wrap; list-style: none; }
+.seo-row summary::-webkit-details-marker { display: none; }
+details.seo-check > summary { cursor: pointer; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }

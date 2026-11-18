@@ -37,13 +37,14 @@ function template_exists(string $name): bool
 function render_page(array $page, array $opts = []): string
 {
     $site = site_load();
-    return render_template('layout', [
+    $html = render_template('layout', [
         'site' => $site,
         'page' => $page,
         'head' => page_head($page, $site, $opts),
         'body' => render_blocks($page, $site),
         'opts' => $opts,
     ]);
+    return add_image_dimensions($html);
 }
 
 /** Official address of a page (handles the home page setting). */
@@ -72,33 +73,45 @@ function page_head(array $page, array $site, array $opts = []): array
     $canonical = trim((string) ($seo['canonical'] ?? ''));
     $canonical = $canonical !== '' ? absolute_url($canonical) : absolute_url(page_canonical_path($page));
 
-    $robots = null;
     if (!empty($opts['preview'])) {
         $robots = 'noindex,nofollow';
     } elseif (!empty($seo['noindex']) || ($page['status'] ?? 'published') !== 'published') {
         $robots = 'noindex,follow';
+    } else {
+        $robots = 'index,follow,max-image-preview:large';
     }
 
-    $jsonld = [];
-    foreach (($page['jsonld'] ?? []) as $item) {
-        if (is_array($item)) {
-            $jsonld[] = $item;
-        }
-    }
+    $ogImage = trim((string) ($seo['ogImage'] ?? '')) ?: (string) ($site['defaultOgImage'] ?? '');
+    $ogSize = $ogImage !== '' ? local_image_size($ogImage) : null;
 
-    return [
+    $head = [
         'lang'          => (string) ($site['lang'] ?? 'en'),
         'title'         => $title,
         'description'   => $description,
         'canonical'     => $canonical,
         'robots'        => $robots,
+        'siteName'      => $brand,
         'ogTitle'       => trim((string) ($seo['ogTitle'] ?? '')) ?: $title,
         'ogDescription' => trim((string) ($seo['ogDescription'] ?? '')) ?: $description,
         'ogType'        => trim((string) ($seo['ogType'] ?? '')) ?: 'website',
-        'ogImage'       => trim((string) ($seo['ogImage'] ?? '')) ?: (string) ($site['defaultOgImage'] ?? ''),
+        'ogImage'       => $ogImage !== '' ? absolute_url($ogImage) : '',
+        'ogImageWidth'  => $ogSize[0] ?? null,
+        'ogImageHeight' => $ogSize[1] ?? null,
+        // A large preview only makes sense for a large picture (a logo gets the small card).
+        'twitterCard'   => ($ogSize && $ogSize[0] >= 600 && $ogSize[0] / max(1, $ogSize[1]) > 1.3) ? 'summary_large_image' : 'summary',
         'favicon'       => (string) ($site['favicon'] ?? ''),
-        'jsonld'        => $jsonld,
+        'tracking'      => empty($opts['preview']) ? (array) ($site['tracking'] ?? []) : [],
     ];
+
+    // Structured data: the generated graph, plus any extra data added on the page.
+    $jsonld = [seo_graph($page, $site, $head)];
+    foreach (($page['jsonld'] ?? []) as $item) {
+        if (is_array($item)) {
+            $jsonld[] = $item;
+        }
+    }
+    $head['jsonld'] = $jsonld;
+    return $head;
 }
 
 /** HTML for all blocks of a page, in order. */

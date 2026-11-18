@@ -92,9 +92,17 @@ function front_route(string $uri): array
     return front_html(404, render_not_found(), false);
 }
 
-/** Hook for generated files. Returns a response or null. */
+/** Generated files: sitemap.xml, robots.txt, llms.txt. Returns a response or null. */
 function front_special_route(string $path): ?array
 {
+    switch ($path) {
+        case '/sitemap.xml':
+            return response(200, seo_sitemap_xml(), ['Content-Type' => 'application/xml; charset=utf-8', 'Cache-Control' => 'public, max-age=3600', 'X-Robots-Tag' => 'noindex']);
+        case '/robots.txt':
+            return response(200, seo_robots_txt(), ['Content-Type' => 'text/plain; charset=utf-8', 'Cache-Control' => 'public, max-age=3600']);
+        case '/llms.txt':
+            return response(200, seo_llms_txt(), ['Content-Type' => 'text/plain; charset=utf-8', 'Cache-Control' => 'public, max-age=3600']);
+    }
     return null;
 }
 

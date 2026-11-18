@@ -159,10 +159,11 @@ try {
     check('home has exactly one H1', preg_match_all('/<h1[\s>]/', $home) === 1);
     check('home title tag', strpos($home, '<title>Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977, Delhi</title>') !== false);
     check('home canonical is /index.html', strpos($home, '<link rel="canonical" href="https://www.jaibabainterlinings.com/index.html">') !== false);
-    check('no robots meta on published page', strpos($home, 'name="robots"') === false);
+    check('live page: robots index,follow', strpos($home, '<meta name="robots" content="index,follow,max-image-preview:large">') !== false);
     preg_match_all('#<script type="application/ld\+json">(.*?)</script>#s', $home, $m);
     $ld = json_decode($m[1][0] ?? '', true);
-    check('JSON-LD parses', is_array($ld) && $ld['@type'] === 'Organization');
+    check('JSON-LD graph parses', is_array($ld) && in_array('Organization', array_column($ld['@graph'] ?? [], '@type'), true));
+    check('extra page JSON-LD kept after the graph', (json_decode($m[1][1] ?? '', true)['@type'] ?? '') === 'Organization');
     check('menu is rendered on the server', strpos($home, 'href="/product/buckram-fabric.html">Buckram Fabric</a>') !== false);
     check('no client-side include placeholders', strpos($home, 'data-include') === false);
     check('phone in footer', strpos($home, '<a href="tel:+918750555033">+91 8750555033</a>') !== false);
@@ -269,7 +270,12 @@ try {
         }
     }
     $homeMig = $rep['pages']['home'];
-    check('home keeps Organization JSON-LD', ($homeMig['jsonld'][0]['@type'] ?? '') === 'Organization');
+    $siteMig = json_read("$mig/site.json");
+    check('home Organization facts moved to Settings (built for every page)', ($siteMig['org']['foundingDate'] ?? '') === '1977'
+        && ($siteMig['org']['address']['postalCode'] ?? '') === '110007' && count($siteMig['org']['sameAs'] ?? []) === 4
+        && !array_filter($homeMig['jsonld'], function ($d) { return ($d['@type'] ?? '') === 'Organization'; }));
+    check('share picture: real logo instead of the SVG placeholder', ($siteMig['defaultOgImage'] ?? '') === '/assets/images/logo.jpeg'
+        && !isset($homeMig['seo']['ogImage']));
     check('hidden (commented-out) sections are kept', (bool) array_filter($homeMig['blocks'], function ($b) {
         return $b['type'] === 'html' && strpos($b['html'], '<!--') !== false && strpos($b['html'], 'STATISTICS') === false && strpos($b['html'], 'counter') !== false;
     }));
@@ -308,7 +314,10 @@ try {
     };
     $mutate('about', function (&$p) { $p['seo']['title'] .= ' X'; });
     $mutate('tatron', function (&$p) { $p['seo']['description'] = 'changed'; });
-    $mutate('home', function (&$p) { $p['jsonld'][0]['foundingDate'] = '1978'; });
+    $sm = json_read("$mig/site.json");
+    $sm['org']['foundingDate'] = '1978';
+    json_write("$mig/site.json", $sm);
+    clearstatcache();
     $mutate('eva-foam', function (&$p) { $p['blocks'][1]['imageAlt'] = 'changed'; });
     $mutate('quality', function (&$p) { $p['blocks'][1]['bg'] = 'bg-soft'; });
     $mutate('belt-roll', function (&$p) {
@@ -513,6 +522,127 @@ try {
     @unlink($png);
     @unlink($fake);
     config_set(['uploads_dir' => null, 'uploads_url' => null]);
+
+    /* ------------------------------------------------------------------ SEO */
+    $section('SEO, AEO, GEO');
+    $dirs[] = $seoDir = sys_get_temp_dir() . '/jaibaba-seo-' . bin2hex(random_bytes(4));
+    ensure_dir("$seoDir/pages");
+    config_set(['content_dir' => $seoDir, 'enabled' => true, 'cache' => false]);
+    migrate_site(ROOT_DIR, $seoDir);
+    $sm = get('/sitemap.xml');
+    $xml = @simplexml_load_string($sm['body']);
+    check('sitemap.xml is valid XML', $sm['status'] === 200 && $xml !== false && strpos($sm['headers']['Content-Type'], 'xml') !== false);
+    check('sitemap lists all 18 live pages with lastmod', $xml && count($xml->url) === 18 && (string) $xml->url[0]->lastmod !== '');
+    $p = page_load('quality');
+    $p['seo']['noindex'] = true;
+    page_save($p);
+    $p = page_load('tatron');
+    $p['status'] = 'draft';
+    page_save($p);
+    $xml = simplexml_load_string(get('/sitemap.xml')['body']);
+    $locs = array_map('strval', iterator_to_array($xml->url, false) ? array_map(function ($u) { return $u->loc; }, iterator_to_array($xml->url, false)) : []);
+    check('hidden-from-Google and draft pages left out of the sitemap', count($locs) === 16 && !preg_grep('/quality|tatron/', $locs));
+    check('noindex page says so in its robots tag', strpos(get('/quality.html')['body'], '<meta name="robots" content="noindex,follow">') !== false);
+    $rb = get('/robots.txt');
+    check('robots.txt allows the site, blocks /admin/, lists the sitemap', $rb['status'] === 200 && strpos($rb['body'], "Disallow: /admin/") !== false
+        && strpos($rb['body'], 'Sitemap: https://www.jaibabainterlinings.com/sitemap.xml') !== false && strpos($rb['body'], 'GPTBot') === false);
+    $s = site_load();
+    $s['robots']['blockAI'] = true;
+    site_save($s);
+    check('blocking AI tools adds them to robots.txt', strpos(get('/robots.txt')['body'], "User-agent: GPTBot\nDisallow: /") !== false);
+    $s['robots']['blockAI'] = false;
+    site_save($s);
+    $ll = get('/llms.txt')['body'];
+    check('llms.txt: name, summary, products, contact', strpos($ll, '# Jaibaba Interlinings') === 0 && strpos($ll, '> Manufacturer, supplier') !== false
+        && strpos($ll, '## Products') !== false && strpos($ll, '[Buckram Fabric](https://www.jaibabainterlinings.com/product/buckram-fabric.html)') !== false
+        && strpos($ll, 'Phone: +91 9910555033') !== false && strpos($ll, '[Tatron](') === false);
+    $graphOf = function (string $path) {
+        preg_match('#<script type="application/ld\+json">(.*?)</script>#s', get($path)['body'], $m);
+        $d = json_decode($m[1] ?? '', true);
+        $types = [];
+        foreach ($d['@graph'] ?? [] as $n) {
+            $types[$n['@type']] = $n;
+        }
+        return $types;
+    };
+    $g = $graphOf('/product/buckram-fabric.html');
+    check('product page graph: Organization, WebSite, WebPage, BreadcrumbList, FAQPage', array_keys($g) == ['Organization', 'WebSite', 'BreadcrumbList', 'WebPage', 'FAQPage']);
+    check('breadcrumb schema matches the visible breadcrumb', array_column($g['BreadcrumbList']['itemListElement'], 'name') === ['Home', 'Products', 'Buckram Fabric']);
+    check('FAQ schema built from the visible questions', count($g['FAQPage']['mainEntity']) === 4 && $g['FAQPage']['mainEntity'][0]['name'] === 'What widths does buckram come in?');
+    check('no fake ratings or prices anywhere', strpos(json_encode($g), 'aggregateRating') === false && strpos(json_encode($g), '"offers"') === false);
+    check('organisation facts: address, phone, founding year', $g['Organization']['address']['postalCode'] === '110007' && $g['Organization']['foundingDate'] === '1977' && $g['Organization']['telephone'] === '+919910555033');
+    check('each social profile once, without tracking parameters', count($g['Organization']['sameAs']) === 4 && !preg_grep('/\?/', $g['Organization']['sameAs']));
+    $p = page_load('buckram-fabric');
+    foreach ($p['blocks'] as &$b) {
+        if ($b['type'] === 'faq') {
+            $b['hidden'] = true;
+        }
+    }
+    unset($b);
+    page_save($p);
+    check('hidden questions → no FAQ schema', !isset($graphOf('/product/buckram-fabric.html')['FAQPage']));
+    $g = $graphOf('/products.html');
+    check('product list: CollectionPage with an ItemList of the live products (draft left out)', isset($g['CollectionPage']) && $g['CollectionPage']['mainEntity']['numberOfItems'] === 9);
+    check('home: no breadcrumb schema; about page is an AboutPage', !isset($graphOf('/index.html')['BreadcrumbList']) && isset($graphOf('/about.html')['AboutPage']) && isset($graphOf('/contact.html')['ContactPage']));
+    $h = get('/about.html')['body'];
+    check('og:url, og:site_name and Twitter tags', strpos($h, '<meta property="og:url" content="https://www.jaibabainterlinings.com/about.html">') !== false
+        && strpos($h, '<meta property="og:site_name" content="Jaibaba Interlinings">') !== false && strpos($h, '<meta name="twitter:card"') !== false);
+    check('share picture is a full address with its size', strpos($h, '<meta property="og:image" content="https://www.jaibabainterlinings.com/assets/images/logo.jpeg">') !== false
+        && strpos($h, '<meta property="og:image:width" content="1250">') !== false);
+    check('every local picture has width and height', preg_match_all('#<img\b(?![^>]*\swidth=)[^>]*src="/[^"]+"#', $h) === 0);
+    check('no tracking tags while no IDs are set', strpos($h, 'googletagmanager') === false && strpos($h, 'fbq(') === false);
+    $s = site_load();
+    $s['tracking'] = ['ga4' => 'G-ABC123XYZ', 'gtm' => 'GTM-AB12CD', 'metaPixel' => '123456789012'];
+    site_save($s);
+    $h = get('/about.html')['body'];
+    check('tracking tags on public pages once set', strpos($h, "gtag('config','G-ABC123XYZ')") !== false && strpos($h, 'GTM-AB12CD') !== false && strpos($h, "fbq('init','123456789012')") !== false);
+    check('…but never in previews', strpos(render_page(page_load('about'), ['preview' => true]), 'googletagmanager') === false);
+    $s['tracking'] = ['ga4' => '"><script>alert(1)</script>', 'gtm' => '', 'metaPixel' => ''];
+    site_save($s);
+    check('a malformed tracking ID prints nothing', strpos(get('/about.html')['body'], 'alert(1)') === false);
+
+    $all = pages_all();
+    $titles = function ($id) use ($all) {
+        return array_column(seo_checks($all[$id], $all), 'text');
+    };
+    check('checks: title and description length', (bool) preg_grep('/Google title is 77 characters/', $titles('about')) && (bool) preg_grep('/description is \d{3} characters/', $titles('about')));
+    $p = page_load('exports');
+    $p['seo']['title'] = $all['about']['seo']['title'];
+    $p['seo']['focusKeyword'] = 'buckram exporter';
+    $p['blocks'][] = ['type' => 'html', 'html' => '<section><p><a href="/missing-page.html">x</a> <a href="/product/tatron.html">t</a> <a href="/old-catalogue.html">o</a></p></section>'];
+    page_save($p);
+    redirects_save([['from' => '/old-catalogue.html', 'to' => '/products.html', 'code' => 301]]);
+    $q = page_load('about');
+    $q['seo']['focusKeyword'] = 'Buckram Exporter';
+    page_save($q);
+    $all = pages_all();
+    $c = implode("\n", array_column(seo_checks($all['exports'], $all), 'text'));
+    check('checks: duplicate Google title', strpos($c, 'has the same Google title') !== false);
+    check('checks: broken link', strpos($c, 'Broken link: /missing-page.html (page not found)') !== false);
+    check('checks: link to a draft', strpos($c, 'Broken link: /product/tatron.html (goes to a draft page)') !== false);
+    check('checks: link to a redirected address', strpos($c, 'The link /old-catalogue.html is redirected. Link straight to /products.html.') !== false);
+    check('checks: two pages targeting one search phrase', strpos($c, 'targets the same search phrase') !== false);
+    check('checks: phrase missing from title', strpos($c, 'Put the main search phrase “buckram exporter” in the Google title.') !== false);
+    $p = page_load('home');
+    $p['blocks'][] = ['type' => 'page-hero', 'heading' => 'Second H1'];
+    page_save($p);
+    check('checks: more than one main heading', (bool) preg_grep('/2 main headings/', array_column(seo_checks(page_load('home')), 'text')));
+    check('site report lists problems per page', count(seo_report()) === count(pages_all()) && seo_report()['exports'] !== []);
+
+    $fx = "$seoDir/fixes.json";
+    $oldT = page_load('about')['seo']['title'];
+    json_write($fx, [
+        ['page' => 'about', 'field' => 'seo.title', 'from' => $oldT, 'to' => 'About Jaibaba Interlinings | Since 1977, Delhi'],
+        ['page' => 'about', 'field' => 'seo.description', 'from' => 'not the current text', 'to' => 'x'],
+        ['page' => 'about', 'field' => 'path', 'from' => '/about.html', 'to' => '/x.html'],
+    ]);
+    $dry = seo_apply_fixes($fx, false);
+    check('bulk fixes: dry run changes nothing', page_load('about')['seo']['title'] === $oldT && strpos($dry[0], 'would fix') === 0);
+    $n = count(history_list('about'));
+    $res = seo_apply_fixes($fx, true);
+    check('bulk fixes: applied only where the old text still matches', page_load('about')['seo']['title'] === 'About Jaibaba Interlinings | Since 1977, Delhi'
+        && strpos($res[1], 'skip') === 0 && strpos($res[2], 'skip') === 0 && page_load('about')['path'] === '/about.html');
+    check('bulk fixes: saved with history', count(history_list('about')) === $n + 1);
 
     /* ------------------------------------------------------- whole fixtures */
     config_set(['content_dir' => $dirs[1], 'enabled' => true]);

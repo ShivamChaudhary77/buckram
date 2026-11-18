@@ -19,6 +19,9 @@ require_once APP_DIR . '/helpers.php';
 require_once APP_DIR . '/content.php';
 require_once APP_DIR . '/cache.php';
 require_once APP_DIR . '/render.php';
+require_once APP_DIR . '/sanitize.php';
+require_once APP_DIR . '/media.php';
+require_once APP_DIR . '/seo.php';
 require_once APP_DIR . '/front.php';
 
 mb_internal_encoding('UTF-8');

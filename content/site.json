@@ -62,7 +62,7 @@
         "alt": "Jaibaba Interlinings – Garment Interlining Manufacturer Since 1977"
     },
     "favicon": "/assets/images/logo.svg",
-    "defaultOgImage": "/assets/images/logo.svg",
+    "defaultOgImage": "/assets/images/logo.jpeg",
     "nav": [
         {
             "label": "Home",
@@ -254,5 +254,25 @@
         "ga4": "",
         "gtm": "",
         "metaPixel": ""
+    },
+    "org": {
+        "description": "Manufacturer, supplier, wholesaler, exporter and trader of garment interlining fabrics including buckram, fusible interlining, pocketing cloth, readymade collar and cuff, belt roll and placket (patti), shoulder pads and EVA foam.",
+        "foundingDate": "1977",
+        "sameAs": [
+            "https://www.facebook.com/share/1DKBwKzXMC/",
+            "https://www.instagram.com/jaibabananakclothtrading",
+            "https://x.com/JB_GROUP_DELHI",
+            "https://youtube.com/@jaibabananakclothtradingco9486"
+        ],
+        "address": {
+            "streetAddress": "8710 Roshanara Road, near Palace Cinema Hall, Pulbangash Metro Station",
+            "addressLocality": "Delhi",
+            "addressRegion": "Delhi",
+            "postalCode": "110007",
+            "addressCountry": "IN"
+        }
+    },
+    "robots": {
+        "blockAI": false
     }
 }

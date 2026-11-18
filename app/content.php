@@ -38,7 +38,9 @@ function site_load(): array
 {
     static $memo = [];
     $file = content_path('site.json');
-    $key = $file . '@' . (is_file($file) ? filemtime($file) . ':' . filesize($file) : '0');
+    clearstatcache(true, $file);
+    // Every save writes a new file (atomic rename), so the inode changes even within one second.
+    $key = $file . '@' . (is_file($file) ? fileinode($file) . ':' . filemtime($file) . ':' . filesize($file) : '0');
     if (!isset($memo[$key])) {
         $memo = [$key => json_read($file, [])];
     }

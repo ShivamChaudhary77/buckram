@@ -241,3 +241,43 @@ JAIBABA_ENABLED=1 JAIBABA_PREVIEW_PHP=1 JAIBABA_CONTENT_DIR=/tmp/jb-content php 
 Open the printed link to choose a password, then go to `http://localhost:8000/admin/`.
 
 **Next: Phase 5 (SEO automation).** Generated `sitemap.xml`, `robots.txt` and `llms.txt`; the full JSON-LD graph (Organization, WebSite, WebPage, BreadcrumbList, FAQPage, Product, …); `og:url`, `og:site_name` and Twitter tags; tracking tags; broken-link check; full SEO checks in the editor and a site-wide SEO report. Each change will be listed as accepted in the parity test.
+
+### Phase 5: SEO automation ✅ (2026-11-18)
+**Generated from the content (editors can't break it)** — `app/seo.php`
+- **Structured data on every page:** one JSON-LD graph containing:
+  - `Organization`: name, brand, logo with size, description, founding year, full head-office address, phones, email, sales contact, official profiles
+  - `WebSite`
+  - `WebPage`, as `AboutPage`, `ContactPage` or `CollectionPage` where they fit, with the main picture and last-changed date
+  - `BreadcrumbList`, from the visible breadcrumb
+  - `FAQPage`, only from questions that are actually shown (hidden FAQ sections are left out)
+  - `ItemList` of the products on the Products page
+
+  There are no ratings, reviews or prices, because the site has none. Product pages deliberately have no `Product` markup: without a price or reviews, Google reports it as an error.
+- **Head tags:** `og:url`, `og:site_name`, `og:image` as a full address with width and height, Twitter tags, and a robots tag on every page (`index,follow,max-image-preview:large`, or `noindex` for hidden pages, drafts and previews).
+- **Share picture:** the real logo (`logo.jpeg`) instead of the SVG placeholder. WhatsApp, Facebook and LinkedIn don't show SVG pictures.
+- **Pictures** get `width`/`height` from the real files, so the page doesn't jump while loading. Checked in the browser: every picture is exactly the same size on screen as before (the site CSS already has `img { height: auto }`).
+- **`/sitemap.xml`:** live, indexable pages only, with real last-changed dates.
+- **`/robots.txt`:** allows the site, blocks `/admin/`, lists the sitemap. A Settings switch can block AI tools (off by default).
+- **`/llms.txt`:** the business summary, the key pages with one-line descriptions, and contact details.
+- **Tracking:** GA4, Google Tag Manager and Meta Pixel are added to public pages once their IDs are set in Settings. They never appear on previews or the dashboard, and an ID in the wrong format prints nothing.
+- **Settings → Facts for Google and AI search:** description, founding year, address in parts, official profiles. The migration filled these only from what the site already said: the home page schema and the footer address.
+
+**Safety nets**
+- Automatic 301 when a live page's address changes or the page is deleted (Phase 4).
+- **Full check in the editor** (as last saved):
+  - Google title and description: missing, too long or too short, or the same as another page
+  - main heading: missing, or more than one
+  - intro under the heading longer than 80 words (AEO)
+  - main search phrase: missing from the title, heading or first sentences, or used by another page too
+  - pictures without a description
+  - broken links, links to drafts, links to redirected addresses
+- **Dashboard → Google check:** every page's problems in one list, plus links to the generated files. Also on the command line: `php app/cli.php seo-report`.
+- **Bulk fixes:** `php app/cli.php apply-fixes fixes.json [--apply]`. It's a dry run by default, changes a field only if it still holds the expected old text, and saves with history.
+
+**Parity:** all 18 pages are still identical in visible text, links, images, titles, descriptions and canonical addresses. Five deliberate improvements are listed with their reasons in `parity_accepted()`: robots tag, added meta tags, other head tags, JSON-LD graph, picture sizes. Each one is checked precisely: for example, the home page's old Organization facts must all still be present.
+
+**Tests:** `php tests/run.php` → **263 passed**; `php tests/dashboard-http.php` → **56 passed**; `php tests/compare-site.php` → all 18 identical apart from the accepted improvements.
+
+**For the owner to decide (not changed, because it is wording):**
+- `seo-report` lists 29 points: 11 titles over 60 characters, and all 18 descriptions over 160.
+- The business description in Settings still lists 7 product lines; the site now has 10.
