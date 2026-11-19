@@ -40,5 +40,8 @@ JAIBABA_ENABLED=1 JAIBABA_PREVIEW_PHP=1 php -S localhost:8000 deploy/dev-router.
 ```
 Add `JAIBABA_CONTENT_DIR=/tmp/copy` to work on a copy. For a local password: `JAIBABA_BASE_URL=http://localhost:8000 php app/cli.php setup-link --content=/tmp/copy`.
 
+## Manual upload (Hostinger, no Git)
+`bash scripts/build-upload.sh --first-time` builds `dist/public_html.zip` (switched on, with `app/config.local.php` pointing to `../site-content`) and `dist/site-content.zip`. Later code updates: `bash scripts/build-upload.sh` (no config, content or uploads). Steps: `HOSTINGER-UPLOAD.md`.
+
 ## Go-live state
 Not live yet (as of 2026-11-18): the `.html` files still serve the site and `enabled` is false. After go-live, delete the static `.html` files and `includes/` from git (see GO-LIVE.md §6), and update this section.

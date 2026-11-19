@@ -1,5 +1,7 @@
 # Go-live runbook: switch to the PHP site with the dashboard
 
+> **Hostinger, uploading by hand (no Git)?** Follow **`HOSTINGER-UPLOAD.md`** instead: two ready-made ZIP files, step by step in hPanel.
+
 This switches www.jaibabainterlinings.com from the old `.html` files to the PHP site you can edit at `/admin`. It takes about 15 minutes. It is reversible with one command, and the dashboard content is never lost by undoing.
 
 Everything below was rehearsed on a copy of the site, in this order:
