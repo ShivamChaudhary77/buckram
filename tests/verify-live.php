@@ -2,7 +2,7 @@
 /**
  * Live checker: run after every deploy.
  *
- *   php tests/verify-live.php https://www.jaibabainterlinings.com
+ *   php tests/verify-live.php https://www.jaibabananakinterlinings.com
  *
  * Finds the pages through the live sitemap.xml (so it also covers pages added or
  * renamed in the dashboard) and checks:

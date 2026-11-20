@@ -6,10 +6,10 @@ DirectoryIndex index.html index.php
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-# One official address: send the bare domain to www (only matches jaibabainterlinings.com itself,
+# One official address: send the bare domain to www (only matches jaibabananakinterlinings.com itself,
 # so previews on a temporary hosting address are not affected). HTTPS is forced in the hosting panel.
-RewriteCond %{HTTP_HOST} ^jaibabainterlinings\.com$ [NC]
-RewriteRule ^ https://www.jaibabainterlinings.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^jaibabananakinterlinings\.com$ [NC]
+RewriteRule ^ https://www.jaibabananakinterlinings.com%{REQUEST_URI} [R=301,L]
 
 # Keep any old redirects ABOVE this line.
 

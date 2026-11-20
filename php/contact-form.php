@@ -131,7 +131,7 @@ function sendNotificationEmail(array $data): bool
     $headers   = [];
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-Type: text/plain; charset=UTF-8';
-    $headers[] = 'From: ' . SITE_NAME . ' Website <no-reply@jaibabainterlinings.com>';
+    $headers[] = 'From: ' . SITE_NAME . ' Website <no-reply@jaibabananakinterlinings.com>';
     $headers[] = 'X-Mailer: PHP/' . phpversion();
 
     return @mail($to, $subject, $body, implode("\r\n", $headers));

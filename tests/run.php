@@ -68,7 +68,7 @@ try {
         check("valid_id rejects '$bad'", !valid_id($bad));
     }
     check('slugify', slugify('Belt Roll & Placket (Patti)') === 'belt-roll-and-placket-patti');
-    check('absolute_url', absolute_url('/about.html') === 'https://www.jaibabainterlinings.com/about.html');
+    check('absolute_url', absolute_url('/about.html') === 'https://www.jaibabananakinterlinings.com/about.html');
     check('absolute_url keeps full URLs', absolute_url('https://x.com/a') === 'https://x.com/a');
     json_write("$dir/t/a.json", ['ü' => 'é/x']);
     check('json round trip', json_read("$dir/t/a.json") === ['ü' => 'é/x']);
@@ -158,7 +158,7 @@ try {
     $home = render_page(page_load('home'));
     check('home has exactly one H1', preg_match_all('/<h1[\s>]/', $home) === 1);
     check('home title tag', strpos($home, '<title>Jaibaba Interlinings | Garment Interlining Manufacturer Since 1977, Delhi</title>') !== false);
-    check('home canonical is /index.html', strpos($home, '<link rel="canonical" href="https://www.jaibabainterlinings.com/index.html">') !== false);
+    check('home canonical is /index.html', strpos($home, '<link rel="canonical" href="https://www.jaibabananakinterlinings.com/index.html">') !== false);
     check('live page: robots index,follow', strpos($home, '<meta name="robots" content="index,follow,max-image-preview:large">') !== false);
     preg_match_all('#<script type="application/ld\+json">(.*?)</script>#s', $home, $m);
     $ld = json_decode($m[1][0] ?? '', true);
@@ -235,7 +235,7 @@ try {
     $r = get('/index.html');
     check("home_path '/' : /index.html → 301 /", $r['status'] === 301 && $r['headers']['Location'] === '/');
     $r = get('/');
-    check("home_path '/' : canonical is /", strpos($r['body'], 'href="https://www.jaibabainterlinings.com/">') !== false);
+    check("home_path '/' : canonical is /", strpos($r['body'], 'href="https://www.jaibabananakinterlinings.com/">') !== false);
     check("home_path '/' : logo links to /", strpos($r['body'], '<a class="navbar-brand" href="/">') !== false);
     config_set(['home_path' => '/index.html']);
 
@@ -545,7 +545,7 @@ try {
     check('noindex page says so in its robots tag', strpos(get('/quality.html')['body'], '<meta name="robots" content="noindex,follow">') !== false);
     $rb = get('/robots.txt');
     check('robots.txt allows the site, blocks /admin/, lists the sitemap', $rb['status'] === 200 && strpos($rb['body'], "Disallow: /admin/") !== false
-        && strpos($rb['body'], 'Sitemap: https://www.jaibabainterlinings.com/sitemap.xml') !== false && strpos($rb['body'], 'GPTBot') === false);
+        && strpos($rb['body'], 'Sitemap: https://www.jaibabananakinterlinings.com/sitemap.xml') !== false && strpos($rb['body'], 'GPTBot') === false);
     $s = site_load();
     $s['robots']['blockAI'] = true;
     site_save($s);
@@ -554,7 +554,7 @@ try {
     site_save($s);
     $ll = get('/llms.txt')['body'];
     check('llms.txt: name, summary, products, contact', strpos($ll, '# Jaibaba Interlinings') === 0 && strpos($ll, '> Manufacturer, supplier') !== false
-        && strpos($ll, '## Products') !== false && strpos($ll, '[Buckram Fabric](https://www.jaibabainterlinings.com/product/buckram-fabric.html)') !== false
+        && strpos($ll, '## Products') !== false && strpos($ll, '[Buckram Fabric](https://www.jaibabananakinterlinings.com/product/buckram-fabric.html)') !== false
         && strpos($ll, 'Phone: +91 9910555033') !== false && strpos($ll, '[Tatron](') === false);
     $graphOf = function (string $path) {
         preg_match('#<script type="application/ld\+json">(.*?)</script>#s', get($path)['body'], $m);
@@ -585,9 +585,9 @@ try {
     check('product list: CollectionPage with an ItemList of the live products (draft left out)', isset($g['CollectionPage']) && $g['CollectionPage']['mainEntity']['numberOfItems'] === 9);
     check('home: no breadcrumb schema; about page is an AboutPage', !isset($graphOf('/index.html')['BreadcrumbList']) && isset($graphOf('/about.html')['AboutPage']) && isset($graphOf('/contact.html')['ContactPage']));
     $h = get('/about.html')['body'];
-    check('og:url, og:site_name and Twitter tags', strpos($h, '<meta property="og:url" content="https://www.jaibabainterlinings.com/about.html">') !== false
+    check('og:url, og:site_name and Twitter tags', strpos($h, '<meta property="og:url" content="https://www.jaibabananakinterlinings.com/about.html">') !== false
         && strpos($h, '<meta property="og:site_name" content="Jaibaba Interlinings">') !== false && strpos($h, '<meta name="twitter:card"') !== false);
-    check('share picture is a full address with its size', strpos($h, '<meta property="og:image" content="https://www.jaibabainterlinings.com/assets/images/logo.jpeg">') !== false
+    check('share picture is a full address with its size', strpos($h, '<meta property="og:image" content="https://www.jaibabananakinterlinings.com/assets/images/logo.jpeg">') !== false
         && strpos($h, '<meta property="og:image:width" content="1250">') !== false);
     check('every local picture has width and height', preg_match_all('#<img\b(?![^>]*\swidth=)[^>]*src="/[^"]+"#', $h) === 0);
     check('no tracking tags while no IDs are set', strpos($h, 'googletagmanager') === false && strpos($h, 'fbq(') === false);

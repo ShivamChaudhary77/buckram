@@ -2,7 +2,7 @@
 
 > **Hostinger, uploading by hand (no Git)?** Follow **`HOSTINGER-UPLOAD.md`** instead: two ready-made ZIP files, step by step in hPanel.
 
-This switches www.jaibabainterlinings.com from the old `.html` files to the PHP site you can edit at `/admin`. It takes about 15 minutes. It is reversible with one command, and the dashboard content is never lost by undoing.
+This switches www.jaibabananakinterlinings.com from the old `.html` files to the PHP site you can edit at `/admin`. It takes about 15 minutes. It is reversible with one command, and the dashboard content is never lost by undoing.
 
 Everything below was rehearsed on a copy of the site, in this order:
 1. dry run
@@ -34,9 +34,9 @@ No database, Composer, Node or SSH is needed.
 
 | What | Hostinger | cPanel | Plesk |
 |---|---|---|---|
-| Website folder | `/home/u…/domains/jaibabainterlinings.com/public_html` | `/home/USER/public_html` | `/var/www/vhosts/DOMAIN/httpdocs` |
-| Content folder (made by the script) | `…/jaibabainterlinings.com/site-content` | `/home/USER/site-content` | `/var/www/vhosts/DOMAIN/site-content` |
-| Backups (made by the script) | `…/jaibabainterlinings.com/site-backups` | `/home/USER/site-backups` | `/var/www/vhosts/DOMAIN/site-backups` |
+| Website folder | `/home/u…/domains/jaibabananakinterlinings.com/public_html` | `/home/USER/public_html` | `/var/www/vhosts/DOMAIN/httpdocs` |
+| Content folder (made by the script) | `…/jaibabananakinterlinings.com/site-content` | `/home/USER/site-content` | `/var/www/vhosts/DOMAIN/site-content` |
+| Backups (made by the script) | `…/jaibabananakinterlinings.com/site-backups` | `/home/USER/site-backups` | `/var/www/vhosts/DOMAIN/site-backups` |
 | PHP version | hPanel → Websites → *site* → Advanced → PHP Configuration | MultiPHP Manager | Domains → PHP Settings |
 | Terminal | hPanel → Advanced → SSH Access (most plans) | Terminal | SSH (if enabled) |
 | Cron jobs | hPanel → Advanced → Cron Jobs | Cron Jobs | Scheduled Tasks |
@@ -47,7 +47,7 @@ The content folder sits outside the public folder, so it can't be downloaded and
 
 ### A. With a terminal (SSH)
 ```bash
-cd ~/domains/jaibabainterlinings.com/public_html   # your website folder
+cd ~/domains/jaibabananakinterlinings.com/public_html   # your website folder
 bash scripts/go-live.sh                             # dry run: checks, changes nothing
 bash scripts/go-live.sh --apply                     # switch over
 ```
@@ -63,7 +63,7 @@ The script:
 ### B. Without a terminal (cron as a remote shell)
 1. In the hosting panel, add a cron job that runs **every minute**:
    ```bash
-   [ -f $HOME/domains/jaibabainterlinings.com/public_html/index.html ] && bash $HOME/domains/jaibabainterlinings.com/public_html/scripts/go-live.sh --apply > $HOME/go-live-log.txt 2>&1
+   [ -f $HOME/domains/jaibabananakinterlinings.com/public_html/index.html ] && bash $HOME/domains/jaibabananakinterlinings.com/public_html/scripts/go-live.sh --apply > $HOME/go-live-log.txt 2>&1
    ```
    (cPanel: use `$HOME/public_html/…`.) The `[ -f …index.html ]` guard makes it run only once: after go-live that file is gone.
 2. Wait two minutes, then **delete the cron job**.
@@ -75,12 +75,12 @@ If the log says "No command-line PHP 8.0+ found", add `PHP_BIN=/opt/alt/php82/us
 - **With a terminal:** the script asks for it. To change it later: `php app/cli.php set-password`.
 - **Without a terminal:** open the link from the log. To get a new link: `php app/cli.php setup-link` (it only works while no password exists).
 
-Then log in at **https://www.jaibabainterlinings.com/admin/**.
+Then log in at **https://www.jaibabananakinterlinings.com/admin/**.
 
 ## 5. Check the live site
 From any computer with PHP (or on the server):
 ```bash
-php tests/verify-live.php https://www.jaibabainterlinings.com
+php tests/verify-live.php https://www.jaibabananakinterlinings.com
 ```
 It reads the live sitemap and checks:
 - every page answers 200, with its title, description, canonical and one H1
@@ -104,17 +104,17 @@ Also by hand:
    ```
 2. **Daily backup:** add a daily cron job (for example at 03:00):
    ```bash
-   bash $HOME/domains/jaibabainterlinings.com/public_html/scripts/backup-content.sh > /dev/null 2>&1
+   bash $HOME/domains/jaibabananakinterlinings.com/public_html/scripts/backup-content.sh > /dev/null 2>&1
    ```
    It keeps the last 14 backups of the content and the uploaded pictures in `site-backups`. Download one now and then, so a copy exists off the server too.
-3. **One address form:** the official addresses are `https://www.jaibabainterlinings.com/…`. Turn on "Force HTTPS" in the panel. If `jaibabainterlinings.com` (without www) doesn't already redirect, set a redirect to the www version in the panel (Hostinger: Domains → Redirects; cPanel: Redirects).
-4. **Google Search Console and Bing Webmaster Tools:** add the site and submit `https://www.jaibabainterlinings.com/sitemap.xml`. Watch "Pages / Indexing" for the next two weeks.
+3. **One address form:** the official addresses are `https://www.jaibabananakinterlinings.com/…`. Turn on "Force HTTPS" in the panel. If `jaibabananakinterlinings.com` (without www) doesn't already redirect, set a redirect to the www version in the panel (Hostinger: Domains → Redirects; cPanel: Redirects).
+4. **Google Search Console and Bing Webmaster Tools:** add the site and submit `https://www.jaibabananakinterlinings.com/sitemap.xml`. Watch "Pages / Indexing" for the next two weeks.
 5. **Tracking:** if you use Google Analytics, Tag Manager or Meta Pixel, enter the IDs in Dashboard → Settings → Visitor statistics. Then check in their real-time view that visits arrive.
 6. **Uploaded pictures** live in `uploads/` inside the website folder. It isn't in git, so deploys never overwrite it, and the daily backup includes it.
 
 ## 7. Undo (rollback)
 ```bash
-bash scripts/rollback-go-live.sh ~/domains/jaibabainterlinings.com/site-backups/static-YYYYMMDD-HHMMSS.tar.gz
+bash scripts/rollback-go-live.sh ~/domains/jaibabananakinterlinings.com/site-backups/static-YYYYMMDD-HHMMSS.tar.gz
 ```
 This puts the old `.html` files back and switches the PHP site off. The content folder is kept, so going live again later keeps every dashboard edit (the script sees existing content and doesn't overwrite it). Without a terminal, run it once from cron the same way as step 3B.
 

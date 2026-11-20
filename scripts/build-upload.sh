@@ -14,7 +14,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FIRST=0
-BASE_URL="https://www.jaibabainterlinings.com"
+BASE_URL="https://www.jaibabananakinterlinings.com"
 for arg in "$@"; do
   case "$arg" in
     --first-time) FIRST=1 ;;
@@ -47,7 +47,7 @@ if [ "$FIRST" = "1" ]; then
 // Server settings (not in git). Made by scripts/build-upload.sh --first-time.
 return [
     'enabled'     => true,
-    // .../domains/jaibabainterlinings.com/site-content (next to public_html, not downloadable)
+    // .../domains/jaibabananakinterlinings.com/site-content (next to public_html, not downloadable)
     'content_dir' => dirname(__DIR__, 2) . '/site-content',
     'base_url'    => '$BASE_URL',
 ];

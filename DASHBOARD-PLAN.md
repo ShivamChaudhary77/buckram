@@ -101,7 +101,7 @@ Business name, legal name, 2 phone numbers, email, head office and branch addres
 
 | Item | Finding |
 |---|---|
-| Domain | `www.jaibabainterlinings.com` (from the canonicals). **It does not resolve in DNS today**, so the site doesn't appear to be live yet. Good news: no Google ranking to protect yet |
+| Domain | `www.jaibabananakinterlinings.com` (from the canonicals). **It does not resolve in DNS today**, so the site doesn't appear to be live yet. Good news: no Google ranking to protect yet |
 | Server | Unknown (no `.htaccess`, `.cpanel.yml` or host docs in the repo). The contact form needs PHP, so the host must have PHP |
 | Local PHP | 8.5 with `dom`, `json`, `mbstring`, `fileinfo`, `gd`, so everything can be built and tested locally |
 | Deploys | Unknown (git, FTP or File Manager?) |

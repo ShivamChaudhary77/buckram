@@ -17,7 +17,7 @@ function config_defaults(): array
         'content_dir'     => ROOT_DIR . '/content',
 
         // Public address of the site, no trailing slash.
-        'base_url'        => 'https://www.jaibabainterlinings.com',
+        'base_url'        => 'https://www.jaibabananakinterlinings.com',
 
         // Official address of the home page: '/index.html' (as the static site has it)
         // or '/' (then /index.html sends a 301 to /).

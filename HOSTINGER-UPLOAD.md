@@ -1,6 +1,6 @@
 # Host the website on Hostinger Premium (manual upload)
 
-This puts www.jaibabainterlinings.com online with the dashboard, using only the Hostinger panel (hPanel) and its File Manager. No GitHub connection is needed.
+This puts www.jaibabananakinterlinings.com online with the dashboard, using only the Hostinger panel (hPanel) and its File Manager. No GitHub connection is needed.
 
 You upload **two ZIP files**:
 
@@ -11,7 +11,7 @@ You upload **two ZIP files**:
 
 On the server it will look like this:
 ```
-/home/u123456789/domains/jaibabainterlinings.com/
+/home/u123456789/domains/jaibabananakinterlinings.com/
 ├── public_html/        ← website (from public_html.zip)
 ├── site-content/       ← page texts and settings (from site-content.zip)
 └── site-backups/       ← made later by the daily backup
@@ -29,27 +29,27 @@ bash scripts/build-upload.sh --first-time
 This creates `dist/public_html.zip` and `dist/site-content.zip`. The old `.html` pages aren't included: the PHP site builds every page from the content.
 
 ## Step 2: Add the website and connect the domain
-1. In **hPanel → Websites → Add website**, choose to create an **empty website** (no WordPress, no builder) for `jaibabainterlinings.com`.
+1. In **hPanel → Websites → Add website**, choose to create an **empty website** (no WordPress, no builder) for `jaibabananakinterlinings.com`.
 2. **If the domain was bought at Hostinger**, it connects by itself.
    **If it was bought elsewhere** (GoDaddy, BigRock, …), log in there and change the **nameservers** to:
    ```
    ns1.dns-parking.com
    ns2.dns-parking.com
    ```
-   It can take a few hours, up to 24, before the domain opens your Hostinger site. (Today the domain doesn't point anywhere yet, so this step is needed.)
+   It can take a few hours, up to 24, before the domain opens your Hostinger site.
 
 ## Step 3: PHP version
-**Websites → Manage (jaibabainterlinings.com) → Advanced → PHP Configuration**
+**Websites → Manage (jaibabananakinterlinings.com) → Advanced → PHP Configuration**
 - **PHP version:** choose **8.2** or **8.3** and save.
 - **PHP extensions tab:** make sure `fileinfo`, `gd`, `mbstring`, `dom` and `json` are ticked. They usually are by default.
 
 ## Step 4: SSL (the padlock)
-**Websites → Manage → Security → SSL**: install the free SSL for `jaibabainterlinings.com` (it covers www too), then turn on **Force HTTPS**.
-The site already sends `jaibabainterlinings.com` (without www) to `https://www.jaibabainterlinings.com`, so everyone lands on one address.
+**Websites → Manage → Security → SSL**: install the free SSL for `jaibabananakinterlinings.com` (it covers www too), then turn on **Force HTTPS**.
+The site already sends `jaibabananakinterlinings.com` (without www) to `https://www.jaibabananakinterlinings.com`, so everyone lands on one address.
 
 ## Step 5: Email for the contact form
-The enquiry form sends from `no-reply@jaibabainterlinings.com` to `Jaibabananakclothtrading@gmail.com`. Hostinger only delivers PHP mail reliably when the sender mailbox exists:
-**hPanel → Emails → (your domain) → Create email account** → `no-reply@jaibabainterlinings.com`, with any strong password. You never need to log in to it.
+The enquiry form sends from `no-reply@jaibabananakinterlinings.com` to `Jaibabananakclothtrading@gmail.com`. Hostinger only delivers PHP mail reliably when the sender mailbox exists:
+**hPanel → Emails → (your domain) → Create email account** → `no-reply@jaibabananakinterlinings.com`, with any strong password. You never need to log in to it.
 
 ## Step 6: Upload the website
 **Websites → Manage → Files → File Manager**
@@ -63,11 +63,11 @@ You should now see `public_html/admin`, `app`, `assets`, `php`, `scripts`, `temp
 > If the 90 MB upload stops halfway: create an FTP account (**Files → FTP Accounts**), upload the ZIP with FileZilla to the same place, then extract it in File Manager.
 
 ## Step 7: Upload the content folder (one level up)
-1. In File Manager, go **up one level**, to the folder that **contains** `public_html` (`domains/jaibabainterlinings.com`).
+1. In File Manager, go **up one level**, to the folder that **contains** `public_html` (`domains/jaibabananakinterlinings.com`).
 2. Upload `dist/site-content.zip` there.
 3. Right-click → **Extract** → into this folder. You now have `site-content` **next to** `public_html`, and inside it `site.json` and a `pages` folder. Delete the ZIP.
 
-**Check:** the path must be `…/jaibabainterlinings.com/site-content/site.json`, not `…/site-content/site-content/site.json`.
+**Check:** the path must be `…/jaibabananakinterlinings.com/site-content/site.json`, not `…/site-content/site-content/site.json`.
 
 ## Step 8: Choose the dashboard password
 Choose **one** of the two ways.
@@ -76,40 +76,41 @@ Choose **one** of the two ways.
 1. hPanel → **Advanced → SSH Access** → enable it, and copy the login command it shows (it looks like `ssh -p 65002 u123456789@123.45.67.89`).
 2. In Terminal, paste that command and log in with your hosting password, then:
    ```bash
-   cd domains/jaibabainterlinings.com/public_html
+   cd domains/jaibabananakinterlinings.com/public_html
    php app/cli.php set-password
    ```
    Type a password of at least 10 characters, twice.
 
 **B. Without SSH (a one-time cron job)**
-1. hPanel → **Advanced → Cron Jobs** → Custom. Set it to run **every minute** with this command (replace `u123456789` with your username):
+1. hPanel → **Advanced → Cron Jobs** → Custom → Common Options: **Once Per Minute (\* \* \* \* \*)**. Paste this command (replace `u123456789` with your username, and `php83` with the PHP version from Step 3, e.g. `php82`):
    ```bash
-   /usr/bin/php /home/u123456789/domains/jaibabainterlinings.com/public_html/app/cli.php setup-link > /home/u123456789/domains/jaibabainterlinings.com/setup-link.txt 2>&1
+   /opt/alt/php83/usr/bin/php -d display_errors=1 /home/u123456789/domains/jaibabananakinterlinings.com/public_html/app/cli.php setup-link > /home/u123456789/domains/jaibabananakinterlinings.com/setup-link.txt 2>&1
    ```
+   Use this full PHP path: the plain `/usr/bin/php` on Hostinger may be a different PHP version and stops without any message (`setup-link.txt` stays empty).
 2. Wait 2 minutes, then **delete the cron job**.
-3. In File Manager, open `setup-link.txt` (next to `public_html`). Open the link in your browser and choose the password. The link works once and for 24 hours.
+3. In File Manager, click the 🏠 home icon (the folder that contains `public_html`) and open `setup-link.txt`. Open the link in your browser and choose the password. The link works once and for 24 hours. If the file shows an error instead, the message says what is wrong.
 4. Delete `setup-link.txt`.
 
 ## Step 9: Check that everything works
-1. Open **https://www.jaibabainterlinings.com**: the home page, the Products menu, two product pages, the Contact page.
+1. Open **https://www.jaibabananakinterlinings.com**: the home page, the Products menu, two product pages, the Contact page.
 2. Send a **test enquiry** through the contact form and check that it arrives (look in Spam the first time).
-3. Open **https://www.jaibabainterlinings.com/admin/**, log in, change a word on a page, save, and see it on the site. Then change it back. Earlier versions are kept in the editor if you need them.
+3. Open **https://www.jaibabananakinterlinings.com/admin/**, log in, change a word on a page, save, and see it on the site. Then change it back. Earlier versions are kept in the editor if you need them.
 4. On your Mac, run the full automatic check:
    ```bash
-   php tests/verify-live.php https://www.jaibabainterlinings.com
+   php tests/verify-live.php https://www.jaibabananakinterlinings.com
    ```
    It should end with `… passed, 0 failed`.
 
 ## Step 10: Daily backup (2 minutes, do it once)
 hPanel → **Advanced → Cron Jobs** → Custom → **once a day** (e.g. 03:00):
 ```bash
-/bin/bash /home/u123456789/domains/jaibabainterlinings.com/public_html/scripts/backup-content.sh > /dev/null 2>&1
+PHP_BIN=/opt/alt/php83/usr/bin/php /bin/bash /home/u123456789/domains/jaibabananakinterlinings.com/public_html/scripts/backup-content.sh > /dev/null 2>&1
 ```
 It keeps 14 days of backups of the pages, settings and uploaded pictures in `site-backups`. Download one to your computer once a month. Hostinger also makes its own weekly backups (**Files → Backups**).
 
 ## Step 11: Tell Google
-1. **Google Search Console** → Add property → Domain → `jaibabainterlinings.com`. It asks you to add a TXT record: hPanel → **Domains → DNS / Nameservers**.
-2. **Sitemaps** → submit `https://www.jaibabainterlinings.com/sitemap.xml`.
+1. **Google Search Console** → Add property → Domain → `jaibabananakinterlinings.com`. It asks you to add a TXT record: hPanel → **Domains → DNS / Nameservers**.
+2. **Sitemaps** → submit `https://www.jaibabananakinterlinings.com/sitemap.xml`.
 3. Do the same in **Bing Webmaster Tools** (it can import from Search Console).
 4. Optional: put your Google Analytics / Meta Pixel IDs in **Dashboard → Settings → Visitor statistics**.
 
@@ -137,5 +138,5 @@ Upload the new `dist/public_html.zip` into `public_html` → Extract → **overw
 | Every page shows the site's own "Page Not Found" | `site-content` is in the wrong place (Step 7 check) |
 | "This website needs PHP 8.0 or newer" | Step 3 |
 | Dashboard asks for the setup link again | No password yet: Step 8 |
-| Enquiries don't arrive | Create `no-reply@jaibabainterlinings.com` (Step 5), check Spam, wait 10 minutes |
+| Enquiries don't arrive | Create `no-reply@jaibabananakinterlinings.com` (Step 5), check Spam, wait 10 minutes |
 | Forgot the dashboard password | Step 8A again (`php app/cli.php set-password`) |

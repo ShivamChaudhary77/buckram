@@ -7,7 +7,7 @@
 # Options:
 #   --content-dir=PATH   where pages and settings will live (default: a "site-content" folder
 #                        next to the website folder, so it is outside the public web folder)
-#   --base-url=URL       the public address (default: https://www.jaibabainterlinings.com)
+#   --base-url=URL       the public address (default: https://www.jaibabananakinterlinings.com)
 #   --verify             after switching, run the live checker against --base-url
 #
 # Works without SSH: run it once from a cron job (see GO-LIVE.md). Without a terminal it

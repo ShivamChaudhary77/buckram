@@ -19,7 +19,7 @@ $opts = getopt('', ['content:']);
 config_set(['enabled' => true, 'cache' => false] + (isset($opts['content']) ? ['content_dir' => $opts['content']] : []));
 
 if (!is_file(ROOT_DIR . '/index.html')) {
-    echo "The static .html files are gone (site is live). Run: php tests/verify-live.php https://www.jaibabainterlinings.com\n";
+    echo "The static .html files are gone (site is live). Run: php tests/verify-live.php https://www.jaibabananakinterlinings.com\n";
     exit(0);
 }
 

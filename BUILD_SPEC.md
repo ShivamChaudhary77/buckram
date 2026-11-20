@@ -20,7 +20,7 @@ Read `/Users/shivamkumar/Desktop/jaibaba/index.html` FIRST as the canonical refe
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PAGE TITLE HERE</title>
 <meta name="description" content="PAGE META DESCRIPTION HERE">
-<link rel="canonical" href="https://www.jaibabainterlinings.com/PAGE_URL_HERE">
+<link rel="canonical" href="https://www.jaibabananakinterlinings.com/PAGE_URL_HERE">
 <meta property="og:title" content="OG TITLE">
 <meta property="og:description" content="OG DESCRIPTION">
 <meta property="og:type" content="website">

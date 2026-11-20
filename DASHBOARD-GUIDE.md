@@ -1,8 +1,8 @@
 # Your website dashboard: a short guide
 
-Everything on www.jaibabainterlinings.com can be changed here without a web developer: texts, pictures, questions and answers, phone numbers, the menu and the footer.
+Everything on www.jaibabananakinterlinings.com can be changed here without a web developer: texts, pictures, questions and answers, phone numbers, the menu and the footer.
 
-**Open it:** go to **https://www.jaibabainterlinings.com/admin/** and type your password.
+**Open it:** go to **https://www.jaibabananakinterlinings.com/admin/** and type your password.
 For safety, after 5 wrong passwords the login waits 15 minutes.
 
 ---

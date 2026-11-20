@@ -30,7 +30,7 @@ It is a **plain PHP 8 + JSON site with a one-password `/admin` dashboard**: no f
 php tests/run.php                 # unit tests (≈263): content, routing, migration, parity, dashboard forms, security, SEO
 php tests/compare-site.php        # before go-live: every static page vs the PHP render (accepted improvements listed)
 php tests/dashboard-http.php      # end-to-end over HTTP with a temp content copy (≈56)
-php tests/verify-live.php https://www.jaibabainterlinings.com   # after every deploy
+php tests/verify-live.php https://www.jaibabananakinterlinings.com   # after every deploy
 php app/cli.php check             # render every page, report errors
 php app/cli.php seo-report        # SEO problems per page
 ```
