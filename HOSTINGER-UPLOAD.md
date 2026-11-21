@@ -82,14 +82,14 @@ Choose **one** of the two ways.
    Type a password of at least 10 characters, twice.
 
 **B. Without SSH (a one-time cron job)**
-1. hPanel → **Advanced → Cron Jobs** → Custom → Common Options: **Once Per Minute (\* \* \* \* \*)**. Paste this command (replace `u123456789` with your username, and `php83` with the PHP version from Step 3, e.g. `php82`):
+1. hPanel → **Advanced → Cron Jobs** → Custom. Set it to run **once an hour**: Minute = a minute 2–3 minutes from now (e.g. `25`), Hour/Day/Month/Weekday = every (\*). Paste this command (replace `u123456789` with your username, and `php83` with the PHP version from Step 3):
    ```bash
-   /opt/alt/php83/usr/bin/php -d display_errors=1 /home/u123456789/domains/jaibabananakinterlinings.com/public_html/app/cli.php setup-link > /home/u123456789/domains/jaibabananakinterlinings.com/setup-link.txt 2>&1
+   /opt/alt/php83/usr/bin/php -d display_errors=1 /home/u123456789/domains/jaibabananakinterlinings.com/public_html/app/cli.php setup-link
    ```
-   Use this full PHP path: the plain `/usr/bin/php` on Hostinger may be a different PHP version and stops without any message (`setup-link.txt` stays empty).
-2. Wait 2 minutes, then **delete the cron job**.
-3. In File Manager, click the 🏠 home icon (the folder that contains `public_html`) and open `setup-link.txt`. Open the link in your browser and choose the password. The link works once and for 24 hours. If the file shows an error instead, the message says what is wrong.
-4. Delete `setup-link.txt`.
+   - Don't add `> file.txt`: Hostinger captures the output of cron jobs itself, so such a file stays empty.
+   - Don't use "every minute": each run makes a new link and cancels the previous one.
+2. After that minute has passed, open the cron job's **output** in the Cron Jobs list (View output). It shows the link. Then **delete the cron job**.
+3. Open the link in your browser and choose the password. The link works once and for 24 hours.
 
 ## Step 9: Check that everything works
 1. Open **https://www.jaibabananakinterlinings.com**: the home page, the Products menu, two product pages, the Contact page.
@@ -104,7 +104,7 @@ Choose **one** of the two ways.
 ## Step 10: Daily backup (2 minutes, do it once)
 hPanel → **Advanced → Cron Jobs** → Custom → **once a day** (e.g. 03:00):
 ```bash
-PHP_BIN=/opt/alt/php83/usr/bin/php /bin/bash /home/u123456789/domains/jaibabananakinterlinings.com/public_html/scripts/backup-content.sh > /dev/null 2>&1
+/bin/bash /home/u123456789/domains/jaibabananakinterlinings.com/public_html/scripts/backup-content.sh
 ```
 It keeps 14 days of backups of the pages, settings and uploaded pictures in `site-backups`. Download one to your computer once a month. Hostinger also makes its own weekly backups (**Files → Backups**).
 
